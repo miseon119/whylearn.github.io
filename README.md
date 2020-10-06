@@ -1,31 +1,37 @@
-# jekyll-rtd-theme
+# Multi-threading Note
 
-![CI](https://github.com/rundocs/jekyll-rtd-theme/workflows/CI/badge.svg?branch=v2)
-![jsDelivr](https://data.jsdelivr.com/v1/package/gh/rundocs/jekyll-rtd-theme/badge)
+## Three Ways to Create Threads
 
-Opinionated github flavored standard document theme for open source projects, with few options, but everything!
-
-## What it does?
-
-This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
-
-- [github-pages](https://github.com/github/pages-gem)
-- [@primer/css](https://github.com/primer/css)
-
-Give you a native GitHub experience and solved the issue of open source project documentation site
-
-- No need to learn other programming languages for building documentation
-- No need to care about the site SEO
-- Markdown syntax extended
-- Native support for mermaid chart plugin
-
-## Quick start
-
-```yml
-remote_theme: rundocs/jekyll-rtd-theme
+```cpp
+#include <thread>
 ```
 
-You can [generate](https://github.com/rundocs/starter-slim/generate) with the same files and folders from [rundocs/starter-slim](https://github.com/rundocs/starter-slim/)
+- Function Pointer
+- Function Objects
+- Lambda
+
+## Function Pointer
+
+```cpp
+#include <iostream>
+#include <thread>
+
+void thread_A()
+{
+    for(int i = 0; i < 10000; i++);
+        std::cout<<"I'm thread A! "<<std::endl;
+}
+
+int main()  
+{
+    std::thread threadObj(thread_A);
+    sleep(5);
+    threadObj.join();
+    return 0;
+}
+```
+
+## Function Objects
 
 ## Options
 
