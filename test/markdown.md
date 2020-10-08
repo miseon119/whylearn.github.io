@@ -14,9 +14,18 @@ $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ub
 $ sudo apt-get install docker-ce
 ```
 
-## Header 2
+# Share Host PC X-Server with Container
 
-> This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+> Run GUI App such as gedit, qt creator in container, we need to share Host PC X-server.
+
+In Host PC:
+```console
+$ sudo xhost +si:localuser:root
+```
+Run A Docker Image In Host Terminal:
+```console
+sudo docker run -i -t --gpus all --network host -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix --name test_container imageA
+```
 
 ### Header 3
 
