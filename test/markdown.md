@@ -26,7 +26,11 @@ Run A Docker Image In Host Terminal:
 ```console
 sudo docker run -i -t --gpus all --network host -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix --name test_container imageA
 ```
-
+In Container:
+```console
+$ apt-get update
+$ apt install libcanberra-gtk-module libcanberra-gtk3-module
+```
 ### Header 3
 
 ```
