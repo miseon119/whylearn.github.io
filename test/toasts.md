@@ -4,11 +4,6 @@ sort: 2
 
 # Modern C++ Notes
 
-THIS IS TOO LONG, NEED UPDATE! HERE IS SOME IDEAS:
-
-- https://primer.style/css/components/box
-- https://primer.style/css/components/toasts
-
 # Pass Arguments to Threads
 
 - Pass Simple Arguments
@@ -65,10 +60,8 @@ int main()
 #include <thread>
 class Drone {
 public:
-    Drone()
-    {}
-    Drone(const Drone & obj)
-    {}
+    Drone(){}
+    Drone(const Drone & obj){}
     void MissionStart(int x)
     {
         While(1)
