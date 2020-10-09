@@ -2,43 +2,88 @@
 sort: 2
 ---
 
-# Toasts Card
+# Modern C++ Notes
 
 THIS IS TOO LONG, NEED UPDATE! HERE IS SOME IDEAS:
 
 - https://primer.style/css/components/box
 - https://primer.style/css/components/toasts
 
-```note
-## This is a note
+# Pass Arguments to Threads
 
-Markdown is supported, Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines
+- Pass Simple Arguments
+- Pass References
+- Pass Class Member Function
 
-`inline code`
+## Passing simple arguments to thread
 
-[`inline code inside link`](./)
+```cpp
+#include <iostream>
+#include <string>
+#include <thread>
+
+void threadFunc(int x, std::string str)
+{
+    std::cout<< x <<std::endl;
+    std::cout<< str <<std::endl;
+}
+int main()  
+{
+    int x = 5;
+    std::string str = "abc";
+    std::thread threadObj(threadFunc, x, str);
+    threadObj.join();
+    return 0;
+}
 ```
 
-```note
-This is note2
-```
+## Passing References
 
-```note
-This is note3
-```
+> We use std::ref() to pass a reference
 
-```tip
-It’s bigger than a bread box.
+```cpp
+#include <iostream>
+#include <thread>
+void threadFunc(int const & x)
+{
+    std::cout<<" x = "<<x<<std::endl;
+}
+int main()
+{
+    int x = 5;
+    std::thread threadObj(threadFunc,std::ref(x));
+    threadObj.join();
+    return 0;
+}
 ```
+## Passing  Member Function
 
-```tip
-It’s tip 2
-```
+> Create a thread using Class member function.
 
-```warning
-Strong prose may provoke extreme mental exertion. Reader discretion is strongly advised.
-```
-
-```danger
-Mad scientist at work!
+```cpp
+#include <iostream>
+#include <thread>
+class Drone {
+public:
+    Drone()
+    {}
+    Drone(const Drone & obj)
+    {}
+    void MissionStart(int x)
+    {
+        While(1)
+        {
+            x++;
+            // do something
+        }
+    }
+};
+int main() {
+ 
+    Drone dummyDrone;
+    int x = 0;
+    std::thread threadObj(&Drone::MissionStart,&dummyDrone, x);
+    threadObj.join();
+    return 0;
+}
 ```
