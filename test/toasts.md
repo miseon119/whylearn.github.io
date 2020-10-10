@@ -4,13 +4,13 @@ sort: 2
 
 # Modern C++ Notes
 
-# Pass Arguments to Threads
+## Pass Arguments to Threads
 
 - Pass Simple Arguments
 - Pass References
 - Pass Class Member Function
 
-## Passing simple arguments to thread
+### Passing simple arguments to thread
 
 ```cpp
 #include <iostream>
@@ -32,7 +32,7 @@ int main()
 }
 ```
 
-## Passing References
+### Passing References
 
 > We use std::ref() to pass a reference
 
@@ -51,7 +51,7 @@ int main()
     return 0;
 }
 ```
-## Passing  Member Function
+### Passing  Member Function
 
 > Create a thread using Class member function.
 
@@ -79,4 +79,22 @@ int main() {
     threadObj.join();
     return 0;
 }
+```
+
+## map vs. unordered_map
+
+|          | map             | unordered_map  |
+| -------- | --------------- | -------------- |
+| Times    | log(n)          | O(n)           |
+| Ordering | True            | False          |
+| ----     | Beastie Boys    | License to Ill |
+
+### Unordered_map Usage
+
+Check an element:
+```cpp
+unordered_map <int, int> mp;
+
+mp.find(x)!=mp.end() //  method 1
+mp.count(x)!=0       //  method 2
 ```
