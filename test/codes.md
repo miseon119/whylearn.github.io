@@ -8,4 +8,4 @@ sort: 3
 
 > **Strategy pattern** lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
-![pattern-strategy](/assets/images/sample.jpeg)
+![pattern-strategy](disign-pattern-strategy.jpg)
