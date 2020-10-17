@@ -2,34 +2,10 @@
 sort: 3
 ---
 
-# Code Blocks
+# Design Patterns
 
-`inline code`
+## Strategy Pattern
 
-[`inline code inside link`](./)
+> **Strategy pattern** lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
-```
-:root {
-  @for $level from 1 through 12 {
-    @if $level % 4 == 0 {
-      --toc-#{$level}: #{darken($theme-white, 4 * 8.8%)};
-    } @else {
-      --toc-#{$level}: #{darken($theme-white, $level % 4 * 8.8%)};
-    }
-  }
-}
-```
-
-**Highlight:**
-
-```scss
-:root {
-  @for $level from 1 through 12 {
-    @if $level % 4 == 0 {
-      --toc-#{$level}: #{darken($theme-white, 4 * 8.8%)};
-    } @else {
-      --toc-#{$level}: #{darken($theme-white, $level % 4 * 8.8%)};
-    }
-  }
-}
-```
+![pattern-strategy](/assets/images/disign-pattern-strategy.jpg){: width="100" height="100"}
