@@ -2,59 +2,38 @@
 sort: 4
 ---
 
-# Mermaid Test
+# Linux
 
-    ```mermaid
-    graph TB
-        c1-->a2
-        subgraph one
-        a1-->a2
-        end
-        subgraph two
-        b1-->b2
-        end
-        subgraph three
-        c1-->c2
-        end
-    ```
+##  Swap Memory
 
-```mermaid
-graph TB
-    c1-->a2
-    subgraph one
-    a1-->a2
-    end
-    subgraph two
-    b1-->b2
-    end
-    subgraph three
-    c1-->c2
-    end
-```
+> In Linux OS, whenever RAM has an insufficient amount of memory to hold a process, it borrows some amount of memory from the secondary storage to store its inactive content. Here, the borrowed space from the hard disk is called **Swap Memory**.
+> Linux swap is a very useful way to extend the RAM. Because it provides the necessary additional memory when RAM space has been exhausted and a process has to be continued. 
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+![swap](swap.png)
 
-```mermaid
-classDiagram
-classA <|-- classB
-classC *-- classD
-classE o-- classF
-classG <-- classH
-classI -- classJ
-classK <.. classL
-classM <|.. classN
-classO .. classP
-```
+Pros:
 
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+- Swap saves from crashes
+- It can easily hold those inactive blocks of RAM that are hardly used once or twice and then they are never used. The freed up RAM can then be used to hold more programs that have a higher priority
+
+Cons:
+
+- Swap is slower than RAM. Adding a swap space won't make your computer faster, it will only help to overcome some limitations posed by the RAM size.
+
+> The safest: RAM = SWAP
+
+| RAM     | SWAP     |
+| ------- | -------- |
+| < 1Gb   | 2Gb      |
+| 2-4Gb   | 2-4Gb    |
+| 8Gb     | 4Gb      |
+
+### Check Swap Command
+
+```console
+$ swapon
+```console
+
+```note
+For reference, see: https://linuxhint.com/swap_memory_linux/
 ```
