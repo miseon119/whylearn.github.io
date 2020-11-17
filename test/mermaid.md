@@ -32,7 +32,7 @@ Cons:
 
 ```console
 $ swapon
-```console
+```
 
 ```note
 For reference, see: https://linuxhint.com/swap_memory_linux/
