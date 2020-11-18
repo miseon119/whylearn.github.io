@@ -4,7 +4,7 @@ sort: 6
 
 # Nvidia Jetson Series 
 
-Swap memory for Jetson nano
+## Swap memory for Jetson nano
 
 Step 1: check current swap status.
 ```console
