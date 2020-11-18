@@ -2,14 +2,51 @@
 sort: 5
 ---
 
-# Emoji Test
+# Go 
 
+Variable Declaration
+```go
+	var i int =10
+	fmt.Printf("%v, %T\n", i, i)
 ```
-I give this theme two :+1:!
+or
+```go
+    i:=10
 ```
 
-I give this theme two :+1:!
+> Can't redeclare variables, but can shadow them
+> variables must be used
 
-```tip
-Set config `plugins: [jemoji]`, Emoji searcher, see: [https://emoji.muan.co/](https://emoji.muan.co/)
+Const
+```go
+	const a = 10
+```
+or
+```go
+const (
+    a = 1
+    b = 2 
+    c = 3 
+)
+```
+
+Array
+```go
+grades := [3]int{100, 60, 70}
+fmt.Printf("grade: %v", grades)
+```
+or
+```go
+var names [3]string
+names[0] = "Tim"
+names[1] = "Tom"
+names[2] = "Bob"
+```
+
+2D Array
+```go
+var mask [3][3]int
+mask[0] = [3]int{1,0,1}
+mask[1] = [3]int{0,1,0}
+mask[2] = [3]int{0,0,1}
 ```
