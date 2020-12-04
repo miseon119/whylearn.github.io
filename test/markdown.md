@@ -4,6 +4,33 @@ sort: 1
 
 # Docker Notes
 
+# Common Command
+
+### [\<Container to image>]
+```console
+docker commit your_container target_image
+```
+
+### [\<image to tar file>]
+```console
+ docker save -o file.tar your_image
+```
+
+### [\<Tar file to docker image>]
+```console
+docker load -i yourFile.tar
+```
+
+### [\<Container to Tar file>]
+```console
+docker export your_container targetFile.tar
+```
+
+### [\<Tar to Image>]
+```console
+docker import yourFile.tar
+```
+
 # Install Docker in Ubuntu
 
 ```console
