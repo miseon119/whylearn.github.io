@@ -37,3 +37,23 @@ $ swapon
 ```note
 For reference, see: https://linuxhint.com/swap_memory_linux/
 ```
+
+### Cut Command
+
+Cut Text's Words By Specific Colume
+
+```console
+ cut -c 5- < file1.txt > file2.txt
+```
+- [5-] cut start point which is 5th character.
+
+file1.txt
+```
+aaaaabbbbbccccc
+```
+after hitting command:
+
+file2.txt
+```
+abbbbbccccc
+```
