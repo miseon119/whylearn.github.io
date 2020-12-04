@@ -38,9 +38,10 @@ $ swapon
 For reference, see: https://linuxhint.com/swap_memory_linux/
 ```
 
+
 ### Cut Command
 
-Cut Text's Words By Specific Colume
+Cut text's words by specific colume
 
 ```console
  cut -c 5- < file1.txt > file2.txt
