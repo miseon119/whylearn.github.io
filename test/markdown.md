@@ -6,29 +6,29 @@ sort: 1
 
 # Common Command
 
-== Container to image== 
+### Container to image
 ```console
-docker commit your_container target_image
+$ docker commit your_container target_image
 ```
 
-== Image to tar file== 
+### Image to tar file
 ```console
- docker save -o file.tar your_image
+$ docker save -o file.tar your_image
 ```
 
-== Tar file to docker Image== 
+###  Tar file to docker Image
 ```console
-docker load -i yourFile.tar
+$ docker load -i yourFile.tar
 ```
 
-== Container to Tar file== 
+### Container to Tar file
 ```console
-docker export your_container targetFile.tar
+$ docker export your_container targetFile.tar
 ```
 
-== Tar to Image== 
+### Tar to Image
 ```console
-docker import yourFile.tar
+$ docker import yourFile.tar
 ```
 
 # Install Docker in Ubuntu
