@@ -4,7 +4,7 @@ sort: 1
 
 # Docker Notes
 
-# Common Command
+## Common Command
 
 ### < Container to image>
 ```console
@@ -31,7 +31,7 @@ $ docker export your_container targetFile.tar
 $ docker import yourFile.tar
 ```
 
-# Install Docker in Ubuntu
+## Install Docker in Ubuntu
 
 ```console
 $ sudo apt-get update | sudo apt-get upgrade
@@ -41,7 +41,7 @@ $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ub
 $ sudo apt-get install docker-ce
 ```
 
-# Share Host PC X-Server with Container
+## Share Host PC X-Server with Container
 
 > Run GUI App such as gedit, qt creator in container, we need to share Host PC X-server.
 
