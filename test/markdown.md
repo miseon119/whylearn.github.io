@@ -16,7 +16,7 @@ $ docker commit your_container target_image
 $ docker save -o file.tar your_image
 ```
 
-### <Tar file to docker Image >
+### < Tar file to docker Image >
 ```console
 $ docker load -i yourFile.tar
 ```
