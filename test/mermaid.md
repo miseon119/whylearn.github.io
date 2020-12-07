@@ -4,6 +4,31 @@ sort: 4
 
 # Linux
 
+##  Git Basic Commands
+
+### Commit
+```console
+$ git commit -m "your note"
+```
+
+### Add Remote Repository
+```console
+$ git remote add origin {remote repository Address}
+```
+
+### Add
+```console
+$ git add .
+```
+
+### Push
+```console
+$ git push origin {branch name}
+```
+eg. branch name is master or main.
+
+
+
 ##  Swap Memory
 
 > In Linux OS, whenever RAM has an insufficient amount of memory to hold a process, it borrows some amount of memory from the secondary storage to store its inactive content. Here, the borrowed space from the hard disk is called **Swap Memory**.

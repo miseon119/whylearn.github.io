@@ -4,7 +4,7 @@ sort: 1
 
 # Docker Notes
 
-## Common Command
+## Basic Command
 
 ### Container to image
 ```console
