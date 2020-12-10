@@ -3,6 +3,7 @@ sort: 6
 ---
 
 # Nvidia Jetson Series 
+---
 
 ## SD Card Backup & Restore
 
@@ -14,13 +15,13 @@ $ sudo parted -l
 ```
 This command sample result:
 > Model: Generic MassStorageClass (scsi)
-> Disk /dev/sdb: 31.9GB
-> Sector size (logical/physical): 512B/512B
-> Partition Table: msdos
-> Disk Flags: 
-> 
-> Number  Start   End     Size    Type     File system  Flags
- > 1      4194kB  31.9GB  31.9GB  primary  fat32        lba
+Disk /dev/sdb: 31.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      4194kB  31.9GB  31.9GB  primary  fat32        lba
 
 Step 2: Check SD card unmount
 ```console
@@ -28,7 +29,7 @@ $ sudo umount /dev/your-sd-card
 ```
 sample result:
 > sudo umount /dev/sdb
-> umount: /dev/sdb: not mounted.
+umount: /dev/sdb: not mounted.
 
 Step 3: save as image file
 ```console
@@ -45,6 +46,7 @@ Step 2:
  $ gunzip -c ~/backup_nano.img.gz | dd of=/dev/YourSdCard bs=64K
 ```
 
+---
 ## Swap memory for Jetson nano
 
 Step 1: check current swap status.
