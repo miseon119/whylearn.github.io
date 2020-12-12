@@ -14,9 +14,9 @@ Modify config file paramenter:
 
 `subdivisions=16`
 
-`max_batches`: classes number x 2000, and larger than training images, and larger than 6000.
+`max_batches`: classes number * 2000, and larger than training images, and larger than 6000.
 
-`steps`: 80% x max_batches, 90% x max_batches 
+`steps`: 80% * max_batches, 90% * max_batches 
 
 `width`: 416
 
