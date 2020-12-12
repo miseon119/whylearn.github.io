@@ -9,6 +9,7 @@ sort: 7
 ### Training
 
 Modify config file paramenter:
+
 `batch = 64`
 
 `subdivisions=16`
