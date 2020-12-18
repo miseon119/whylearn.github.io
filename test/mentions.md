@@ -22,14 +22,14 @@ $ virtualenv venv
 ```console
 $ source venv/bin/activate
 ```
-#### Save pip3 package list to .txt file
+### Save pip3 package list to .txt file
 ```console
 $ pip3 freeze > requirements.txt
 ```
 ### Remove virtualenv
 ```console
-sudo apt-get remove --auto-remove virtualenv
+$ sudo apt-get remove --auto-remove virtualenv
 ```
 ```console
-sudo apt-get remove virtualenv
+$ sudo apt-get remove virtualenv
 ```
