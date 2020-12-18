@@ -2,16 +2,34 @@
 sort: 8
 ---
 
-# Mentions Test
+# Python
 
+## Python3 Setting
+
+### Install pip3
+
+```console
+$ sudo apt-get install python3 python3-pip python3-dev python3-setuptools
 ```
-Hey @saowang, what do you think of this?
+```colsole
+$ sudo pip3 install --upgrade pip
 ```
+### Install virtualenv (if need)
 
-Hey @saowang, what do you think of this?
-
-```tip
-Set config `plugins: [jekyll-mentions]`
-
-For documentation, see: [https://github.com/jekyll/jekyll-mentions](https://github.com/jekyll/jekyll-mentions)
+```console
+$ virtualenv venv
+```
+```console
+$ source venv/bin/activate
+```
+#### Save pip3 package list to .txt file
+```console
+$ pip3 freeze > requirements.txt
+```
+### Remove virtualenv
+```console
+sudo apt-get remove --auto-remove virtualenv
+```
+```console
+sudo apt-get remove virtualenv
 ```

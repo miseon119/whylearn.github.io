@@ -30,7 +30,6 @@ $ git push origin {branch name}
 ```
 eg. branch name is master or main.
 
-___
 
 ## SSH Config Setting
 
