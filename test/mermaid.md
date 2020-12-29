@@ -116,7 +116,8 @@ $ ssh Jane@192.168.0.1
 
 [More SSH Config Reference](http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#ForwardX11).
 
-___
+---
+
 ##  Swap Memory
 
 > In Linux OS, whenever RAM has an insufficient amount of memory to hold a process, it borrows some amount of memory from the secondary storage to store its inactive content. Here, the borrowed space from the hard disk is called **Swap Memory**.
@@ -170,4 +171,51 @@ after hitting command:
 file2.txt
 ```
 abbbbbccccc
+```
+
+---
+
+## Troubleshooting
+
+### apt-get update failed
+
+In some cases, update error like this:
+> Err:11 http://ppa.launchpad.net/inameiname/stable/ubuntu bionic Release   
+  404  Not Found [IP: 91.189.95.85 80]
+It mentioned `inameiname` message in this error.
+
+**Solution**
+
+Step 1:
+```console
+$  cd /etc/apt/sources.list.d/
+```
+
+Step 2: Check your `.list` files:
+```console
+$ ls -l
+```
+In my case, it's similar like this:
+> user@user:/etc/apt/sources.list.d$ ls -l
+total 36
+-rw-r--r-- 1 root root  71 Dec 29 10:34 gazebo-stable.list
+-rw-r--r-- 1 root root  71 Dec 29 10:34 gazebo-stable.list.save
+-rw-r--r-- 1 root root 189 Dec 29 10:34 google-chrome.list
+-rw-r--r-- 1 root root 189 Dec 29 10:34 google-chrome.list.save
+-rw-r--r-- 1 root root 138 Dec 29 10:34 inameiname-ubuntu-stable-bionic.list
+-rw-r--r-- 1 root root 338 Dec 29 10:34 nvidia-container-runtime.list
+-rw-r--r-- 1 root root 336 Dec 29 10:34 nvidia-container-runtime.list.save
+-rw-r--r-- 1 root root 193 Dec 29 10:34 vscode.list
+-rw-r--r-- 1 root root 193 Dec 29 10:34 vscode.list.save
+
+`-rw-r--r-- 1 root root 138 Dec 29 10:34 inameiname-ubuntu-stable-bionic.list` this file maybe caused error.
+
+Step 3:
+```console
+$ sudo rm inameiname-ubuntu-stable-bionic.list
+```
+
+Step 4:
+```console
+$ sudo apt-get update
 ```
