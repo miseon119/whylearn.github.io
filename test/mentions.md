@@ -34,7 +34,10 @@ $ sudo apt-get remove --auto-remove virtualenv
 $ sudo apt-get remove virtualenv
 ```
 
-### Class Sample
+---
+
+## Class Sample
+
 ```python
 class Panda:
 	def __init__(self, name, age):
@@ -68,7 +71,9 @@ class Rabbit:
 	def speak(self):
 		print("carrot")
 ```
+
 After using inheritance:
+
 ```python
 class Animal:
 	def __init__(self, name, age):
@@ -146,3 +151,5 @@ class Person:
 
 print(Person.age(5))
 ```
+
+---
