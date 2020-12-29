@@ -4,8 +4,6 @@ sort: 4
 
 # Linux
 
----
-
 ##  Git Basic Commands
 
 ### Commit
@@ -33,7 +31,6 @@ eg. branch name is master or main.
 
 ## SSH Config Setting
 
----
 
 ### SSH Config File Sample
 
