@@ -222,3 +222,34 @@ Step 4:
 ```console
 $ sudo apt-get update
 ```
+
+---
+
+## dpkg common commands
+
+**Install package**
+```console
+$ sudo dpkg -i your.deb
+```
+
+**Search installed package**
+```console
+$  sudo dpkg -l pkg_name
+```
+or 
+```console
+$  sudo dpkg --list pkg_name
+```
+
+```console
+$ dpkg -l | grep part_of_pkgName
+```
+
+**remove**
+```console
+$ sudo dpkg --remove pkg_name
+```
+and 
+```console
+$  sudo dpkg --purge pkg_name
+```
