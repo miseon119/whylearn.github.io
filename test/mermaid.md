@@ -182,6 +182,7 @@ abbbbbccccc
 In some cases, update error like this:
 > Err:11 http://ppa.launchpad.net/inameiname/stable/ubuntu bionic Release   
   404  Not Found [IP: 91.189.95.85 80]
+
 It mentioned `inameiname` message in this error.
 
 **Solution**
@@ -196,7 +197,8 @@ Step 2: Check your `.list` files:
 $ ls -l
 ```
 In my case, it's similar like this:
-> user@user:/etc/apt/sources.list.d$ ls -l
+```
+user@user:/etc/apt/sources.list.d$ ls -l
 total 36
 -rw-r--r-- 1 root root  71 Dec 29 10:34 gazebo-stable.list
 -rw-r--r-- 1 root root  71 Dec 29 10:34 gazebo-stable.list.save
@@ -207,6 +209,7 @@ total 36
 -rw-r--r-- 1 root root 336 Dec 29 10:34 nvidia-container-runtime.list.save
 -rw-r--r-- 1 root root 193 Dec 29 10:34 vscode.list
 -rw-r--r-- 1 root root 193 Dec 29 10:34 vscode.list.save
+```
 
 `-rw-r--r-- 1 root root 138 Dec 29 10:34 inameiname-ubuntu-stable-bionic.list` this file maybe caused error.
 
