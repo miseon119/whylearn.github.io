@@ -23,6 +23,7 @@ cv2.destroyAllWindows()
 ```
 Result:
 ![DrawRect](https://github.com/miseon119/whylearn.github.io/tree/master/test/images/contour1.png)
+![DrawRect2](images/contour1.png)
 
 ---
 
