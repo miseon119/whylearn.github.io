@@ -23,7 +23,7 @@ cv2.destroyAllWindows()
 ```
 Result:
 
-![DrawRect2](images/contour1.png =250x)
+![DrawRect](images/contour1.png)
 
 ---
 
