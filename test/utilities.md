@@ -4,7 +4,29 @@ sort: 9
 
 # OpenCV
 
-## Use **pointPolygonTest** to find target points 
+## Draw Contour
+
+`custom_roi_points` are user defined points, and we use `cv2.drawContours` to draw its contour.
+
+```python
+import numpy as np
+import cv2
+from numpy import array
+
+img = np.zeros((512,512,3), np.uint8)
+custom_roi_points = array([(50,50),(50,100),(100,100),(100,50)])
+
+cv2.drawContours(img, [custom_roi_points], 0, (0,255,0), 2)
+cv2.imshow('draw rect', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+Result:
+![DrawRect](https://github.com/miseon119/whylearn.github.io/tree/master/test/images/contour1.png)
+
+---
+
+## Use pointPolygonTest to find target points 
 
 If you want to check a **point** inside or outside of a **polygon**, use `cv2.pointPolygonTest`:
 
@@ -26,33 +48,3 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ___
-
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.text-red}
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark}
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white}
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white.m-5}
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white.p-5.mb-6}
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white.p-5.mb-6}
-Text can be **bold**{:.h1}, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white.p-2.box-shadow-large}
-Text can be **bold**{:.h1}, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-{:.bg-yellow-dark.text-white.p-5.box-shadow-large.anim-pulse}
-Text can be **bold**{:.h1}, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-```tip
-Edit this page to see how to add this to your docs, theme can use [@primer/css utilities](https://primer.style/css/utilities)
-```
