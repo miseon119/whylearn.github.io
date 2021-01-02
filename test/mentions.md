@@ -161,7 +161,7 @@ print(Person.age(5))
 
 ---
 
-### Edit Specifin Line
+### Edit Specific Line
 
 Original `test.txt`
 
@@ -215,9 +215,15 @@ custom_roi_arr = array(custom_roi_list)
 
 **Create**
 
-- `List = []`
-- `List = [1, 2, 3]`
-- `List = [[10,10], [20,20]]`
+```
+List = []
+```
+```
+List = [1, 2, 3]
+```
+```
+List = [[10,10], [20,20]]
+```
 
 **Size of list**
 
@@ -226,22 +232,29 @@ custom_roi_arr = array(custom_roi_list)
 **Add element**
 
 1. Use `append()`, you can add one elements in the end of the list :
-
-- `List.append(x)`
-
+```
+List.append(x)
+```
 2. Use `insert`, you can add element in specific position:
-
-- `List.insert(index, data)`
-- `List.insert(1, 5)`
-
+```
+List.insert(index, data)
+```
+```
+List.insert(1, 5)
+```
 3. Use `extend`, you can add multiple elements in the end of the list:
-- `List.extent([x, y , z])`
-- `List.extent([3, 4 , 5])`
-
+```
+List.extent([x, y , z])
+```
+```
+List.extent([3, 4 , 5])
+```
 **Access Element**
 
-Access last element: `List[-1]`
-
+Access last element: 
+```
+List[-1]
+```
 
 ---
 
