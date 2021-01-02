@@ -36,7 +36,7 @@ $ sudo apt-get remove virtualenv
 
 ---
 
-## Class Sample
+## Create A Class
 
 ```python
 class Panda:
@@ -53,9 +53,11 @@ class Panda:
 temp = Panda("lingling", 10)
 temp.set_age(11)
 ```
-### Example of Inheritance in Python
 
-Before using inheritance:
+### Example of Inheritance
+
+**Before using inheritance**
+
 ```python
 class Panda:
 	def __init__(self, name, age):
@@ -72,7 +74,7 @@ class Rabbit:
 		print("carrot")
 ```
 
-After using inheritance:
+**After using inheritance**
 
 ```python
 class Animal:
@@ -103,6 +105,7 @@ temp2.show()
 
 ### Class Attributes
 
+
 ```python
 class Person:
 	number_of_people = 0
@@ -115,12 +118,15 @@ p2 = Person("Bob")
 print(Person.number_of_people)
 
 ```
+
 Result:
+
 ```
 2
 ```
 
 ### Class Methods
+
 ```python
 class Person:
 	a = 0
@@ -142,6 +148,7 @@ print(Person.number_of_people())
 ```
 
 ### Class Static Methods
+
 ```python
 class Person:
 
@@ -153,3 +160,88 @@ print(Person.age(5))
 ```
 
 ---
+
+### Edit Specifin Line
+
+Original `test.txt`
+
+```
+aaa
+bbb
+ccc
+```
+
+Run this piece:
+
+```python
+ss = open("test.txt", "r")
+list_of_lines = ss.readlines()
+list_of_lines[1] = "kkk\n"
+
+ss = open("test.txt", "w")
+ss.writelines(list_of_lines)
+ss.close()
+```
+
+Modified `test.txt`
+
+```
+aaa
+kkk
+ccc
+```
+
+---
+
+### Array and List
+
+**Convert Array/List**
+
+```python
+import numpy as np
+from numpy import array
+
+custom_roi_points = array([(50,60),(50,100),(100,50),(100,100)])
+
+# array to list
+custom_roi_list = custom_roi_points.tolist()
+
+# list to array
+custom_roi_arr = array(custom_roi_list)
+
+```
+
+### List
+
+**Create**
+
+- `List = []`
+- `List = [1, 2, 3]`
+- `List = [[10,10], [20,20]]`
+
+**Size of list**
+
+`len(List)`
+
+**Add element**
+
+1. Use `append()`, you can add one elements in the end of the list :
+
+- `List.append(x)`
+
+2. Use `insert`, you can add element in specific position:
+
+- `List.insert(index, data)`
+- `List.insert(1, 5)`
+
+3. Use `extend`, you can add multiple elements in the end of the list:
+- `List.extent([x, y , z])`
+- `List.extent([3, 4 , 5])`
+
+**Access Element**
+
+Access last element: `List[-1]`
+
+
+---
+
