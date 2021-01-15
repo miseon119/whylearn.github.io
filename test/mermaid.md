@@ -171,7 +171,7 @@ $ ssh Jane@192.168.0.1
 
 [More SSH Config Reference](http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#ForwardX11).
 
-###  Enable Or Disable X11Forwarding in SSH server
+###  Enable Or Disable X11 Forwarding in SSH server
 
 Modify sshd configuration file:
 ```console
