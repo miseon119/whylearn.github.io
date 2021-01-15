@@ -5,6 +5,18 @@ sort: 6
 # Nvidia Jetson Series 
 ---
 
+## Jetson Nano Troubleshooting
+
+###  Issue: Could not get EGL display connection
+
+Solution:
+1. Make sure DISPLAY is not set. Unset if necessary.
+2. Disable X11-forwarding.
+
+[reference](https://forums.developer.nvidia.com/t/nano-nvbufsurftransform-could-not-get-egl-display-connection/81946)
+
+---
+
 ## SD Card Backup & Restore
 
 ### Backup
