@@ -171,6 +171,25 @@ $ ssh Jane@192.168.0.1
 
 [More SSH Config Reference](http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#ForwardX11).
 
+###  Enable Or Disable X11Forwarding in SSH server
+
+Modify sshd configuration file:
+```console
+$ sudo vim /etc/ssh/sshd_config
+```
+
+Search `X11Forwarding`:
+```
+X11Forwarding no
+```
+
+Reload or restart SSH server service:
+```console
+$ sudo systemctl restart sshd
+```
+
+[Reference](https://www.simplified.guide/ssh/enable-x11-forwarding)
+
 ---
 
 ##  Swap Memory
