@@ -4,6 +4,61 @@ sort: 4
 
 # Linux
 
+## Chown Command
+
+Change File or Folder's Owner 
+
+### Check Folder or File's Owner
+
+```console
+$ ls -lt
+```
+
+sample result:
+```
+drwxr-xr-x   2 root root       4096 Jan 15 23:34 foo
+```
+### Change Owner To Specific User
+```console
+$ sudo chown user1:user1 <file>
+```
+sample:
+```console
+$ sudo chown wendy:wendy foo
+```
+
+Or use User ID:
+```console
+$ chown 1000:1000 foo.txt
+``` 
+
+Check User ID:
+```console
+$ id
+```
+sample result:
+```
+uid=1000(wendy) gid=1000(wendy) groups=1000(wendy),4(adm),20(dialout),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
+```
+
+### Change To Root
+```console
+$ sudo chown root foo
+```
+
+### Change Group To Root
+```console
+$ sudo chown :root foo
+```
+
+### Chaner Folder's Owner
+```console
+$ chown -R wendy:wendy foo-folder
+```
+
+
+---
+
 ##  Git Basic Commands
 
 ### Commit
