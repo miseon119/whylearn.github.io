@@ -11,7 +11,7 @@ sort: 6
 
 Solution:
 1. Make sure DISPLAY is not set. Unset if necessary.
-2. Disable X11-forwarding.
+2. [Disable X11-forwarding.](https://miseon119.github.io/whylearn.github.io/test/mermaid.html#enable-or-disable-x11-forwarding-in-ssh-server)
 
 [reference](https://forums.developer.nvidia.com/t/nano-nvbufsurftransform-could-not-get-egl-display-connection/81946)
 
@@ -47,7 +47,9 @@ Step 3: save as image file
 ```console
 $ sudo dd if=/dev/yourSdCard conv=sync,noerror bs=64K | gzip -c > ~/backup_nano.img.gz
 ```
+
 ### Restore
+
 Step 1: 
 ```console
  $ sudo su

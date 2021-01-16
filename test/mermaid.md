@@ -18,7 +18,9 @@ sample result:
 ```
 drwxr-xr-x   2 root root       4096 Jan 15 23:34 foo
 ```
+
 ### Change Owner To Specific User
+
 ```console
 $ sudo chown user1:user1 <file>
 ```
@@ -46,10 +48,12 @@ uid=1000(wendy) gid=1000(wendy) groups=1000(wendy),4(adm),20(dialout),24(cdrom),
 $ sudo chown root foo
 ```
 
+
 ### Change Group To Root
 ```console
 $ sudo chown :root foo
 ```
+
 
 ### Chaner Folder's Owner
 ```console
@@ -87,7 +91,6 @@ eg. branch name is master or main.
 
 ## SSH Config Setting
 
-
 ### SSH Config File Sample
 
 Common Remote Control Command via SSH:
@@ -111,6 +114,8 @@ Host BillPC
 ```
 After saving the config file, and then open terminal type `ssh JanePC`. 
 You can access `Jane@192.168.0.1`.
+
+---
 
 ### SSH X11 Forwarding
 
@@ -151,6 +156,8 @@ ssh -X Jane@192.168.0.1
 $ gedit
 ```
 
+---
+
 ### SSH Remote Control Without Password
 
 Step 1: Generate public key
@@ -170,6 +177,8 @@ $ ssh Jane@192.168.0.1
 ```
 
 [More SSH Config Reference](http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#ForwardX11).
+
+---
 
 ###  Enable Or Disable X11 Forwarding in SSH server
 
