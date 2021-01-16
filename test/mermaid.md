@@ -260,6 +260,20 @@ abbbbbccccc
 
 ## Troubleshooting
 
+### Check Service log
+```console
+$ journalctl -u service-name.service
+```
+
+for the current boot:
+```console
+$ journalctl -u service-name.service -b
+```
+[reference1](https://sysops.tistory.com/115)
+[reference2](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)
+[log reference](https://www.loggly.com/ultimate-guide/python-logging-basics/)
+
+
 ### apt-get update failed
 
 In some cases, update error like this:
