@@ -4,6 +4,13 @@ sort: 4
 
 # Linux
 
+## Find Top 10 Largest File/Directories
+
+In terminal:
+```console
+$ sudo du -a /var | sort -n -r | head -n 10
+```
+
 ## Chown Command
 
 Change File or Folder's Owner 
@@ -275,6 +282,18 @@ $ journalctl -u service-name.service -b
 
 [log reference](https://www.loggly.com/ultimate-guide/python-logging-basics/)
 
+
+###  /var/log/ File Too Large
+
+Check Error Log:
+```console
+$ tail -f /var/log/syslog
+```
+
+Clearing the `/var/log/syslog` file:
+```console
+$ sudo cat /dev/null > /var/log/syslog
+```
 
 ### apt-get update failed
 
