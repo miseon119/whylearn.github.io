@@ -4,12 +4,24 @@ sort: 4
 
 # Linux
 
+## Change IP In Terminal
+
+Sample:
+```console
+$ sudo ifconfig eth0 192.168.0.1 netmask 255.255.255.0
+```
+
+---
+
+
 ## Find Top 10 Largest File/Directories
 
 In terminal:
 ```console
 $ sudo du -a /var | sort -n -r | head -n 10
 ```
+
+---
 
 ## Chown Command
 
@@ -266,6 +278,16 @@ abbbbbccccc
 ---
 
 ## Troubleshooting
+
+### System Settings Can't Open in Ubuntu 18.04
+
+```console
+$ sudo apt-get remove gnome-control-center
+$ sudo apt autoremove
+$ sudo apt-get install gnome-control-center
+```
+
+---
 
 ### Check Service log
 ```console
