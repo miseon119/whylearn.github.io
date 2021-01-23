@@ -6,9 +6,9 @@ sort: 4
 
 ## Shell Script
 
-### Array
+**Array**
 
-*arr=(1 2 3)*
+arr=(1 2 3)
 
 array size: `${#arr[@]}`
 
@@ -18,7 +18,32 @@ array's all items: `${arr[*]}` or `${arr[@]}`
 
 arr[0] element size: `${#arr[0]}`
 
----
+
+**User Input**
+
+Input command: `read -p 'name: ' uservar`
+
+Silient input command: `read -sp 'name: ' uservar`
+
+
+**Get IP last Number**
+
+```
+var=123.444.888.235
+new_var="${var%.*}.0"
+```
+[reference](https://unix.stackexchange.com/questions/250740/replace-string-after-last-dot-in-bash)
+
+**if else**
+```
+if [condition];then
+    # do something
+elif [condition];then
+    # do something
+else
+    # do something
+fi    
+```
 
 
 ## Change IP In Terminal
