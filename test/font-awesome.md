@@ -95,7 +95,7 @@ $ dpkg -l | grep TensorRT
 ##  Install DeepStream 5.0
 
 Nvidia said...
-`You must install the following components: - Ubuntu 18.04 - GStreamer 1.14.1 - NVIDIA driver 450.51 - CUDA 10.2 - TensorRT 7.0.X`
+*You must install the following components: - Ubuntu 18.04 - GStreamer 1.14.1 - NVIDIA driver 450.51 - CUDA 10.2 - TensorRT 7.0.X*
 
 Install dependencies:
 ```console

@@ -4,6 +4,23 @@ sort: 4
 
 # Linux
 
+## Shell Script
+
+### Array
+
+`arr=(1 2 3)`
+
+array size: `${#arr[@]}`
+
+arr[0] element: `${arr[0]}`
+
+array's all items: `${arr[*]}` or `${arr[@]}` 
+
+arr[0] element size: `${#arr[0]}`
+
+---
+
+
 ## Change IP In Terminal
 
 Sample:
