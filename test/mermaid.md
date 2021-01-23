@@ -8,15 +8,29 @@ sort: 4
 
 ### Array
 
-`arr=(1 2 3)`
-
-array size: `${#arr[@]}`
-
-arr[0] element: `${arr[0]}`
-
-array's all items: `${arr[*]}` or `${arr[@]}` 
-
-arr[0] element size: `${#arr[0]}`
+```console
+arr=(1 2 3)
+```
+array size: 
+```console
+${#arr[@]}
+```
+arr[0] element: 
+```console
+${arr[0]}
+```
+array's all items: 
+```console
+${arr[*]}
+``` 
+or 
+```console
+${arr[@]}
+``` 
+arr[0] element size: 
+```console
+${#arr[0]}
+```
 
 ---
 
