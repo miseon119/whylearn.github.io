@@ -45,6 +45,8 @@ else
 fi    
 ```
 
+---
+
 
 ## Change IP In Terminal
 
@@ -296,7 +298,6 @@ $ swapon
 For reference, see: https://linuxhint.com/swap_memory_linux/
 ```
 
-
 ### Cut Command
 
 Cut text's words by specific colume
@@ -315,6 +316,35 @@ after hitting command:
 file2.txt
 ```
 abbbbbccccc
+```
+
+### zip command
+
+zip a directory but exclude some directories:
+```console
+$ zip -r zip_file_name foo -x "foo/dir1/*" "foo/dir2/*"
+```
+
+### uname
+
+Linux Kernel Name
+```console
+$ uname -s
+```
+
+Linux Kernel release
+```console
+$ uname -r
+```
+
+Get Machine Architecture
+```console
+$ uname --m
+```
+
+Processor Type
+```console
+$ uname -p
 ```
 
 ---

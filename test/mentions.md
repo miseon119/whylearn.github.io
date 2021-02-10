@@ -256,5 +256,35 @@ Access last element:
 List[-1]
 ```
 
+### ls Directory using glob
+
+sorting by create time
+```python
+sorted_files = sorted(glob.glob('*'), key=os.path.getctime) 
+for i in sorted_files:
+	pass
+```
+
+sorting by touched time
+```python
+sorted_files = sorted(glob.glob('*'), key=os.path.getatime) 
+for i in sorted_files:
+	pass
+```
+
+sorting by modified time
+```python
+sorted_files = sorted(glob.glob('*'), key=os.path.getmtime) 
+for i in sorted_files:
+	pass
+```
+
+sorting by size
+```python
+sorted_files = sorted(glob.glob('*'), key=os.path.getsize) 
+for i in sorted_files:
+	pass
+```
+
 ---
 

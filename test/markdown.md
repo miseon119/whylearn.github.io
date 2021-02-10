@@ -31,6 +31,13 @@ $ docker export your_container targetFile.tar
 $ docker import yourFile.tar
 ```
 
+### Tag Docker Image
+```console
+$ docker tag src_img:tag target_img:tag
+```
+
+---
+
 ## Install Docker in Ubuntu
 
 ```console
