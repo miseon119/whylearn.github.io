@@ -45,6 +45,46 @@ else
 fi    
 ```
 
+**Replace String's Character**
+
+solution 1: Use `tr`
+
+E.g. Replace `192.168.0.111` to `192_168_0_111`
+
+```console
+$ server_ip=192.168.0.111
+$ echo "$server_ip" | tr . _
+```
+
+Result: 
+```
+192_168_0_111
+```
+
+solution 2: Use bash expansion
+```console
+$ server_ip=192.168.0.111
+$ result=${server_ip//[.]/_}
+```
+
+Result: 
+```
+192_168_0_111
+```
+
+More usage:
+
+Only replace first match char:
+```
+${string/substring/replacement}
+```
+Replace all match chars:
+```
+${string//substring/replacement}
+```
+
+
+
 ---
 
 
