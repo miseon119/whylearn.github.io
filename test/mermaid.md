@@ -83,22 +83,15 @@ Replace all match chars:
 ${string//substring/replacement}
 ```
 
-
-
----
-
-
-## Change IP In Terminal
+**Change IP In Terminal**
 
 Sample:
 ```console
 $ sudo ifconfig eth0 192.168.0.1 netmask 255.255.255.0
 ```
 
----
 
-
-## Find Top 10 Largest File/Directories
+**Find Top 10 Largest File/Directories**
 
 In terminal:
 ```console
@@ -106,6 +99,53 @@ $ sudo du -a /var | sort -n -r | head -n 10
 ```
 
 ---
+## tr command
+
+> **tr** is a command line utility for translating or deleting characters.
+
+**Replace character: tr -c**
+
+There are string1=aaabbbccc, string2=ab:
+```console
+$ echo -n "aaabbbccc" | tr -c ab k
+```
+result:
+```
+aaabbbkkk
+```
+
+**Delete repeated characters: tr -s**
+
+There are string1=aaabbbccc:
+```console
+$ echo -n "aaabbbccc" | tr -s '[a-z]'
+```
+result:
+```
+abc
+```
+
+**Delete Characters: tr -d**
+
+There are string1=aaabbbccc:
+```console
+$ echo -n "aaabbbccc" | tr -d bbb
+```
+result:
+```
+aaaccc
+```
+
+**Replace lowercase to uppercase**
+```console
+$  echo aaabbbccc | tr '[a-z]' '[A-Z]'
+```
+result:
+```
+AAABBBCCC
+```
+
+
 
 ## Chown Command
 
@@ -146,19 +186,17 @@ sample result:
 uid=1000(wendy) gid=1000(wendy) groups=1000(wendy),4(adm),20(dialout),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
 ```
 
-### Change To Root
+**Change To Root**
 ```console
 $ sudo chown root foo
 ```
 
-
-### Change Group To Root
+**Change Group To Root**
 ```console
 $ sudo chown :root foo
 ```
 
-
-### Chaner Folder's Owner
+**Chaner Folder's Owner**
 ```console
 $ chown -R wendy:wendy foo-folder
 ```
