@@ -4,7 +4,9 @@ sort: 9
 
 # OpenCV
 
-## Draw Contour
+## All About Contour
+
+### Draw Contour
 
 `custom_roi_points` are user defined points, and we use `cv2.drawContours` to draw its contour.
 
@@ -25,9 +27,25 @@ Result:
 
 ![DrawRect](images/contour1.png)
 
+### Find object's minimal Rectangle
+
+Get minimal rectangle:
+```python
+rotate_rect = cv2.minAreaRect(array(obj_pts))
+w = rotate_rect[1][0]
+h = rotate_rect[1][1]
+obj_center = rotate_rect[0]
+angle = rotate_rect[2]
+```
+Get minimal rectangle points:
+```python
+rect_pts = cv2.boxPoints(rotate_rect)
+```
+
 ---
 
-## Use pointPolygonTest to find target points 
+
+## Distance between polygon and points 
 
 If you want to check a **point** inside or outside of a **polygon**, use `cv2.pointPolygonTest`:
 
