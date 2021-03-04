@@ -4,6 +4,18 @@ sort: 4
 
 # Linux
 
+## ffmpeg
+
+Resize Video:
+```console
+$ ffmpeg -i input_video.mp4 -s 640x480 -c:a copy out.mp4
+```
+
+Extract frame in a video(every 10 frames):
+```console
+$ ffmpeg -i out.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 img_%05d.jpg
+```
+
 ## Shell Script
 
 **Array**

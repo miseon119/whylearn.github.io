@@ -249,6 +249,12 @@ List.extent([x, y , z])
 ```
 List.extent([3, 4 , 5])
 ```
+
+4. clear()
+```python
+list.clear()
+```
+
 **Access Element**
 
 Access last element: 
