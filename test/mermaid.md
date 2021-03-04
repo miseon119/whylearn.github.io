@@ -4,6 +4,18 @@ sort: 4
 
 # Linux
 
+## cat file
+
+Print 5 lines:
+```console
+$ head -n 5 my.txt
+```
+
+print with line number:
+```console
+$ cat -n my.txt
+```
+
 ## ffmpeg
 
 Resize Video:
