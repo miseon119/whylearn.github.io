@@ -4,6 +4,35 @@ sort: 8
 
 # Python
 
+## Version Check
+
+### OpenCV Version
+
+**In Python**
+
+```python
+import cv2
+cv2.__version__
+```
+
+**In C++**
+
+```console
+pkg-config --modversion opencv4
+```
+or
+
+```console
+pkg-config --modversion opencv
+```
+
+### Tensorflow Version
+
+```python
+import tensorflow as tf
+ tf.__version__
+```
+
 ## Python3 Setting
 
 ### Install pip3

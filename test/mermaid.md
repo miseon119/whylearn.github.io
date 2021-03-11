@@ -4,7 +4,34 @@ sort: 4
 
 # Linux
 
-## cat file
+## softlink and hardlink
+
+**create soft link**
+
+```console
+$ ln -s {source-filename} {symbolic-filename}
+```
+
+**verify**
+
+```console
+$ ls -l file1 link1
+```
+
+**overwrite symlinks/Soft link**
+
+```console
+$ ln -f -s file link
+```
+
+[reference](https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/)
+## find command
+
+```console
+$ find /dir -name keyword
+```
+
+## cat command
 
 Print 5 lines:
 ```console
