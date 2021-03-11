@@ -45,12 +45,43 @@ $ sudo pip3 install --upgrade pip
 ```
 ### Install virtualenv (if need)
 
+**Install**
+```console
+$ pip3 install virtualenv
+```
+
+**Create a virtual environment**
 ```console
 $ virtualenv venv
 ```
+
+**Activate virtual environment**
 ```console
 $ source venv/bin/activate
 ```
+
+**Deactivate**
+```console
+$ deactivate
+```
+
+### virtualenvwrapper
+
+**install**
+```console
+$ pip3 install virtualenvwrapper
+```
+
+**Create a virtual environment**
+```console
+$ mkvirtualenv venv
+```
+
+**Work on a virtual environment**
+```console
+$ workon venv
+```
+
 ### Save pip3 package list to .txt file
 ```console
 $ pip3 freeze > requirements.txt
