@@ -4,6 +4,13 @@ sort: 10
 
 # IDE And Environment Setting
 
+## Check GPU
+
+```console
+$ sudo lshw -C display
+```
+
+
 ## VS Code Remote SSH Setting
 
 **Local PC Setting**
