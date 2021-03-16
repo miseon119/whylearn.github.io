@@ -19,7 +19,7 @@ head : Output the first part of files.
 
 **Human Readable Format**
 ```console
-$ # du -hs * | sort -rh | head -5
+$ du -hs * | sort -rh | head -5
 ```
  
 **Display the largest folders/files including the sub-directories** 
@@ -85,6 +85,11 @@ $ ffmpeg -i input_video.mp4 -s 640x480 -c:a copy out.mp4
 Extract frame in a video(every 10 frames):
 ```console
 $ ffmpeg -i out.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 img_%05d.jpg
+```
+
+change file format:
+```console
+$ ffmpeg -i out.mp4 -c copy sample.h264
 ```
 
 ## Shell Script
