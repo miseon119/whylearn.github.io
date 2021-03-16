@@ -27,7 +27,7 @@ Tracing by timestamp:
 $ strace -t yourApp
 ```
 
-##ltrace
+## ltrace
 
 lib trace tool
 ```console
