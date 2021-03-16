@@ -4,6 +4,30 @@ sort: 4
 
 # Linux
 
+## strace
+strace is a debug tool which helps you to debug your APP.
+
+save tracing message to .txt:
+```console
+$ strace -o debug.txt yourApp
+```
+
+check system  calls:
+```console
+$ strace -c yourApp
+```
+
+Extracting info by specific keyword, like `open`:
+```console
+$ strace -e open yourApp
+```
+
+Tracing by timestamp:
+```console
+$ strace -t yourApp
+```
+
+
 ## Find Biggest Files and Directories in Linux
 
 ```console
