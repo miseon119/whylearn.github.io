@@ -27,6 +27,12 @@ Tracing by timestamp:
 $ strace -t yourApp
 ```
 
+##ltrace
+
+lib trace tool
+```console
+$ ltrace -t yourApp
+```
 
 ## Find Biggest Files and Directories in Linux
 
