@@ -34,7 +34,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-**Write Video**
+## Write Video
 
 ```python
 import numpy as np
