@@ -62,6 +62,14 @@ outfile.release();
 cv2.destroyAllWindows()
 ```
 
+## Merge Two Frames
+
+```python
+#img == imread()
+red_img = np.full((1080,1920,3), (0,0,255), np.uint8)
+img_copy = cv2.addWeighted(src1=img, alpha=0.8, src2=red_img, beta=0.2, gamma=0)
+```
+
 ## All About Contour
 
 ### Draw Contour
