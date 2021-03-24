@@ -547,6 +547,20 @@ $ uname -p
 
 ## Troubleshooting
 
+### dpkg 
+
+Error:
+**E: Sub-process /usr/bin/dpkg returned an error code (1)**
+when install a package.
+
+Solution:
+```console
+$ sudo rm -r /var/lib/dpkg/info/*
+$ sudo dpkg --configure -a
+$ sudo apt update -y
+```
+
+
 ### System Settings Can't Open in Ubuntu 18.04
 
 ```console

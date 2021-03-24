@@ -1,16 +1,41 @@
 ---
 sort: 2
 ---
+# C++
 
-# Modern C++ Notes
+## CMake
 
-## Pass Arguments to Threads
+**Check Module List** 
+
+```console
+$ cmake --help-module-list
+```
+
+**Check pkg-config list**
+
+```console
+$ pkg-config --list-all
+```
+
+**Set CMAKE_PREFIX_PATH**
+
+```console
+$ cmake -DCMAKE_PREFIX_PATH=/home/rip/Qt/5.12.1/gcc_64/lib/cmake
+```
+or in CMakeLists:
+```cmake
+set(CMAKE_PREFIX_PATH "/home/rip/Qt/5.12.1/gcc_64/lib/cmake")
+```
+
+## Modern C++ Notes
+
+### Pass Arguments to Threads
 
 - Pass Simple Arguments
 - Pass References
 - Pass Class Member Function
 
-### Passing simple arguments to thread
+#### Passing simple arguments to thread
 
 ```cpp
 #include <iostream>
@@ -32,7 +57,7 @@ int main()
 }
 ```
 
-### Passing References
+#### Passing References
 
 > We use std::ref() to pass a reference
 
@@ -51,7 +76,7 @@ int main()
     return 0;
 }
 ```
-### Passing  Member Function
+#### Passing  Member Function
 
 > Create a thread using Class member function.
 
@@ -81,7 +106,7 @@ int main() {
 }
 ```
 
-## map vs. unordered_map
+### map vs. unordered_map
 
 |          | map             | unordered_map  |
 | -------- | --------------- | -------------- |
@@ -89,7 +114,7 @@ int main() {
 | Ordering | True            | False          |
 
 
-### Unordered_map Usage
+#### Unordered_map Usage
 
 Check an element:
 ```cpp

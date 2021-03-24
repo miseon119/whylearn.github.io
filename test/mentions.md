@@ -33,6 +33,12 @@ import tensorflow as tf
  tf.__version__
 ```
 
+### gstreamer version
+
+```console
+dpkg -l | grep gstreamer
+```
+
 ## Python3 Setting
 
 ### Install pip3
