@@ -69,7 +69,9 @@ $ sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.2_amd64.deb
 
 [reference](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-deb) 
 
-## Install TensorRT 7.0 in Ubuntu 18.04 (x64)
+##  Install TensorRT
+
+### Install TensorRT 7.0 in Ubuntu 18.04 (x64)
 
 1. [Download](https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.0/7.0.0.11/local_repo/nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.0.0.11-ga-20191216_1-1_amd64.deb) 
 
@@ -98,6 +100,44 @@ $ dpkg -l | grep TensorRT
 [reference](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-700/tensorrt-install-guide/index.html#installing-debian)
 
 ---
+
+## Uninstall TensorRT
+
+Step 1: Uninstall libnvinfer7 which was installed using the Debian:
+```console
+$ sudo apt-get purge "libnvinfer*"
+```
+
+Step 2: Uninstall uff-converter-tf, graphsurgeon-tf, and onnx-graphsurgeon which were also installed using the Debian
+```console
+$ sudo apt-get purge graphsurgeon-tf onnx-graphsurgeon
+```
+
+Step 3: Uninstall the Python TensorRT wheel file
+If using Python 3.x:
+```console
+$ sudo pip3 uninstall tensorrt
+```
+
+Step 4: Uninstall the Python UFF wheel file
+If using Python 3.x:
+```console
+$ sudo pip3 uninstall uff
+```
+
+Step 5: Uninstall the Python GraphSurgeon wheel file
+If using Python 3.x:
+```console
+$ sudo pip3 uninstall graphsurgeon
+```
+
+Step 6: Uninstall the Python ONNX GraphSurgeon wheel file
+If using Python 3.x:
+```console
+$ sudo pip3 uninstall onnx-graphsurgeon
+```
+
+
 
 ##  Install DeepStream 5.0
 
@@ -128,3 +168,22 @@ $ sudo apt-get install ./deepstream-5.0_5.0.1-1_amd64.deb
 
 
 [reference](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html#dgpu-setup-for-ubuntu)
+
+### Uninstall DeepStream
+
+Remove DeepStream 4.0 or later installations:
+```console
+$ cd /opt/nvidia/deepstream/deepstream/
+$ PREV_DS_VER as 4.0
+$ sudo ./uninstall.sh
+```
+
+
+## VS Code
+
+### Python Interactive Mode
+
+create an empty .py file and type:
+```python
+# %%
+```

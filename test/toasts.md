@@ -5,6 +5,35 @@ sort: 2
 
 ## CMake
 
+**Include header**
+
+```cmake
+include_directories(${YOUR_DIRECTORY})
+```
+
+**Set source files**
+```cmake
+set(SOURCES file.cpp file2.cpp ${YOUR_DIRECTORY}/file1.h ${YOUR_DIRECTORY}/file2.h)
+add_executable(test ${SOURCES})
+```
+
+**Set Variable**
+```cmake
+SET()
+```
+
+
+
+**OpenCV Sample CMakeLists**
+
+```cmake
+cmake_minimum_required(VERSION 2.8)
+project( DisplayImage )
+find_package( OpenCV REQUIRED )
+add_executable( DisplayImage DisplayImage.cpp )
+target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+```
+
 **Check Module List** 
 
 ```console
