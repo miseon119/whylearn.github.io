@@ -93,6 +93,37 @@ Result:
 
 ![DrawRect](images/contour1.png)
 
+
+### Bitwise Operation
+
+AND:
+```python
+cv2.bitwise_and(img1, img2)
+```
+
+OR
+```python
+cv2.bitwise_or(img1, img2)
+```
+
+XOR
+```python
+cv2.bitwise_xor(img1, img2)
+```
+
+NOT
+```python
+cv2.bitwise_not(img1)
+```
+
+Binary image:
+```python
+src = cv2.imread("sample.jpg")
+gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
+_, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+and_img = cv2.bitwise_and(gray, binary)
+```
+
 ### Find object's minimal Rectangle
 
 Get minimal rectangle:
@@ -109,6 +140,19 @@ rect_pts = cv2.boxPoints(rotate_rect)
 ```
 
 ---
+
+## All about polygon
+
+**Draw polygon line**
+```python
+img = cv2.polylines(img, [pts], False, blue, 2) # open type poylgon
+img = cv2.polylines(img, [pts], True, blue, 2) # close type poylgon
+```
+
+**Draw Convex polygon**
+```python
+img = cv2.fillConvexPoly(img, [pts], blue) 
+```
 
 
 ## Distance between polygon and points 
@@ -132,4 +176,12 @@ cv2.imshow('img',blank_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+
+## inshow setting
+
+**Scalable Window Size**
+```python
+cv2.namedWindow("result", cv2.WINDOW_NORMAL) 
+```
+
 ___
