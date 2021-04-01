@@ -79,6 +79,7 @@ $ sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.2_amd64.deb
 
 ```console
 $ sudo dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.0.0.11-ga-20191216_1-1_amd64.deb
+$ sudo apt-key add /var/nv-tensorrt-repo-${tag}/7fa2af80.pub
 $ sudo apt-get update
 $ sudo apt-get install tensorrt libcudnn7
 ```
