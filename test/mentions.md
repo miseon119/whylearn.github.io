@@ -328,6 +328,12 @@ Access last element:
 List[-1]
 ```
 
+**deeo copy list**
+```python
+import copy
+a = [1, 2, 3]
+b = copy.deepcopy(a)
+```
 
 ### ls Directory using glob
 
