@@ -319,33 +319,40 @@ $ sudo chown :root foo
 $ chown -R wendy:wendy foo-folder
 ```
 
-
 ---
 
 ##  Git Basic Commands
 
-### Commit
+**Commit**
 ```console
 $ git commit -m "your note"
 ```
 
-### Add Remote Repository
+**Modify Commit Message**
+```console
+$ git commit -m “new message” - -amend
+```
+
+**Add Remote Repository**
 ```console
 $ git remote add origin {remote repository Address}
 ```
 
-### Add
+**Add**
 ```console
 $ git add .
 ```
-```
 
-### Push
+**Push**
 ```console
 $ git push origin {branch name}
 ```
 eg. branch name is master or main.
 
+**Initialize repo**
+```console
+$ git init
+```
 ---
 
 ## SSH Config Setting
