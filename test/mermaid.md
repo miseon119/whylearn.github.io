@@ -321,7 +321,17 @@ $ chown -R wendy:wendy foo-folder
 
 ---
 
-##  Git Basic Commands
+## Git
+
+**git workflow**
+[git-workflow3](images/git-workflow-diagram3.png)
+
+```console
+# workspace -> staging
+$ git add <file/dir>
+```
+
+###  Git Basic Commands
 
 **Commit**
 ```console
@@ -353,6 +363,7 @@ eg. branch name is master or main.
 ```console
 $ git init
 ```
+
 ---
 
 ## SSH Config Setting
