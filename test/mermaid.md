@@ -324,11 +324,17 @@ $ chown -R wendy:wendy foo-folder
 ## Git
 
 **git workflow**
-[git-workflow3](images/git-workflow-diagram3.png)
+![git-workflow3](images/git-workflow-diagram3.png)
 
 ```console
 # workspace -> staging
 $ git add <file/dir>
+
+# staging -> local repo
+$ git commit -m "some info"
+
+# local repo -> remote repo, local master to remote origin
+$ git push origin master
 ```
 
 ###  Git Basic Commands
