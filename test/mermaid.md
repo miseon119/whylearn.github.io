@@ -320,10 +320,10 @@ $ chown -R wendy:wendy foo-folder
 ```
 
 ---
-
+https://miseon119.github.io/whylearn.github.io/test/images/git-workflow-diagram3.png
 ## Git
 
-**git workflow**
+### git workflow
 
 ![git-workflow3](images/git-workflow-diagram3.png)
 
@@ -337,6 +337,36 @@ $ git commit -m "some info"
 # local repo -> remote repo, local master to remote origin
 $ git push origin master
 ```
+
+```console
+# workspace <- staging
+$ git checkout -- <file>
+
+# staging <- local repo
+$ git reset HEAD <file>
+
+# local repo <- remote repo
+$ git clone <git_url>  
+$ git fetch upstream master # 拉取远程代码到本地但不应用在当前分支
+$ git pull upstream master   # 拉取远程代码到本地但应用在当前分支
+$ git pull --rebase upstream master  # 如果平时使用rebase合并代码则加上
+```
+
+```console
+# workspace <- local repo
+$ git reset <commit>          # 本地仓库覆盖到工作区(保存回退文件内容修改)
+$ git reset --mixed <commit>  # 本地仓库覆盖到工作区(保存回退文件内容修改)
+$ git reset --soft <commit>   # 本地仓库覆盖到工作区(保留修改并加到暂存区)
+$ git reset --hard <commit>   # 本地仓库覆盖到工作区(不保留修改直接删除掉)
+```
+
+#### git user info
+
+```console
+$ git config --global user.name "your_name"
+$ git config --global user.email "your_email"
+```
+
 
 ###  Git Basic Commands
 
