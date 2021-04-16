@@ -324,6 +324,7 @@ $ chown -R wendy:wendy foo-folder
 ## Git
 
 **git workflow**
+
 ![git-workflow3](images/git-workflow-diagram3.png)
 
 ```console
