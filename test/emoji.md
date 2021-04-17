@@ -30,6 +30,38 @@ lower case: `Ctrl + KL`
 
 [//]: # (go to method:<kbd>Ctrl</kbd>+<kbd>R</kbd>)
 
+### Environment Setting
+
+#### Set Python3 Build
+
+step 1:
+In sublime text 3, select `Tools -> Build System -> New Build System`
+
+step 2: 
+find your python3 path, maybe you can use `which` command to find.
+
+```console
+$ which python3
+```
+in my case, my path is */usr/bin/python3*
+
+step 3:
+then, add following code:
+```plain
+{
+ "cmd": ["/usr/bin/python3", "-u", "$file"],
+ "file_regex": "^[ ]File \"(...?)\", line ([0-9]*)",
+ "selector": "source.python"
+}
+```
+
+step 4:
+save as: `py3.sublime-build`
+
+step 5:
+select, `Tools -> Build System -> py3`
+
+and run your code using `Ctrl+B`
 
 
 ## Go 
