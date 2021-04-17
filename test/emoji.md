@@ -9,9 +9,13 @@ sort: 5
 ### shortcut key
 
 Show/Hide sidebar: `Ctrl + K` and `Ctrl + B`
+
 Duplicate lines: `Ctrl + Shift + D`
+
 Goto line number: `Ctrl + G`
+
 select word: `Ctrl + D`
+
 select all of the word: `Alt + F3`
 
 # Go 
