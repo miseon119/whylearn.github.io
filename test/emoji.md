@@ -63,6 +63,45 @@ select, `Tools -> Build System -> py3`
 
 and run your code using `Ctrl+B`
 
+## Vim 
+
+### shortcut key
+
+Delete character: `x`
+
+go to 2nd line: `:2`
+
+add: `a` or `A`
+
+move down: `j`
+
+move up: `k`
+
+move left: `h`
+
+move right: `l`
+
+go bottom: `G`
+
+go top: `gg`
+
+add a line(below): `o`
+
+add a line(above): `O`
+
+go to next word: `w`
+
+go back last word: `b`
+
+delete word: `dw`
+
+delete rest of line: `D`
+
+delete rest of line and insert: `C`
+
+deletl to char a: `dta`
+
+
 
 ## Go 
 
