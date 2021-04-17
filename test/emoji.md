@@ -18,7 +18,17 @@ select word: `Ctrl + D`
 
 select all of the word: `Alt + F3`
 
-go to method:<kbd>Ctrl</kbd>+<kbd>R</kbd>
+jump back: `Alt + -`
+
+jump forward: `Alt + Shift + -`
+
+upper case: `Ctrl + KU`
+
+lower case: `Ctrl + KL`
+
+[referece](https://gist.github.com/mrliptontea/4c793ebdf72ed145bcbf)
+
+[//]: # (go to method:<kbd>Ctrl</kbd>+<kbd>R</kbd>)
 
 
 
