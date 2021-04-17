@@ -18,7 +18,11 @@ select word: `Ctrl + D`
 
 select all of the word: `Alt + F3`
 
-# Go 
+go to method:<kbd>Ctrl</kbd>+<kbd>R</kbd>
+
+
+
+## Go 
 
 Variable Declaration
 ```go
