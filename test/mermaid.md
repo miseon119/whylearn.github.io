@@ -122,6 +122,11 @@ change file format:
 $ ffmpeg -i out.mp4 -c copy sample.h264
 ```
 
+cut video:
+```console
+$ ffmpeg -ss 00:01:26 -t 00:01:52 -i dog.mp4 -acodec copy -vcodec copy -async 1 cut.mp4
+```
+
 ## Shell Script
 
 **Array**
