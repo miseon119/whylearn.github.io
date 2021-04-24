@@ -101,6 +101,15 @@ delete rest of line and insert: `C`
 
 deletl to char a: `dta`
 
+## Qt Creator
+
+Stop Debugging: `Shift + F5`
+
+Next Bookmark: `Ctrl + .`
+
+Previous Bookmark: `Ctrl + ,`
+
+Show/Hide side menu: `Alt + 0`
 
 
 ## Go 
