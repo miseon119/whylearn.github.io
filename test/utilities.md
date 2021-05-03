@@ -4,7 +4,7 @@ sort: 9
 
 # OpenCV
 
-## Read video
+## Video Processing
 
 **Read Frame by key**
 
@@ -34,7 +34,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-## Write Video
+**Write Video**
 
 ```python
 import numpy as np
@@ -60,6 +60,27 @@ while(True):
 cap.release()
 outfile.release();
 cv2.destroyAllWindows()
+```
+## Filtering
+
+Averaging
+```python
+blur = cv2.blur(img,(5,5))
+```
+
+Median Filtering
+```python
+median = cv2.medianBlur(img,5)
+```
+
+Gaussian Filtering
+```python
+blur = cv2.GaussianBlur(img,(5,5),0)
+```
+
+Bilateral Filtering
+```python
+blur = cv2.bilateralFilter(img,9,75,75)
 ```
 
 ## Merge Two Frames
