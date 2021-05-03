@@ -34,3 +34,9 @@ numpy.var(arr)
 numpy.std(arr)
 ```
 
+**MSE**
+```python
+np.square(np.subtract(A, B)).mean()
+```
+
+
