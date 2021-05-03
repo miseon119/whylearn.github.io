@@ -2,10 +2,19 @@
 sort: 3
 ---
 
-# Design Patterns
+# Python Lib
 
-## Strategy Pattern
+## Numpy
 
-> **Strategy pattern** lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+sum an array:
+```python
+import numpy as np  
+a=np.array([0.4,0.5])  
+b=np.sum(a)  
+```
+```python
+import numpy as np  
+a=np.array([[1,4],[3,5]])  
+b=np.sum(a,axis=0) 
+```
 
-![pattern-strategy](images/disign-pattern-strategy.jpg)
