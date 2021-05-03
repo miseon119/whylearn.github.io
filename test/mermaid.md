@@ -406,6 +406,38 @@ eg. branch name is master or main.
 $ git init
 ```
 
+#### branch
+
+Check remote repo branch:
+```console
+$ git branch -r
+```
+
+create branch:
+```console
+$ git branch dev
+```
+
+move to branch:
+```console
+$ git checkout dev
+```
+
+create and move to branch:
+```console
+$ git checkout -b dev
+```
+
+delete branch:
+```console
+$ git branch -d dev
+```
+
+push branch:
+```console
+git push -u origin test
+```
+
 ---
 
 ## SSH Config Setting
