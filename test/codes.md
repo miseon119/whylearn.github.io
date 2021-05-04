@@ -39,4 +39,10 @@ numpy.std(arr)
 np.square(np.subtract(A, B)).mean()
 ```
 
+## OS LIB
 
+**Generate Dir**
+```python
+from pathlib import Path
+Path("/my/directory").mkdir(parents=True, exist_ok=True)
+```
