@@ -39,6 +39,16 @@ numpy.std(arr)
 np.square(np.subtract(A, B)).mean()
 ```
 
+**padding 2D array**
+```python
+up=2
+down=2
+left=2
+right=2
+np.pad(img, ((up,down),(left,right)), 'constant', constant_values=0)
+```
+
+
 ## OS LIB
 
 **Generate Dir**
