@@ -69,22 +69,29 @@ head : Output the first part of files.
 ## softlink and hardlink
 
 **create soft link**
-
 ```console
 $ ln -s {source-filename} {symbolic-filename}
 ```
 
 **verify**
-
 ```console
 $ ls -l file1 link1
 ```
 
 **overwrite symlinks/Soft link**
-
 ```console
 $ ln -f -s file link
 ```
+
+**unlink**
+```console
+$ unlink symlink_name
+```
+or 
+```console
+$ rm symlink_name
+```
+
 
 [reference](https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/)
 ## find command
