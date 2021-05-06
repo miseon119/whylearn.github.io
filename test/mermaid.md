@@ -65,6 +65,10 @@ sort command : sort lines of text files.
 -h : Compare human readable numbers (e.g., 2K, 1G).
 head : Output the first part of files.
 
+**Total files' number** 
+```console
+find . -mindepth 1 -maxdepth 1 | wc -l
+```
 
 ## softlink and hardlink
 
