@@ -6,26 +6,6 @@ sort: 8
 
 ## Version Check
 
-### OpenCV Version
-
-**In Python**
-
-```python
-import cv2
-cv2.__version__
-```
-
-**In C++**
-
-```console
-pkg-config --modversion opencv4
-```
-or
-
-```console
-pkg-config --modversion opencv
-```
-
 ### Tensorflow Version
 
 ```python
