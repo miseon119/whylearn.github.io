@@ -4,8 +4,6 @@ sort: 9
 
 # OpenCV
 
-## Video Processing
-
 ## Filtering
 
 Averaging
