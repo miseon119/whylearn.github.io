@@ -4,6 +4,20 @@ sort: 6
 
 # Nvidia Series 
 
+## Jetson
+
+### Jetson Tools
+
+Install jtop:
+```console
+$ sudo pip3 install jetson-stats
+```
+Run:
+```console
+$ sudo jtop
+```
+
+
 ## TLT(Transfer Learning Toolkit) v2 command
 
 ### MaskRCNN TLT
