@@ -48,6 +48,19 @@ right=2
 np.pad(img, ((up,down),(left,right)), 'constant', constant_values=0)
 ```
 
+### Change element 
+
+```python 
+ a[a < 0] = 0
+```
+```python 
+np.where(a < 0, 0, a)
+```
+```python 
+np.clip(a, 0, 4)
+```
+
+
 
 ## OS LIB
 
