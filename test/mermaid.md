@@ -148,6 +148,23 @@ rotate video:
 $ ffmpeg -i "in.mp4" -metadata:s:v "rotate=90" -c copy "out.mp4"
 ```
 
+Resize image:
+```console
+$ ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png
+```
+or 
+```console
+$ ffmpeg -i input.jpg -vf scale=320:-1 output_320x240.png
+```
+
+Add image to video:
+```console
+# tl=(5,5)
+$ ffmpeg -i input.mp4 -i logo.png -filter_complex "overlay=5:5" -codec:a copy output.mp4
+```
+[more](https://stackoverflow.com/questions/10918907/how-to-add-transparent-watermark-in-center-of-a-video-with-ffmpeg)
+
+
 ## Shell Script
 
 **Array**
