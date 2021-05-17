@@ -48,6 +48,13 @@ right=2
 np.pad(img, ((up,down),(left,right)), 'constant', constant_values=0)
 ```
 
+**show array's all elements**
+```python
+import sys
+import numpy
+numpy.set_printoptions(threshold=sys.maxsize)
+```
+
 ### Change element 
 
 ```python 
