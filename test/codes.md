@@ -67,7 +67,39 @@ np.where(a < 0, 0, a)
 np.clip(a, 0, 4)
 ```
 
+## matplotlib
 
+### plot numpy array
+
+Preinstall:
+```console
+$ sudo apt-get install python3-tk
+```
+
+Save plot:
+```python 
+import matplotlib.pyplot as plt
+plt.plot([1,2,3], [5,7,4])
+plt.savefig("mygraph.png")
+```
+
+Show array distribution:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+n, bins, patches = plt.hist(np_array)
+plt.show()
+```
+or 
+```python
+from matplotlib import pyplot as plt 
+import numpy as np  
+   
+a = np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27]) 
+plt.hist(a, bins = [0,20,40,60,80,100]) 
+plt.title("histogram") 
+plt.show()
+```
 
 ## OS LIB
 
