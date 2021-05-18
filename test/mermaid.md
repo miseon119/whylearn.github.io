@@ -8,7 +8,7 @@ sort: 4
 strace is a debug tool which helps you to debug your APP.
 
 save tracing message to .txt:
-```console
+```consolel rotate π/1 radians, or 180°:
 $ strace -o debug.txt yourApp
 ```
 
@@ -147,6 +147,18 @@ rotate video:
 ```console
 $ ffmpeg -i "in.mp4" -metadata:s:v "rotate=90" -c copy "out.mp4"
 ```
+or
+```console
+# rotate 90 degree
+#0 = 90CounterCLockwise and Vertical Flip (default)
+#1 = 90Clockwise
+#2 = 90CounterClockwise
+#3 = 90Clockwise and Vertical Flip
+# -vf "transpose=2,transpose=2" for 180 degrees.
+
+$ ffmpeg -i in.mov -vf "transpose=1" out.mov
+```
+
 
 Resize image:
 ```console
