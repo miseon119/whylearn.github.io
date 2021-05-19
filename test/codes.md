@@ -6,13 +6,15 @@ sort: 3
 
 ## Numpy
 
+### Statistics
+
 **sum** an array:
 ```python
 import numpy as np  
 a=np.array([0.4,0.5])  
 b=np.sum(a)  
 ```
-
+or
 ```python
 import numpy as np  
 a=np.array([[1,4],[3,5]])  
@@ -32,6 +34,11 @@ numpy.var(arr)
 **standard deviation**
 ```python
 numpy.std(arr)
+```
+
+**count elements**
+```python
+cnt = np.count_nonzero(hue_roi > 0)
 ```
 
 **MSE**
@@ -67,9 +74,9 @@ np.where(a < 0, 0, a)
 np.clip(a, 0, 4)
 ```
 
-## matplotlib
 
-### plot numpy array
+
+## matplotlib
 
 Preinstall:
 ```console
@@ -82,6 +89,8 @@ import matplotlib.pyplot as plt
 plt.plot([1,2,3], [5,7,4])
 plt.savefig("mygraph.png")
 ```
+
+### plot numpy array
 
 Show array distribution:
 ```python
