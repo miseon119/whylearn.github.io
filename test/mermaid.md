@@ -70,6 +70,18 @@ head : Output the first part of files.
 find . -mindepth 1 -maxdepth 1 | wc -l
 ```
 
+### ls command
+
+find 5 most-recently modified files
+```console
+$ ls -1t | head -5
+```
+
+last 5 modified files
+```console
+$ ls -1t | tail -5
+```
+
 ## softlink and hardlink
 
 **create soft link**
