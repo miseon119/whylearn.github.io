@@ -8,7 +8,7 @@ sort: 4
 strace is a debug tool which helps you to debug your APP.
 
 save tracing message to .txt:
-```consolel rotate π/1 radians, or 180°:
+```console
 $ strace -o debug.txt yourApp
 ```
 
