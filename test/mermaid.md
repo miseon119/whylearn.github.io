@@ -189,6 +189,27 @@ $ ffmpeg -i input.mp4 -i logo.png -filter_complex "overlay=5:5" -codec:a copy ou
 [more](https://stackoverflow.com/questions/10918907/how-to-add-transparent-watermark-in-center-of-a-video-with-ffmpeg)
 
 
+Convert 10-bit H.265 to 10-bit H.264
+```console
+$ ffmpeg -i input -c:v libx264 -crf 18 -c:a copy output.mkv
+```
+
+- `-crf 18` appear visually lossless
+
+- `-crf 0`  lossless mode
+
+
+Convert 10-bit H.265 to 8-bit H.265
+```console
+$ ffmpeg -i input -c:v libx265 -vf format=yuv420p -c:a copy output.mkv
+```
+
+Convert 10-bit H.265 to 8-bit H.264
+```console
+$ ffmpeg -i input -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy output.mkv
+```
+
+
 ## Shell Script
 
 **Array**
