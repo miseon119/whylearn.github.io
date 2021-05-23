@@ -150,10 +150,18 @@ cut video:
 $ ffmpeg -ss 00:01:26 -t 00:01:52 -i dog.mp4 -acodec copy -vcodec copy -async 1 cut.mp4
 ```
 
-concat videos:
+### concat videos
+
+concat demuxer:
 ```console
-$ ffmpeg -i "concat:video1.mp4|video2.mp4" -c copy "out.mp4"
+$ cat mylist.txt
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+    
+$ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
+[reference](https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg)
 
 rotate video:
 ```console
