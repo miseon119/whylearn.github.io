@@ -62,6 +62,12 @@ import numpy
 numpy.set_printoptions(threshold=sys.maxsize)
 ```
 
+**Change data type:**
+```python 
+img = data.astype(np.uint8)
+```
+
+
 ### Change element 
 
 ```python 
