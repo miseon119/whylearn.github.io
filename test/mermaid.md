@@ -743,6 +743,13 @@ $ sudo dpkg --configure -a
 $ sudo apt update -y
 ```
 
+### Can not open settings
+Solution:
+```console
+$ sudo apt-get remove gnome-control-center
+$ sudo apt autoremove
+$ sudo apt-get install gnome-control-center
+```
 
 ### System Settings Can't Open in Ubuntu 18.04
 
