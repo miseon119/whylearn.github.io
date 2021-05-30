@@ -730,6 +730,13 @@ $ uname -p
 
 ## Troubleshooting
 
+### Docker Container
+
+#### Gtk-WARNING **: cannot open display: :x.0
+
+Add `-v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY` option
+
+
 ### dpkg 
 
 Error:
