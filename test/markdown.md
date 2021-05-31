@@ -65,3 +65,10 @@ In Container:
 $ apt-get update
 $ apt install libcanberra-gtk-module libcanberra-gtk3-module
 ```
+
+## docker warning config.json permission denied
+
+```console
+$ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+$ sudo chmod g+rwx "/home/$USER/.docker" -R
+```
