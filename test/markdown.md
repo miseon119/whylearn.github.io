@@ -36,6 +36,16 @@ $ docker import yourFile.tar
 $ docker tag src_img:tag target_img:tag
 ```
 
+### push
+```console
+$ docker push localhost:5000/hello-world
+```
+
+### tag
+```console
+$ docker tag hello-world localhost:5000/hello-world
+```
+
 ---
 
 ## Install Docker in Ubuntu
