@@ -19,7 +19,7 @@ $ tree -L 2 -d -N /
 
 no indentation + full path
 ```console
-$ 
+$ tree -L 2 -d -fi -N /
 ```
 
 [reference](https://www.lesstif.com/lpt/linux-tree-54952142.html)
