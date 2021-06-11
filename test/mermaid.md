@@ -4,6 +4,26 @@ sort: 4
 
 # Linux
 
+
+## tree
+
+-L 2: Depth 2  
+```console
+$ tree -L 2 -N /
+```
+
+Only show directories:
+```console
+$ tree -L 2 -d -N /
+```
+
+no indentation + full path
+```console
+$ 
+```
+
+[reference](https://www.lesstif.com/lpt/linux-tree-54952142.html)
+
 ## strace
 strace is a debug tool which helps you to debug your APP.
 
