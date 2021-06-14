@@ -170,6 +170,11 @@ cut video:
 $ ffmpeg -ss 00:01:26 -t 00:01:52 -i dog.mp4 -acodec copy -vcodec copy -async 1 cut.mp4
 ```
 
+An image to a video:
+```console
+$ ffmpeg -loop 1 -i sample.jpg -c:v libx264 -t 5 -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2"  out.mp4
+```
+
 ### concat videos
 
 concat demuxer:
