@@ -86,8 +86,17 @@ Install SYNOLOGY assistant in Windows
 Step 2: 
 Connect to your Synology NAS on your Windows computer using Synology Assistant.
 
-[synology-assistant](./images/synology_assistant.JPG)
+![synology-assistant](./images/synology_assistant.JPG)
 
+Step 3:
+Synology Assistant Setup Wizard
+![synology-assistant2](./images/synology_assistant2.JPG)
+
+Step 4:
+Synology NAS Folders directly from Windows Explorer 
+![synology-assistant3](./images/synology_assistant3.JPG)
+
+[reference](https://www.itblock.sg/post/easysynologynaswindowssetup)
 
 
 ## Environment Setting
