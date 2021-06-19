@@ -76,6 +76,20 @@ Previous Bookmark: `Ctrl + ,`
 
 Show/Hide side menu: `Alt + 0`
 
+## Synology NAS Setting
+
+### Connect NAS to Windows Computer
+
+Step 1: 
+Install SYNOLOGY assistant in Windows
+
+Step 2: 
+Connect to your Synology NAS on your Windows computer using Synology Assistant.
+
+[synology-assistant](./images/synology_assistant.JPG)
+
+
+
 ## Environment Setting
 
 ### Set Python3 Build
