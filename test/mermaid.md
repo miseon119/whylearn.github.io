@@ -821,6 +821,16 @@ Clearing the `/var/log/syslog` file:
 $ sudo cat /dev/null > /var/log/syslog
 ```
 
+### Reset PATH
+
+```console
+$ source /etc/environment 
+```
+```console
+$ echo PATH
+```
+
+
 ### apt-get update failed
 
 In some cases, update error like this:
