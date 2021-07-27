@@ -377,3 +377,16 @@ e.g.
 $ bash Anaconda3-2021.05-Linux-x86_64.sh
 ```
 
+### Uninstall
+
+Delete anaconda directory
+```console
+$ rm -rf ~/anaconda3
+```
+
+Remove conda path from `~./bash_profile`:
+
+e.g. 
+```console
+$ export PATH="/Users/jsmith/anaconda3/bin:$PATH"
+```
