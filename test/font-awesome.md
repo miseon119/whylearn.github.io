@@ -358,7 +358,7 @@ $ chmod 600 ~/.ssh/config
 $ chmod 600 ~/.ssh/id_rsa.pub
 ```
 
-### Connect To A Remote Host In VS Code
+**Connect To A Remote Host In VS Code**
 
 Step 1: In VS Code, Command Palette (F1)
 
