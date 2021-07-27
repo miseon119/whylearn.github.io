@@ -525,6 +525,7 @@ $ git init
 **fetch**
 
 The **git fetch** command is used to download the contents from a remote repository. **git pull** directly changes your local working copy of a repository.
+
 git서버에서 최신 코드 받아오기
 
 ```console
