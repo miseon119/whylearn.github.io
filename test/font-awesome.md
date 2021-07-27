@@ -358,6 +358,7 @@ $ chmod 600 ~/.ssh/config
 $ chmod 600 ~/.ssh/id_rsa.pub
 ```
 
+
 **Connect To A Remote Host In VS Code**
 
 Step 1: In VS Code, Command Palette (F1)
@@ -365,6 +366,22 @@ Step 1: In VS Code, Command Palette (F1)
 Step 2: Search  `Remote-SSH: Connect to Host` and Click
 
 Step 3: Type `user@hostname`
+
+
+### CMake Configuration
+
+Step 1: Install c++ extension, `ctrl+shift+x` search "c++".
+
+Step 2: Install cmake tools extension, `ctrl+shift+x` search "Cmake tools"
+
+Step 3: make GCC installed.
+
+**Create CMake project**
+
+step 1:
+
+`Ctrl+Shift+P` run the **CMake: Quick Start** command
+
 
 ---
 
