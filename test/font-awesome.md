@@ -365,3 +365,15 @@ create an empty .py file and type:
 ```python
 # %%
 ```
+
+## Anaconda
+
+### Installation
+
+[Download](https://docs.anaconda.com/anaconda/install/linux/) bash file, then install.
+
+e.g.
+```console
+$ bash Anaconda3-2021.05-Linux-x86_64.sh
+```
+
