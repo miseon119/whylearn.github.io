@@ -387,7 +387,9 @@ step 3: `ctrl+shift+p` and type cmake:Build
 
 If need selelct debug/release mode by `ctrl+shift+p` and type **CMake: Select Variant**
 
+
 **Debug**
+
 `ctrl+shift+p`, type **CMake: Debug**
 
 [reference](https://code.visualstudio.com/docs/cpp/cmake-linux)
