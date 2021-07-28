@@ -323,6 +323,7 @@ $ PREV_DS_VER as 4.0
 $ sudo ./uninstall.sh
 ```
 
+---
 
 ## VS Code
 
@@ -378,10 +379,18 @@ Step 3: make GCC installed.
 
 **Create CMake project**
 
-step 1:
+step 1:  create CMakeLists.txt and .cpp files
 
-`Ctrl+Shift+P` run the **CMake: Quick Start** command
+step 2: build, `ctrl+shift+p` and type **cmake:Configure**, select cpp compiler
 
+step 3: `ctrl+shift+p` and type cmake:Build
+
+If need selelct debug/release mode by `ctrl+shift+p` and type **CMake: Select Variant**
+
+**Debug**
+`ctrl+shift+p`, type **CMake: Debug**
+
+[reference](https://code.visualstudio.com/docs/cpp/cmake-linux)
 
 ---
 
