@@ -396,6 +396,17 @@ If need selelct debug/release mode by `ctrl+shift+p` and type **CMake: Select Va
 
 ---
 
+## Sublime Text
+
+### Install Plugin
+
+Step 1: Open Sublime Text, `ctrl+shift+p` and type "install package control"
+
+Step 2: `ctrl+shift+p` and type "install package"
+
+Step 3: type your package name and check your plugin.
+
+---
 
 ## Anaconda
 
