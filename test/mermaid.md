@@ -764,6 +764,22 @@ $ uname -p
 
 ---
 
+## Terminal Setting
+
+### Install Terminator
+
+```console
+$ sudo apt-get install terminator
+```
+
+### Set Default Terminal
+
+```console
+$ sudo update-alternatives --config x-terminal-emulator
+```
+
+---
+
 ## Troubleshooting
 
 ### Docker Container
