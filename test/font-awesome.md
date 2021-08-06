@@ -92,6 +92,10 @@ Show/Hide side menu: `Alt + 0`
 
 `Ctrl+Tab`: Next Window
 
+`Ctrl+pgup`: previous tab
+
+`ctrl+pgdown`: next tab
+
 ---
 
 ## Synology NAS Setting
