@@ -4,6 +4,35 @@ sort: 7
 
 # Deep Learning Note
 
+## Human Pose Estimation
+
+### Top-Down
+
+> There are two important parts: a human body detector to obtain person bounding boxes 
+> and a single-person pose estimator to predict the locations of keypoints within these bounding boxes.
+
+#### Approaches
+- CPM
+- Hourglass
+- CPN
+- Simple Baselines
+- HRNet
+- MSPN
+
+
+### Bottom-Up
+
+> In general, top-down has more accurate result, and bottow-up is faster.
+
+#### Approaches
+- Openpose
+- Hourglass+Associative Embedding
+- HigherHRNet
+
+
+
+---
+
 ## COCO DATASET FORMAT
 
 The COCO dataset is formatted in JSON and is a collection of
