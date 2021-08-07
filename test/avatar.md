@@ -11,6 +11,10 @@ sort: 7
 > There are two important parts: a human body detector to obtain person bounding boxes 
 > and a single-person pose estimator to predict the locations of keypoints within these bounding boxes.
 
+![topDown](./images/top-down.png)
+
+[Deep Learning-Based Human Pose Estimation](https://arxiv.org/pdf/2012.13392.pdf)
+
 #### Approaches
 - CPM
 - Hourglass
@@ -22,7 +26,10 @@ sort: 7
 
 ### Bottom-Up
 
+> The bottom-up has two main steps including body joint detection and joint candidates assembling for individual bodies.
 > In general, top-down has more accurate result, and bottow-up is faster.
+
+![bottom-up](./images/bottom-up.png)
 
 #### Approaches
 - Openpose
