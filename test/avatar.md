@@ -23,7 +23,6 @@ sort: 7
 - HRNet
 - MSPN
 
-
 ### Bottom-Up
 
 > The bottom-up has two main steps including body joint detection and joint candidates assembling for individual bodies.
