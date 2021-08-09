@@ -565,6 +565,24 @@ git push -u origin test
 ```
 [reference](https://pks2974.medium.com/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B8%B0%EC%B4%88-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-533b3689db81)
 
+#### Diff
+
+Compare two branch file
+```console
+$ git diff mybranch2 master -- myfile.py
+```
+or 
+```console
+$ git diff branch1:path/to/file branch2:path/to/file
+```
+
+#### Clone
+
+Clone branch
+```console
+$ git clone -b <branch> <remote_repo>
+```
+
 ---
 
 ## SSH Config Setting
