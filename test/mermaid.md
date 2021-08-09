@@ -575,6 +575,14 @@ or
 ```console
 $ git diff branch1:path/to/file branch2:path/to/file
 ```
+Compare local/remote branches:
+```console
+$ git diff <local branch> <remote>/<remote branch>
+```
+e.g.
+```console
+$ git diff myfile.py origin/myfile.py
+```
 
 #### Clone
 
