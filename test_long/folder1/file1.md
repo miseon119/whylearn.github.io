@@ -1,3 +1,5 @@
-# [LeetCode] 41. First Missing Positive
+# C++
+
+## [LeetCode] 41. First Missing Positive
 
 source: `{{ page.path }}`
