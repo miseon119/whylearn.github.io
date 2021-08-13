@@ -1,3 +1,3 @@
-# Memory
+# LeetCode
 
 source: `{{ page.path }}`
