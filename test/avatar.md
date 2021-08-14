@@ -11,8 +11,15 @@ sort: 7
 - Fully Connected Layer: It splits into two separate FC-blocks. 
     - Predicting the class-scores for the proposed object, e.g. output size [N, 81]
     - Box-coordinates for the proposed object, e.g. output size [N, 4 * C] or [N,(x,y,w,h) * C]
+- `N` is number of objects proposed by the Region-Proposal Layer.
+- `C` number of classes
 
 ![frcnn](./images/frcnn_360.jpg) 
+
+## Mask RCNN
+
+- ROI-Align Layer: It Instead of quantization, ROI-Align uses bilinear-interpolation to fill up the values in the fixed-size featuremap.
+- Final output size: [N, C, 28, 28] 
 
 
 ## Human Pose Estimation
