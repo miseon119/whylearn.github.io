@@ -12,7 +12,7 @@ sort: 7
     - Predicting the class-scores for the proposed object, e.g. output size [N, 81]
     - Box-coordinates for the proposed object, e.g. output size [N, 4 * C] or [N,(x,y,w,h) * C]
 
-![frcnn](https://learnopencv.com/wp-content/uploads/2021/05/fasterRCNN.jpg) 
+![frcnn](./images/frcnn_360.jpg) 
 
 
 ## Human Pose Estimation
