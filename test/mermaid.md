@@ -808,6 +808,17 @@ $ sudo update-alternatives --config x-terminal-emulator
 
 ## Troubleshooting
 
+### remmina codec error Ubuntun 18.04
+
+
+```console
+$ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+$ sudo apt update
+$ sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+$ sudo killall remmina
+```
+restart remmina
+
 ### Docker Container
 
 #### Gtk-WARNING **: cannot open display: :x.0
