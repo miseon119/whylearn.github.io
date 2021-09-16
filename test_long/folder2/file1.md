@@ -1,3 +1,5 @@
-# Essential Characteristics of Cloud Computing
+# Cloud Computing Notes
 
-source: `{{ page.path }}`
+## Essential Characteristics of Cloud Computing
+
+![cloud1](./images/cloud1.PNG)
