@@ -1,3 +1,3 @@
-# I'm folder2
+# Cloud Computing Notes
 
 source: `{{ page.path }}`
