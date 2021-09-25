@@ -1,3 +1,3 @@
-# Cloud Computing Notes
+# MLOps Roadmap 
 
-source: `{{ page.path }}`
+![MLOps](https://miro.medium.com/max/1000/1*wr7uGBu9Kb918igOxhJVlA.jpeg)
