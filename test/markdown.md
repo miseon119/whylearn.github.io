@@ -141,3 +141,9 @@ Conceptual structure:
 2. Nvidia Docker
 3. Triton Client libraries for communication with Triton inference server
 4. Your deep learning platform library (Tensorflow/pytorch)
+
+[reference 1](https://medium.com/nvidia-ai/how-to-deploy-almost-any-hugging-face-model-on-nvidia-triton-inference-server-with-an-8ee7ec0e6fc4)
+
+[reference 2](https://github.com/sachinsharma9780/AI-Enterprise-Workshop-Building-ML-Pipelines)
+
+[aws-triton](https://sofian-hamiti.medium.com/deploying-an-nvidia-triton-inference-server-on-amazon-ecs-ca6f0bebfcc8)
