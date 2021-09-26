@@ -51,5 +51,5 @@ sort: 1
 
 **Jetpack**
 
-Path: `VPI installation path: /opt/nvidia/vpi/vpi-0.1`
+Path: `/opt/nvidia/vpi/vpi-0.1`
 
