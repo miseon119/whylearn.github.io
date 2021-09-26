@@ -4,6 +4,27 @@ sort: 4
 
 # Linux
 
+## deb package
+
+```console
+dpkg -i package.deb #安装/更新一个 deb 包
+dpkg -r package_name #从系统删除一个 deb 包
+dpkg -l #显示系统中所有已经安装的 deb 包
+dpkg -l | grep httpd #显示所有名称中包含 "httpd" 字样的deb包
+dpkg -s package_name #获得已经安装在系统中一个特殊包的信息
+dpkg -L package_name #显示系统中已经安装的一个deb包所提供的文件列表
+dpkg --contents package.deb #显示尚未安装的一个包所提供的文件列表
+dpkg -S /bin/ping #确认所给的文件由哪个deb包提供
+#APT 软件工具 (Debian, Ubuntu 以及类似系统)
+apt-get install package_name #安装/更新一个 deb 包
+apt-cdrom install package_name #从光盘安装/更新一个 deb 包
+apt-get update #升级列表中的软件包
+apt-get upgrade #升级所有已安装的软件
+apt-get remove package_name #从系统删除一个deb包
+apt-get check #确认依赖的软件仓库正确
+apt-get clean #从下载的软件包中清理缓存
+apt-cache search searched-package #返回包含所要搜索字符串的软件包名称
+```
 
 ## tree
 
@@ -442,154 +463,6 @@ $ chown -R wendy:wendy foo-folder
 
 ---
 https://miseon119.github.io/whylearn.github.io/test/images/git-workflow-diagram3.png
-## Git
-
-### git workflow
-
-![git-workflow3](images/git-workflow-diagram3.png)
-
-```console
-# workspace -> staging
-$ git add <file/dir>
-
-# staging -> local repo
-$ git commit -m "some info"
-
-# local repo -> remote repo, local master to remote origin
-$ git push origin master
-```
-
-```console
-# workspace <- staging
-$ git checkout -- <file>
-
-# staging <- local repo
-$ git reset HEAD <file>
-
-# local repo <- remote repo
-$ git clone <git_url>  
-$ git fetch upstream master # 拉取远程代码到本地但不应用在当前分支
-$ git pull upstream master   # 拉取远程代码到本地但应用在当前分支
-$ git pull --rebase upstream master  # 如果平时使用rebase合并代码则加上
-```
-
-```console
-# workspace <- local repo
-$ git reset <commit>          # 本地仓库覆盖到工作区(保存回退文件内容修改)
-$ git reset --mixed <commit>  # 本地仓库覆盖到工作区(保存回退文件内容修改)
-$ git reset --soft <commit>   # 本地仓库覆盖到工作区(保留修改并加到暂存区)
-$ git reset --hard <commit>   # 本地仓库覆盖到工作区(不保留修改直接删除掉)
-```
-
-#### git user info
-
-```console
-$ git config --global user.name "your_name"
-$ git config --global user.email "your_email"
-```
-
-
-###  Git Basic Commands
-
-**Commit**
-```console
-$ git commit -m "your note"
-```
-
-**Modify Commit Message**
-```console
-$ git commit -m “new message” - -amend
-```
-
-**Add Remote Repository**
-```console
-$ git remote add origin {remote repository Address}
-```
-
-**Add**
-```console
-$ git add .
-```
-
-**Push**
-```console
-$ git push origin {branch name}
-```
-eg. branch name is master or main.
-
-**Initialize repo**
-```console
-$ git init
-```
-
-**fetch**
-
-The **git fetch** command is used to download the contents from a remote repository. **git pull** directly changes your local working copy of a repository.
-
-git서버에서 최신 코드 받아오기
-
-```console
-$ git fetch 
-```
-
-#### branch
-
-Check remote repo branch:
-```console
-$ git branch -r
-```
-
-create branch:
-```console
-$ git branch dev
-```
-
-move to branch:
-```console
-$ git checkout dev
-```
-
-create and move to branch:
-```console
-$ git checkout -b dev
-```
-
-delete branch:
-```console
-$ git branch -d dev
-```
-
-push branch:
-```console
-git push -u origin test
-```
-[reference](https://pks2974.medium.com/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B8%B0%EC%B4%88-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-533b3689db81)
-
-#### Diff
-
-Compare two branch file
-```console
-$ git diff mybranch2 master -- myfile.py
-```
-or 
-```console
-$ git diff branch1:path/to/file branch2:path/to/file
-```
-Compare local/remote branches:
-```console
-$ git diff <local branch> <remote>/<remote branch>
-```
-e.g.
-```console
-$ git diff myfile.py origin/myfile.py
-```
-
-#### Clone
-
-Clone branch
-```console
-$ git clone -b <branch> <remote_repo>
-```
 
 ---
 
