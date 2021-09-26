@@ -2,7 +2,7 @@
 
 ## git workflow
 
-![git-workflow3](images/git-workflow-diagram3.png)
+![git-workflow3](/test/images/git-workflow-diagram3.png)
 
 ```console
 # workspace -> staging
