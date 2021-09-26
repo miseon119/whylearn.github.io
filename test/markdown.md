@@ -116,3 +116,28 @@ Conceptual structure:
 [more](https://docs.nvidia.com/vpi/architecture.html)
 
 [nvidia-blog](https://developer.nvidia.com/blog/reducing-temporal-noise-on-images-with-vpi-on-jetson-embedded-computers/)
+
+## Nvidia Triton Server
+
+> Triton is an efficient inference serving software enabling you to focus on application development. It is open-source software that serves inferences using all major framework backends: TensorFlow, PyTorch, TensorRT, ONNX Runtime, and even custom backends in C++ and Python. It optimizes serving across three dimensions.
+
+![triton-arch](https://developer.nvidia.com/blog/wp-content/uploads/2020/10/Triton-Inference-Server.png)
+
+**New Features**
+- Multiple models can run simultaneously on the same GPU.
+- Batching Support
+- Ensemble support
+- Multi-GPU support
+- Model repositories in Google Cloud Storage, or in Amazon S3
+
+### Setup
+
+1. Set up our own inference server (docker container)
+2. write a python client-side script (communicate with the inference server to send requests, and get back predictions response)
+
+### Requirments
+
+1. Nvidia CUDA enabled GPU
+2. Nvidia Docker
+3. Triton Client libraries for communication with Triton inference server
+4. Your deep learning platform library (Tensorflow/pytorch)
