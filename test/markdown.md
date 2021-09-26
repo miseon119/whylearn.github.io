@@ -21,3 +21,9 @@ sort: 1
   - Force Sensor
   - Custom Lidar Patterns
 - Downloadable from NVIDIA Omniverse Launcher
+
+**Synthetic Data Generation**
+
+> Isaac Sim has built-in support for a variety of sensor types that are important in training perception models. These sensors include RGB, depth, bounding boxes, and segmentation.
+
+> Output synthetic data** in the KITTI format. This data can then be used directly with the NVIDIA Transfer Learning Toolkit to enhance model performance with use case-specific data.
