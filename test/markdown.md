@@ -114,3 +114,5 @@ Conceptual structure:
 ![ conceptual_structure](images/conceptual_structure.png)
 
 [more](https://docs.nvidia.com/vpi/architecture.html)
+
+[nvidia-blog](https://developer.nvidia.com/blog/reducing-temporal-noise-on-images-with-vpi-on-jetson-embedded-computers/)
