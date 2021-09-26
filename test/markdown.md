@@ -65,3 +65,52 @@ sort: 1
 
 Path: `/opt/nvidia/vpi/vpi-0.1`
 
+**Example**
+
+![boxfilter1](images/boxfilter1.png)
+
+python
+```python
+import vpi
+input = vpi.Image((640,480), vpi.Format.U8)
+with vpi.Backend.CUDA:
+    output = input.box_filter(3)
+```
+
+c++
+```cpp
+#include <vpi/Image.h>
+#include <vpi/Stream.h>
+#include <vpi/algo/BoxFilter.h>
+
+int main()
+{
+    VPIImage input, output;
+    vpiImageCreate(640, 480, VPI_IMAGE_FORMAT_U8, 0, &input);
+    vpiImageCreate(640, 480, VPI_IMAGE_FORMAT_U8, 0, &output);
+
+    //Create a stream to execute the algorithm. 
+    VPIStream stream;
+    vpiStreamCreate(0, &stream);
+    
+    //Submit the box filter algorithm to the stream
+    vpiSubmitBoxFilter(stream, VPI_BACKEND_CUDA, input, output, 3, 3, VPI_BORDER_CLAMP);
+    
+    //Wait until the stream finishes processing.
+    vpiStreamSync(stream);
+    
+    //Destroy created objects.
+    vpiStreamDestroy(stream);
+    vpiImageDestroy(input);
+    vpiImageDestroy(output);
+ 
+    return 0;
+}
+   
+```
+
+Conceptual structure:
+
+![ conceptual_structure](images/conceptual_structure.png)
+
+[more](https://docs.nvidia.com/vpi/architecture.html)
