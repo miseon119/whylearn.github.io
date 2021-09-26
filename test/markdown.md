@@ -29,3 +29,4 @@ sort: 1
 > Output synthetic data in the KITTI format. This data can then be used directly with the NVIDIA Transfer Learning Toolkit to enhance model performance with use case-specific data.
 
 [more](https://developer.nvidia.com/blog/nvidia-isaac-sim-on-omniverse-now-available-in-open-beta/)
+[webinar](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31824/)
