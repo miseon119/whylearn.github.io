@@ -38,6 +38,18 @@ sort: 1
 
 > NVIDIA VPI is a library that abstracts heterogeneous video stream computing on NVIDIA embedded devices. VPI provides a common API to use various hardware modules for accelerating computer vision applications. 
 
+> VPI supports the backends CPU, GPU (using CUDA), PVA (Programmable Vision Accelerator), VIC (Video and Image Compositor) and NVENC(Video encoder engine). 
+
+
+| Backend | Device/platform |
+|---------| ----------------|
+| CPU | All devices on x86 (linux) and Jetson aarch64 platforms |
+| CUDA | All devices on x86 (linux) with a Maxwell or superior NVIDIA GPU, and Jetson aarch64 platforms |
+| PVA | All Jetson AGX Xavier series and Jetson Xavier NX devices |
+| VIC | All Jetson devices. |
+| NVENC | All Jetson devices. Noting that nvenc that has dense optical flow is only supported on Jetson AGX Xavier series. |
+
+
 ![architecture](images/Arch_overview.png)
 
 **New Features**
