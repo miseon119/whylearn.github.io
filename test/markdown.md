@@ -31,3 +31,25 @@ sort: 1
 [more](https://developer.nvidia.com/blog/nvidia-isaac-sim-on-omniverse-now-available-in-open-beta/)
 
 [webinar link](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31824/)
+
+---
+
+## NVIDIA VPI
+
+> NVIDIA VPI is a library that abstracts heterogeneous video stream computing on NVIDIA embedded devices. VPI provides a common API to use various hardware modules for accelerating computer vision applications. 
+
+![architecture](images/Arch_overview.png)
+
+**New Features**
+- Support for different processing backends
+- VPI allows a combination of different backends in the same processing pipeline.
+- Zero copy, shared memory mapping interface to manage data between the different backends.
+- The API is designed to minimize initial memory allocations typically required just at the starting stage of many computer vision algorithms.
+- OpenCV and EGL interoperability.
+- Synchronization mechanisms that are agnostic of the backend being used.
+
+
+**Jetpack**
+
+Path: `VPI installation path: /opt/nvidia/vpi/vpi-0.1`
+
