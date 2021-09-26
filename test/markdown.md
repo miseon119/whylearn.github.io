@@ -10,4 +10,14 @@ sort: 1
 
 ![isaac](https://developer.nvidia.com/sites/default/files/akamai/isaac/images/IsaacSim_with_ROS_StereoCamera.png)
 
-```
+**New Features**
+
+- Multi-Camera Support
+- Fisheye Camera with Synthetic Data
+- ROS2 Support
+- PTC Onshape Importer
+- Improved Sensor Support
+  - Ultrasonic Sensor
+  - Force Sensor
+  - Custom Lidar Patterns
+- Downloadable from NVIDIA Omniverse Launcher
