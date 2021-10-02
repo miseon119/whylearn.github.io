@@ -147,3 +147,40 @@ Conceptual structure:
 [reference 2](https://github.com/sachinsharma9780/AI-Enterprise-Workshop-Building-ML-Pipelines)
 
 [aws-triton](https://sofian-hamiti.medium.com/deploying-an-nvidia-triton-inference-server-on-amazon-ecs-ca6f0bebfcc8)
+
+### Approach
+
+Step 1: Install Triton Docker Image
+
+Pull the [image](https://ngc.nvidia.com/catalog/containers/nvidia:tritonserver):
+```bash
+$ docker pull nvcr.io/nvidia/tritonserver:<xx.yy>-py3
+```
+
+Step 2: Create A Model Repository
+The [model repositor](https://github.com/triton-inference-server/server/blob/r21.05/docs/model_configuration.md) is the directory where you place the models that you want Triton to server.
+
+
+Step 3: Run Triton
+
+**Run on System with GPUs**
+```bash
+$ docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v/full/path/to/docs/examples/model_repository:/models nvcr.io/nvidia/tritonserver:<xx.yy>-py3 tritonserver --model-repository=/models
+```
+**Run on CPU-Only System**
+```bash
+$ docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v/full/path/to/docs/examples/model_repository:/models nvcr.io/nvidia/tritonserver:<xx.yy>-py3 tritonserver --model-repository=/models
+```
+
+Step 4: Verify Triton Is Running Correctly
+```bash
+$ curl -v localhost:8000/v2/health/ready
+```
+Result e.g.
+```plain
+...
+< HTTP/1.1 200 OK
+< Content-Length: 0
+< Content-Type: text/plain
+```
+[more](https://github.com/triton-inference-server/server/blob/r21.05/docs/quickstart.md)
