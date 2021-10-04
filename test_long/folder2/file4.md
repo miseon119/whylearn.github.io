@@ -40,9 +40,10 @@ service: set permanent IP address, Lifecycle of Pod and Service not connected
 
 **Deployment** for stateless apps, **StatefulSet** for stateful Apps or Databases.
 
-![kube4](./images/kube4.png)
-![kube5](./images/kube5.png)
-![kube6](./images/kube6.png)
+
+## Kubernetes Configuration
+
+![kube7](./images/kube7.png)
 
 
 
