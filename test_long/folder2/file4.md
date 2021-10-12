@@ -46,4 +46,5 @@ service: set permanent IP address, Lifecycle of Pod and Service not connected
 ![kube7](./images/kube7.png)
 
 
-
+## Master Process
+![./images/master_process.png]
