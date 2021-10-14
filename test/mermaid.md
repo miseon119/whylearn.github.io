@@ -814,6 +814,31 @@ Step 4:
 $ sudo apt-get update
 ```
 
+### Serial port permission denied errors
+
+> This is because the device file of the serial port does not have permissions to allow to currently logged in user to “read” or “write” to the serial device. 
+
+Confirm device user:
+```console
+$ ls -l /dev/ttyUSB*
+```
+
+verify if the user does belong to the dialout group
+```console
+$ id -Gn Jane
+```
+
+add the user to the “dialout” supplementary group
+```console
+$ sudo usermod -a -G dialout <username>
+```
+
+logout and login, try the “id” command:
+```console
+$ id -Gn Jane
+```
+[more](https://websistent.com/fix-serial-port-permission-denied-errors-linux/)
+
 ---
 
 ## dpkg common commands
