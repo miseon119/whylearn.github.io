@@ -42,6 +42,7 @@ $ git reset --hard <commit>   # 本地仓库覆盖到工作区(不保留修改�
 ```console
 $ git config --global user.name "your_name"
 $ git config --global user.email "your_email"
+$ git config --list
 ```
 
 
