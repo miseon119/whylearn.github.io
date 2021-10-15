@@ -17,6 +17,26 @@ Run:
 $ sudo jtop
 ```
 
+### Install pygame
+python2 version pygame
+```console
+$ sudo apt update
+$ sudo apt install python-pygame
+```
+
+python3 version pygame
+```console
+$ sudo apt update
+$ sudo apt install libsdl-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
+$ sudo apt install libsmpeg-dev libportmidi-dev libavformat-dev libswscale-dev
+$ sudo apt install libfreetype6-dev
+$ sudo apt install libportmidi-dev
+
+$ sudo apt install python3-pip
+$ pip3 install pygame==1.9.6
+```
+[more](https://qiita.com/karaage0703/items/5d43309bc688858e7c2a)
+
 ## TLT(Transfer Learning Toolkit) V3
 
 ### UNET
