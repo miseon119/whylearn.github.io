@@ -1,4 +1,5 @@
-# Technology Trends
+# Personal Projects
 
-## 
-
+##  
+TODO: 
+Live Stock Price Application
