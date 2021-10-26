@@ -18,7 +18,7 @@ Features:
 
 ![kube1](./images/kube1.png)
 
-`APC Server` is Entrypoint to K8s cluster.
+`APP Server` is Entrypoint to K8s cluster.
 
 `Controller Manager` keeps track of what's happening in the cluster.
 
