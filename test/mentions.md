@@ -80,6 +80,32 @@ $ sudo apt-get remove --auto-remove virtualenv
 $ sudo apt-get remove virtualenv
 ```
 
+### Install jupter notebook
+
+Step 1: Install Package
+```console
+$ sudo apt update && sudo apt -y upgrade
+$ sudo apt install python3-pip python3-dev
+$ sudo -H pip3 install --upgrade pip
+$ sudo -H pip3 install virtualenv
+```
+Step 2: create vitual env
+```console
+$ virtualenv jupyterenv
+$ source jupyterenv/bin/activate
+$ pip install jupyter
+```
+[more](https://speedysense.com/install-jupyter-notebook-on-ubuntu-20-04/)
+
+Step 3: Run notebook
+```console
+$ jupyter notebook --port 9999
+```
+or
+```console
+$ jupyter execute notebook.ipynb
+```
+
 ---
 
 ### Example of Inheritance
