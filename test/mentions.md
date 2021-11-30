@@ -82,24 +82,6 @@ $ sudo apt-get remove virtualenv
 
 ---
 
-## Create A Class
-
-```python
-class Panda:
-	def __init__(self, name, age):
-		self.name = name
-		self.age = age
-	def get_name(self):
-		return self.name
-	def get_age(self):
-		return self.age
-	def set_age(self):
-		self.age = age
-
-temp = Panda("lingling", 10)
-temp.set_age(11)
-```
-
 ### Example of Inheritance
 
 **Before using inheritance**
@@ -147,62 +129,6 @@ temp1.show()
 
 temp2 = Rabbit("Tom", 5)
 temp2.show()
-```
-
-### Class Attributes
-
-
-```python
-class Person:
-	number_of_people = 0
-	def __init__(self, name):
-		self.name = name
-		Person.number_of_people += 1
-
-p1 = Person("Jane")
-p2 = Person("Bob")
-print(Person.number_of_people)
-
-```
-
-Result:
-
-```
-2
-```
-
-### Class Methods
-
-```python
-class Person:
-	a = 0
-	def __init__(self, name):
-		self.name = name
-		Person.add_person()
-
-	@classmethod
-	def number_of_people(cls):
-		return cls.a
-
-	@classmethod
-	def add_person(cls):
-		cls.a += 1
-
-p1 = Person("Jane")
-p2 = Person("Bob")
-print(Person.number_of_people())
-```
-
-### Class Static Methods
-
-```python
-class Person:
-
-	@staticmethod
-	def age(x):
-		return x + 5
-
-print(Person.age(5))
 ```
 
 ---
