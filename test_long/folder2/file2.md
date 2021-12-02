@@ -78,3 +78,19 @@ $ apt install libcanberra-gtk-module libcanberra-gtk3-module
 $ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 $ sudo chmod g+rwx "/home/$USER/.docker" -R
 ```
+
+## Shared Memory
+
+Use the `--ipc` flag and the `--shm-size` flags to be able to **create and register shared memory regions** with Triton when running in a docker.
+
+> IPC (POSIX/SysV IPC) namespace provides separation of named shared memory segments, semaphores and message queues.
+
+[more](https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+
+e.g.
+```console
+$ docker run --gpus=1 -v /dev:/dev --ipc=host --shm-size=1g --rm -p8000:8000 -p8001:8001 -p8002:8002 \
+-v /examples/model_repository:/models \
+nvcr.io/nvidia/tritonserver:21.03-py3 \
+tritonserver --model-repository=/models
+```
