@@ -1,5 +1,4 @@
-# Personal Projects
+# Note
 
 ##  
 TODO: 
-Live Stock Price Application
