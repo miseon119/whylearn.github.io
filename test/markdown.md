@@ -5,7 +5,8 @@ sort: 1
 # Nvidia Developement
 
 ## Nsight Family
-[nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
+![nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
+
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
 
