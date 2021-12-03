@@ -9,6 +9,8 @@ sort: 1
 
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
+sample profile:
+![nsight-profile](./images/nsight-profile.png)
 
 ## NVIDIA Isaac Sim
 
