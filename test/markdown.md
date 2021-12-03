@@ -9,7 +9,10 @@ sort: 1
 
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
-sample profile:
+
+> Nsight Systems allows you to identify issues such as GPU starvation, unnecessary GPU synchronization, insufficient CPU parallelization or pipelining, and unexpectedly expensive CPU or GPU algorithms. 
+
+Sample profile:
 ![nsight-profile](./images/nsight-profile.png)
 
 ## NVIDIA Isaac Sim
