@@ -16,6 +16,8 @@ IDE Plugins:
 
 [more](https://drive.google.com/file/d/1Nsx1gW1aFgNtUInJ6IxiZa06CrZSgaVs/view?usp=sharing)
 
+[more blog](https://developer.nvidia.com/blog/nsight-systems-exposes-gpu-optimization/)
+
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
 
