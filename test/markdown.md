@@ -8,7 +8,9 @@ sort: 1
 ![nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
 
 **Nsight Systems**: system-wide application algorithm tuning
+
 **Nsight Compute**: Debug/optimize specific CUDA kernel
+
 **Nsight Graphics**: Debug/optimize specific graphics
 
 IDE Plugins:
