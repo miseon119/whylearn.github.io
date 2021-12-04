@@ -15,6 +15,58 @@ sort: 1
 Sample profile:
 ![nsight-profile](./images/nsight-profile.png)
 
+#### Command
+Version Information
+```console
+$ nsys -v
+```
+
+Default analysis run
+```console
+$ nsys profile <application> [application-arguments]
+```
+
+> Effect: Launch the application using the given arguments. Start collecting immediately and end collection when the application stops. Trace CUDA, OpenGL, NVTX, and OS runtime libraries APIs. Collect CPU sampling information and thread scheduling information.
+
+Limited trace only run
+```console
+$ nsys profile --trace=cuda, nvtx -d 20
+    --sample=none --cpuctxsw=none -o my_test <application>
+    [application-arguments]
+```
+`-d 20` : Start collecting immediately and end collection after 20 seconds or when the application ends.
+
+> Trace CUDA and NVTX APIs. Do not collect CPU sampling information or thread scheduling information. 
+
+Delayed start run
+```console
+$ nsys profile -e TEST_ONLY=0 -y 20
+    <application> [application-arguments]
+```
+
+Collect ftrace events
+```console
+nsys profile --ftrace=drm/drm_vblank_event
+    -d 20
+```
+
+> Effect: Collect ftrace drm_vblank_event events for 20 seconds. Note that ftrace event collection requires running as root. 
+
+To get a list of ftrace events available from the kernel, run the following:
+```console
+$ sudo cat /sys/kernel/debug/tracing/available_events
+```
+
+E.g. profile a Python script that uses CUDA
+```console
+$ nsys profile --trace=cuda,cudnn,cublas,osrt,nvtx
+    --delay=60 python <my_dnn_script.py>
+```
+
+> Effect: Launch a Python script and start profiling it 60 seconds after the launch, tracing CUDA, cuDNN, cuBLAS, OS runtime APIs, and NVTX as well as collecting thread schedule information.
+
+
+
 ## NVIDIA Isaac Sim
 
 > Isaac Sim is a *robotics simulation application* and *synthetic data generation tool*. Within Isaac Sim, you can program, train and test any robot design. The simulation environment enables the creation of photorealistic worlds filled with specific objects that the robot can interact with.
