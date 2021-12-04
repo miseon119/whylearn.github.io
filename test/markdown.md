@@ -7,6 +7,15 @@ sort: 1
 ## Nsight Family
 ![nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
 
+**Nsight Systems**: system-wide application algorithm tuning
+**Nsight Compute**: Debug/optimize specific CUDA kernel
+**Nsight Graphics**: Debug/optimize specific graphics
+
+IDE Plugins:
+- Nsight Eclipse Edition/Visual Studio
+
+[more](http://gofile.me/5Ztd5/M6R0ERxmY)
+
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
 
