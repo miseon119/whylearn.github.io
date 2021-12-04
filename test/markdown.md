@@ -78,7 +78,29 @@ $ nsys profile --trace=cuda,cudnn,cublas,osrt,nvtx
 
 > Effect: Launch a Python script and start profiling it 60 seconds after the launch, tracing CUDA, cuDNN, cuBLAS, OS runtime APIs, and NVTX as well as collecting thread schedule information.
 
+#### Interactive CLI Command
+Collect from beginning of application, end manually
+```console
+nsys start --stop-on-exit=false
+nsys launch --trace=cuda,nvtx --sample=none <application> [application-arguments]
+nsys stop
+```
 
+> Effect: Create interactive CLI process and set it up to begin collecting as soon as an application is launched. Launch the application, set up to allow tracing of CUDA and NVTX as well as collection of thread schedule information. Stop only when explicitly requested.
+
+> If you start a collection and fail to stop the collection (or if you are allowing it to stop on exit, and the application runs for too long) your system’s storage space may be filled with collected data causing significant issues for the system. Nsight Systems will collect a different amount of data/sec depending on options, but in general Nsight Systems does not support runs of more than 5 minutes duration.
+
+Run application, begin collection manually, run until process ends
+```console
+nsys launch -w true <application> [application-arguments]
+nsys start
+```
+
+> Effect: Create interactive CLI and launch an application set up for default analysis. Send application output to the terminal. No data is collected until you manually start collection at area of interest. Profile until the application ends. 
+
+[more](https://docs.nvidia.com/nsight-systems/UserGuide/index.html)
+
+---
 
 ## NVIDIA Isaac Sim
 
