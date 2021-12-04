@@ -14,7 +14,7 @@ sort: 1
 IDE Plugins:
 - Nsight Eclipse Edition/Visual Studio
 
-[more](http://gofile.me/5Ztd5/M6R0ERxmY)
+[more](https://drive.google.com/file/d/1Nsx1gW1aFgNtUInJ6IxiZa06CrZSgaVs/view?usp=sharing)
 
 ### Nsight Systems
 **NVIDIA Nsight Systems** provides developers with a more complete and unified view of how their applications utilize a computer’s CPUs and GPUs.
