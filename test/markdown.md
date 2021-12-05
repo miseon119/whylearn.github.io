@@ -283,6 +283,63 @@ Result e.g.
 ```
 [more](https://github.com/triton-inference-server/server/blob/r21.05/docs/quickstart.md)
 
+### Shared-Memory
+
+> The shared-memory extensions allow a client to communicate input and output tensors by system or CUDA shared memory. 
+> Using shared memory instead of sending the tensor data over the GRPC or REST interface can provide significant performance improvement for some use cases. 
+
+`shared_memory_region` and `shared_memory_byte_size` two parameters are required. If only one of the two is given Triton will return an error.
+
+> Shared memory regions must be created by the client and then registered with Triton before they can be referenced with a “shared_memory_region” parameter. 
+
+#### Check Status, register, unregister
+Triton exposes the following URL to register and unregister system shared memory regions.
+```plain
+GET v2/systemsharedmemory[/region/${REGION_NAME}]/status
+
+POST v2/systemsharedmemory/region/${REGION_NAME}/register
+
+POST v2/systemsharedmemory[/region/${REGION_NAME}]/unregister
+```
+cuda memory
+```plain
+GET v2/cudasharedmemory[/region/${REGION_NAME}]/status
+
+POST v2/cudasharedmemory/region/${REGION_NAME}/register
+
+POST v2/cudasharedmemory[/region/${REGION_NAME}]/unregister
+```
+
+#### Server Docker Command
+```console
+$ docker run --gpus=1 -v /dev:/dev --ipc=host --shm-size=1g --rm \
+-p8000:8000 -p8001:8001 -p8002:8002 \
+-v /host/model_repository:/models \
+nvcr.io/nvidia/tritonserver:21.03-py3 \
+tritonserver --model-repository=/models
+```
+
+`-v /dev:/dev --ipc=host --shm-size=1g` is shared memory flag.
+
+#### Client Docker Command
+```console
+$ docker run --gpus all -it  \
+--privileged --network host -v /dev:/dev --ipc=host --shm-size=1g  -v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY=$DISPLAY  --name client_shm_sdk nvcr.io/nvidia/tritonserver:21.03-py3-sdk
+```
+
+#### Check System Shared Memory Status:
+```console
+$ curl localhost:8000/v2/systemsharedmemory/region/input0_data/status
+```
+
+`input0_data` is register name from client.
+
+e.g.:
+```plain
+[{"name":"input0_data","key":"/input0_simple","offset":0,"byte_size":64}]% 
+```
+
 ---
 
 ## Nvidia DALI
