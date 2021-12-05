@@ -7,8 +7,9 @@ Wendy Park
 meixian119@gmail.com
 <!-- 1 MyAddress                        
 MyTown                          @twitter_handle
-MyCountry                           1800 my-phone-nr -->
--------------------     ---------------------------- 
+MyCountry                           1800 my-phone-nr 
+-------------------     ---------------------------- -->
+
 
 Education
 ---------
