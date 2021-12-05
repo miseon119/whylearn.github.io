@@ -282,3 +282,17 @@ Result e.g.
 < Content-Type: text/plain
 ```
 [more](https://github.com/triton-inference-server/server/blob/r21.05/docs/quickstart.md)
+
+---
+
+## Nvidia DALI
+
+> DALI is a data loading and preprocessing library to build highly optimized custom data processing pipelines used in deep learning applications. 
+
+> The set of operations that can be found in DALI includes, but is not limited to, data loading, decoding multiple formats of image, video, and audio, as well as a wide range of processing operators.
+
+Workflow
+![dali](https://developer-blogs.nvidia.com/wp-content/uploads/2021/04/dali-workflow.png)
+
+
+[more](https://developer.nvidia.com/blog/accelerating-inference-with-triton-inference-server-and-dali/)
