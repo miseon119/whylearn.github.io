@@ -4,6 +4,48 @@ sort: 3
 
 # Python Lib
 
+## pytorch
+
+### numpy array to Pytorch Tensor:
+1. torch.Tensor()
+2. torch.from_numpy()
+
+> torch.Tensor() 는 Numpy array의 사본일 뿐이다. 그래서 tensor의 값을 변경하더라도 Numpy array자체의 값이 달라지지 않는다.
+
+```python
+import torch
+import numpy as np
+a=np.array([1,2,3,4])
+b=torch.Tensor(a)
+print('output tensor:',b)
+
+b[0]=-1
+print('It cannot change np.array:',a)
+```
+
+> torch.from_numpy()는 자동으로 input array의 dtype을 상속받고 tensor와 메모리 버퍼를 공유하기 때문에 tensor의 값이 변경되면 Numpy array값이 변경된다. 
+
+```python
+a=np.array([1,2,3,4])
+b=torch.from_numpy(a)
+print('output tensor:',b)
+
+b[0]=-1
+print('It can change np.array:',a)
+```
+
+### torch Tensor to numpy
+
+```python
+import torch
+import numpy as np
+
+a = torch.rand(3,3)
+b = a.numpy()
+```
+
+---
+
 ## Numpy
 
 ### Statistics
