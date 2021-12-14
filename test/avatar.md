@@ -182,6 +182,31 @@ The “categories” object contains a list of categories (e.g. dog, boat) and e
 
 [more reference](https://www.immersivelimit.com/tutorials/create-coco-annotations-from-scratch)
 
+---
+
+## Image Preprocessing
+
+> Mean values for the **ImageNet** training set are `R=103.93, G=116.77, and B=123.68` 
+
+When we are ready to pass an image through our network (whether for training or testing), we subtract the mean `u` from each input channel of the input image:
+
+`R = R - mean_r`
+
+`G = G - mean_g`
+
+`B = B - mean_b`
+
+We may also have a scaling factor `sigma` which adds in a normalization:
+
+`R = (R - mean_r)/sigma`
+
+`G = (G - mean_g)/sigma`
+
+`B = (B - mean_b)/sigma`
+
+The value of `sigma` may be the **standard deviation** across the training set (thereby turning the preprocessing step into a standard score/z-score). However, `sigma` may also be manually set (versus calculated) to scale the input image space into a particular range — it really depends on the architecture.
+
+
 ## YOLO v4
 
 ### Training
