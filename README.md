@@ -4,4 +4,4 @@
 
 search code on GitHub
 
-![code_search](./images/code_search1.png)
+![code_search](./test/images/code_search1.png)
