@@ -6,7 +6,87 @@ sort: 3
 
 ## pytorch
 
-### numpy array to Pytorch Tensor:
+### check version
+```python
+import torch
+import torch.nn as nn
+import torchvision
+print(torch.__version__)
+print(torch.version.cuda)
+print(torch.backends.cudnn.version())
+print(torch.cuda.get_device_name(0))
+```
+
+### Use GPU
+
+Single GPU:
+```python
+# Device configuration
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+```
+
+Multi-GPU:
+```python
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+```
+in CLI:
+```bash
+CUDA_VISIBLE_DEVICES=0,1 python train.py
+```
+
+clear GPU cache:
+```python
+torch.cuda.empty_cache()
+```
+
+reset gpu
+```bash
+$ nvidia-smi --gpu-reset -i [gpu_id]
+```
+
+### tensor info
+
+```python
+tensor = torch.randn(3,4,5)
+print(tensor.type())  # 数据类型
+print(tensor.size())  # 张量的shape，是个元组
+print(tensor.dim())   # 维度的数量
+```
+
+#### set tensor name
+```python
+# 在PyTorch 1.3之前，需要使用注释
+# Tensor[N, C, H, W]
+images = torch.randn(32, 3, 56, 56)
+images.sum(dim=1)
+images.select(dim=1, index=0)
+
+# PyTorch 1.3之后
+NCHW = [‘N’, ‘C’, ‘H’, ‘W’]
+images = torch.randn(32, 3, 56, 56, names=NCHW)
+images.sum('C')
+images.select('C', index=0)
+# 也可以这么设置
+tensor = torch.rand(3,4,1,2,names=('C', 'N', 'H', 'W'))
+# 使用align_to可以对维度方便地排序
+tensor = tensor.align_to('N', 'C', 'H', 'W')
+```
+
+### Data type transform
+```python
+
+# 设置默认类型，pytorch中的FloatTensor远远快于DoubleTensor
+torch.set_default_tensor_type(torch.FloatTensor)
+
+# 类型转换
+tensor = tensor.cuda()
+tensor = tensor.cpu()
+tensor = tensor.float()
+tensor = tensor.long()
+```
+
+#### numpy array to Pytorch Tensor:
 1. torch.Tensor()
 2. torch.from_numpy()
 
@@ -34,7 +114,8 @@ b[0]=-1
 print('It can change np.array:',a)
 ```
 
-### torch Tensor to numpy
+
+#### torch Tensor to numpy
 
 ```python
 import torch
@@ -43,6 +124,74 @@ import numpy as np
 a = torch.rand(3,3)
 b = a.numpy()
 ```
+or
+```python
+ndarray = tensor.cpu().numpy()
+#tensor = torch.from_numpy(ndarray).float()
+#tensor = torch.from_numpy(ndarray.copy()).float() # If ndarray has negative stride.
+```
+
+### Torch tensor to PIL.Image
+```python
+# pytorch中的张量默认采用[N, C, H, W]的顺序，并且数据范围在[0,1]，需要进行转置和规范化
+# torch.Tensor -> PIL.Image
+image = PIL.Image.fromarray(torch.clamp(tensor*255, min=0, max=255).byte().permute(1,2,0).cpu().numpy())
+image = torchvision.transforms.functional.to_pil_image(tensor)  # Equivalently way
+
+# PIL.Image -> torch.Tensor
+path = r'./figure.jpg'
+tensor = torch.from_numpy(np.asarray(PIL.Image.open(path))).permute(2,0,1).float() / 255
+tensor = torchvision.transforms.functional.to_tensor(PIL.Image.open(path)) # Equivalently way
+```
+
+### np.array to PIL.Image
+```python
+image = PIL.Image.fromarray(ndarray.astype(np.uint8))
+
+ndarray = np.asarray(PIL.Image.open(path))
+```
+
+### tensor transform
+
+```python
+# 在将卷积层输入全连接层的情况下通常需要对张量做形变处理，
+# 相比torch.view，torch.reshape可以自动处理输入张量不连续的情况。
+tensor = torch.rand(2,3,4)
+shape = (6, 4)
+tensor = torch.reshape(tensor, shape)
+```
+
+### Flip tensor
+e.g.
+```python
+# [0 1 2 3 4 5 6 7 8 9]
+# to [9 8 7 6 5 4 3 2 1 0]
+
+# pytorch不支持tensor[::-1]这样的负步长操作，水平翻转可以通过张量索引实现
+# 假设张量的维度为[N, D, H, W].
+tensor = tensor[:,:,:,torch.arange(tensor.size(3) - 1, -1, -1).long()]
+```
+
+### copy tensor
+```python
+# Operation                 |  New/Shared memory | Still in computation graph |
+tensor.clone()            # |        New         |          Yes               |
+tensor.detach()           # |      Shared        |          No                |
+tensor.detach.clone()()   # |        New         |          No                |
+```
+
+### concate tensor
+```python
+
+'''
+注意torch.cat和torch.stack的区别在于torch.cat沿着给定的维度拼接，
+而torch.stack会新增一维。例如当参数是3个10x5的张量，torch.cat的结果是30x5的张量，
+而torch.stack的结果是3x10x5的张量。
+'''
+tensor = torch.cat(list_of_tensors, dim=0)
+tensor = torch.stack(list_of_tensors, dim=0)
+```
+
 
 ---
 
