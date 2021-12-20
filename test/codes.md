@@ -197,6 +197,28 @@ tensor = torch.stack(list_of_tensors, dim=0)
 
 ## Numpy
 
+### Save array as txt file
+```python
+a = np.array([1, 2, 3, 4])
+np.savetxt('test1.txt', a, fmt='%d')
+b = np.loadtxt('test1.txt', dtype=int)
+a == b
+``` 
+or
+```python
+a.tofile('test2.dat')
+c = np.fromfile('test2.dat', dtype=int)
+c == a
+```
+or There is a platform independent format for NumPy arrays:
+```python
+np.save('test3.npy', a)    # .npy extension is added if not given
+d = np.load('test3.npy')
+a == d
+```
+
+[more](https://stackoverflow.com/questions/28439701/how-to-save-and-load-numpy-array-data-properly)
+
 ### Statistics
 
 **sum** an array:
