@@ -45,6 +45,21 @@ reset gpu
 $ nvidia-smi --gpu-reset -i [gpu_id]
 ```
 
+### squeeze and unsqueeze
+
+squeeze sample:
+```python
+import torch
+
+x = torch.rand(3, 1, 20, 128)
+x = x.squeeze() #[3, 1, 20, 128] -> [3, 20, 128]
+```
+unsqueeze sample:
+```python
+x2 = torch.rand(1, 1, 20, 128)
+x2 = x2.squeeze(dim=1) # [1, 1, 20, 128] -> [1, 20, 128]
+```
+
 ### tensor info
 
 ```python
