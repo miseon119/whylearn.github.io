@@ -45,6 +45,23 @@ reset gpu
 $ nvidia-smi --gpu-reset -i [gpu_id]
 ```
 
+### torchvision
+
+#### PIL Image/ numpy.ndarray to pytorch tensor
+
+> torchvision.transform.ToTensor
+
+```python
+transforms.ToTensor()
+```
+#### Normalize
+
+> torchvision.transforms.Normalize(mean, std, inplace=False)
+
+```python
+transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+```
+
 ### squeeze and unsqueeze
 
 squeeze sample:
