@@ -263,6 +263,17 @@ Convert 10-bit H.265 to 8-bit H.264
 $ ffmpeg -i input -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy output.mkv
 ```
 
+### video to GIF
+Generate color_palette.png
+```bash
+ $ ffmpeg -i sample.mp4 -filter_complex "[0:v] palettegen" color_palette.png
+```
+Generate GIF file:
+```bash
+$ ffmpeg -i sample.mp4 -i color_pallet.png -filter_complex "[0:v][1:v] paletteuse" -r 10 -s 640x360  my_gif_file.gif
+```
+[more](https://www.fosslinux.com/45389/gif-maker-apps-linux.htm)
+
 
 ## Shell Script
 
