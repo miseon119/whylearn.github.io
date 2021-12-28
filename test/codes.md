@@ -229,6 +229,22 @@ tensor = torch.stack(list_of_tensors, dim=0)
 
 ## Numpy
 
+### Create random array
+```python
+# a random integer in the given range
+rand_int = np.random.randint(5,10)  
+
+# random numpy array of shape (4,5)
+rand_int2 = np.random.randint(10,90,(4,5)) 
+
+rand_int3 = np.random.randint(50,75,(2,2), dtype='int64')
+```
+
+`randint()` parameters:
+
+`Low`  lower limit of the range, `High` upper limit of the range, `Size` shape of the array, `dtype` datatype of the values.
+
+
 ### Save array as txt file
 ```python
 a = np.array([1, 2, 3, 4])
