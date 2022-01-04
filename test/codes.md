@@ -224,10 +224,17 @@ tensor = torch.cat(list_of_tensors, dim=0)
 tensor = torch.stack(list_of_tensors, dim=0)
 ```
 
-
 ---
 
 ## Numpy
+
+### squeeze
+```python
+x = np.array([[[0], [1], [2]]])
+np.squeeze(x).shape
+np.squeeze(x, axis=0).shape
+np.squeeze(x, axis=1).shape
+```
 
 ### Create random array
 ```python
