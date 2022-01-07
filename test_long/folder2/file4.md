@@ -81,7 +81,7 @@ data:
 - Resource grouped in Namespaces
 - Conflicts(e.g. Many teams, sampe application)
 
-!(conflict)[./images/conflict.png]
+![conflict](./images/conflict.png)
 
 - 
 
