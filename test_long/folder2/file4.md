@@ -83,5 +83,12 @@ data:
 
 ![conflict](./images/conflict.png)
 
-- 
+- Resouce Sharing: Staging and Development
+- Resouce Sharing: Blue/Green Deployment
+- Access and Resource limits on Namespaces
+
+Note:
+
+- Each Namespace must define own ConfigMap
+
 
