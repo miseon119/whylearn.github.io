@@ -47,4 +47,41 @@ service: set permanent IP address, Lifecycle of Pod and Service not connected
 
 
 ## Master Process
-![./images/master_process.png]
+![master_proc](./images/master_process.png)
+
+
+### What is a Namespace ?
+
+- Organize resources in namespaces
+- Virtual claster inside a cluster
+
+check:
+```bash
+$ kubectl get namespace
+```
+
+using CLI to create namespace:
+```bash
+$ kubectl create namespace my-namespace
+```
+
+using yaml file to create namespace:
+```plain
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+  namespace: my-namespace
+data:
+  database_url: mongodb-service
+```
+#### Why you should use namespace?
+
+- Everything in one Namespace is terrible (e.g. multiple deployments, replicasets, services, configmaps)
+- Resource grouped in Namespaces
+- Conflicts(e.g. Many teams, sampe application)
+
+!(conflict)[./images/conflict.png]
+
+- 
+
