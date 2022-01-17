@@ -10,6 +10,32 @@ Features:
 - Scalability or high performance
 - Disaster recovery(backup and restore)
 
+## Command
+
+Imperative
+```bash
+# Create Objects
+kubectl run --image=nginx nginx
+kubectl create deployment --image=nginx nginx
+kubectl expose deployment nginx --port 80
+
+# Update Objects
+kubectl edit deployment nginx
+kubectl scale deployment nginx --replicas=5
+kubectl set image deployment nginx nginx=nginx:1.18
+
+# use yaml files
+kubectl create -f nginx.yaml
+kubectl replace -f nginx.yaml
+kubectl delete -f nginx.yaml
+```
+
+Declarative
+```bash
+kubectl apply -f nginx.yaml
+```
+
+
 ## Architecture
 
 `Worker Nodes` refered as "Node"
