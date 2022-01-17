@@ -35,6 +35,19 @@ Declarative
 kubectl apply -f nginx.yaml
 ```
 
+Some options
+
+`--dry-run` : By default as soon as the command is run, the resource will be created.
+
+`--dry-run=client`: This will not create the resource, instead, tell you whether the resource can be created and if your command is right.
+
+`-o yaml`: This will output the resource definition in YAML format on screen.
+
+e.g.
+```bash
+kubectl run nginx --image=nginx --dry-run=client -o yaml
+```
+
 
 ## Architecture
 
