@@ -48,6 +48,11 @@ e.g.
 kubectl run nginx --image=nginx --dry-run=client -o yaml
 ```
 
+selector
+```bash
+kubectl get pods --selector app=App1
+```
+
 
 ## Architecture
 
