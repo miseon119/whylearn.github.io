@@ -53,6 +53,23 @@ selector
 kubectl get pods --selector app=App1
 ```
 
+### namespace
+
+```bash
+ kubectl create namespace blue
+ kubectl get namespace
+# yaml
+ kubectl create namespace green --dry-run -o yaml > green-ns.yaml
+ kubectl create -f green-ns.yaml
+ kubectl delete namespace xx
+```
+
+### config
+```bash
+ kubectl config view
+ kubectl config set-context NAME --cluster=kubernetes xxx
+ kubectl config use-context NAME
+```
 
 ## Architecture
 
