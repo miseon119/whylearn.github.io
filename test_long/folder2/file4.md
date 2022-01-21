@@ -85,6 +85,56 @@ kubectl label pod <name> --show-labels
 kubectl label pod <name> key-
 ```
 
+### Node Affinity
+
+Node Selector sample:
+```yaml
+spec:
+  containers:
+  - name: data_pro
+    image: data_pro
+  
+  nodeSelector:
+    size: Large
+
+```
+
+Affinity sample 1:
+```yaml
+spec:
+  containers:
+  - name: data_pro
+    image: data_pro
+    
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator: In
+            values:
+            - Large
+```
+
+Affinity sample 2:
+```yaml
+spec:
+  containers:
+  - name: data_pro
+    image: data_pro
+    
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator: NotIn
+            values:
+            - Small
+```
+
 ## Architecture
 
 `Worker Nodes` refered as "Node"
