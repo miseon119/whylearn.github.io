@@ -71,6 +71,20 @@ kubectl get pods --selector app=App1
  kubectl config use-context NAME
 ```
 
+### label
+```bash
+kubectl get pods --show-labels
+kubectl get pods -l <label_name>
+
+# create and change
+kubectl label pod <name> key=value
+kubectl label pod <name> key=value --overwrite
+# check 
+kubectl label pod <name> --show-labels
+# delete 
+kubectl label pod <name> key-
+```
+
 ## Architecture
 
 `Worker Nodes` refered as "Node"
