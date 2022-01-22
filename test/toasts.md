@@ -145,7 +145,7 @@ spec:
 
 `kubelet` refered as "node agent"
 
-![kube1](./images/kube1.png)
+![kube1](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/kube1.png)
 
 `APP Server` is Entrypoint to K8s cluster.
 
@@ -155,7 +155,7 @@ spec:
 
 `etcd` Kubernetes backing store.
 
-![kube2](./images/kube2.png)
+![kube2](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/kube2.png)
 
 ## Main Components
 
@@ -165,18 +165,18 @@ pod: Abstraction over container, a layer of top of the container  , usually 1 ap
 
 service: set permanent IP address, Lifecycle of Pod and Service not connected
 
-![kube3](./images/kube3.png)
+![kube3](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/kube3.png)
 
 **Deployment** for stateless apps, **StatefulSet** for stateful Apps or Databases.
 
 
 ## Kubernetes Configuration
 
-![kube7](./images/kube7.png)
+![kube7](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/kube7.png)
 
 
 ## Master Process
-![master_proc](./images/master_process.png)
+![master_proc](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/master_process.png)
 
 
 ### What is a Namespace ?
@@ -210,7 +210,7 @@ data:
 - Resource grouped in Namespaces
 - Conflicts(e.g. Many teams, sampe application)
 
-![conflict](./images/conflict.png)
+![conflict](https://github.com/miseon119/whylearn.github.io/blob/master/test_long/folder2/images/conflict.png)
 
 - Resouce Sharing: Staging and Development
 - Resouce Sharing: Blue/Green Deployment
