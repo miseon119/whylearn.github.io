@@ -146,11 +146,33 @@ Static Pods
 - Deploy control plane components as static pods
 - Both ingnored by the Kube-Scheduler
 
-
 DaemonSets
 - Created by Kube-API server(DaemonSet Controller)
 - Deploy Monitoring Agents, Logging Agents on nodes
 - Both ingnored by the Kube-Scheduler
+
+
+#### Get Static Pod Path
+
+```bash
+ps -ef |  grep /usr/bin/kubelet
+```
+e.g.
+```plain
+root@node01:/var/lib/kubelet#  ps -ef |  grep /usr/bin/kubelet 
+root     21172     1  0 07:28 ?        00:00:17 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.2
+root     31913 25115  0 07:40 pts/0    00:00:00 grep --color=auto /usr/bin/kubelet
+```
+
+```bash
+grep -i staticpod /var/lib/kubelet/config.yaml
+```
+e.g.
+```plain
+staticPodPath: /etc/just-to-mess-with-you
+```
+
+
 
 ---
 
