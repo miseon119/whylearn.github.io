@@ -139,6 +139,21 @@ spec:
             - Small
 ```
 
+### Static pods vs Daemonsets
+
+Static Pods
+- created by the kubelet
+- Deploy control plane components as static pods
+- Both ingnored by the Kube-Scheduler
+
+
+DaemonSets
+- Created by Kube-API server(DaemonSet Controller)
+- Deploy Monitoring Agents, Logging Agents on nodes
+- Both ingnored by the Kube-Scheduler
+
+---
+
 ## Architecture
 
 `Worker Nodes` refered as "Node"
