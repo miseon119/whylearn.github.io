@@ -172,7 +172,10 @@ e.g.
 staticPodPath: /etc/just-to-mess-with-you
 ```
 
-
+### Check Node CPU
+```bash
+kubectl top node --sort-by='cpu' --no-headers | head -1
+```
 
 ---
 
