@@ -177,6 +177,27 @@ staticPodPath: /etc/just-to-mess-with-you
 kubectl top node --sort-by='cpu' --no-headers | head -1
 ```
 
+### drain
+
+- kubectl drain은 노드 관리를 위해서 지정된 노드에 있는 포드들을 다른곳으로 이동시키는 명령입니다.
+- 우선 새로운 포드가 노드에 스케쥴링 되어서 실행되지 않도록 설정합니다.
+- 그리고 나서 기존에 이 노드에서 실행중이던 포드들을 삭제합니다. 이 때 노드에 데몬셋으로 실행된 포드들이 있으면 drain이 실패합니다.
+- 데몬셋으로 실행한 포드를 무시하고 진행하려면 `--ignore-daemonsets=true` 옵션을 주고 drain을 하면 됩니다.
+
+```bash
+ kubectl get nodes
+ kubectl drain node01 --ignore-daemonsets=true
+
+ ```
+
+### kubectl corden
+ 
+ - kubectl cordon은 지정된 노드에 더이상 포드들이 스케쥴링되서 실행되지 않도록 합니다.
+
+```bash
+kubectl get nodes
+kubectl cordon node01
+kubectl uncordon node01
 ---
 
 ## Architecture
