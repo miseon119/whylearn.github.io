@@ -212,8 +212,22 @@ systemctl restart kubelet
 
 ### Backup
 
+Backup Resource Configure
 ```bash
 kubectl get all --all-namespaces -o yaml > all-deploy-svc.yaml
+```
+
+Backup ETCD
+```bash
+export ETCDCTL_API=3
+etcdctl snapshot save snapshot.db
+
+Service kubeapi-server stopped
+
+etcdctl snapshot restore snapshot.db --data-dir=/var/lib/etcd-backup
+
+systemctl daemon-reload
+service etcd restart
 ```
 
 ---
