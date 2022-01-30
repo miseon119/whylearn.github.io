@@ -210,6 +210,12 @@ apt install kubelet=1.20.0-00
 systemctl restart kubelet
 ```
 
+### Backup
+
+```bash
+kubectl get all --all-namespaces -o yaml > all-deploy-svc.yaml
+```
+
 ---
 
 ## Architecture
