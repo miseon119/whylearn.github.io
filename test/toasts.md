@@ -198,6 +198,18 @@ kubectl top node --sort-by='cpu' --no-headers | head -1
 kubectl get nodes
 kubectl cordon node01
 kubectl uncordon node01
+```
+
+### upgrade K8S
+
+```bash
+apt update
+apt install kubeadm=1.20.0-00
+kubeadm upgrade apply v1.20.0
+apt install kubelet=1.20.0-00
+systemctl restart kubelet
+```
+
 ---
 
 ## Architecture
