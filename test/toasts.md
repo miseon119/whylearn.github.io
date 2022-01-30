@@ -230,6 +230,11 @@ systemctl daemon-reload
 service etcd restart
 ```
 
+ETCD version
+```bash
+kubectl logs etcd-controlplane -n kube-system
+```
+
 ---
 
 ## Architecture
