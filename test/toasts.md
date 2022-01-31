@@ -265,6 +265,22 @@ openssl genrsa -out my-bank.key 1024
 openssl rsa -in my-bank.key -pubout > mybank.pem
 ```
 
+### Certificate Authority
+
+#### Generate Keys
+```bash
+openssl genrsa -out ca.key 2048
+```
+
+#### Certificate Signing Resquest
+```bash
+openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
+```
+
+#### Sign Certificates
+```bash
+openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
+```
 
 ---
 
