@@ -7,6 +7,24 @@ sort: 6
 
 ![datatype](https://chartio.com/images/articles/automatic-cloud-data-stack/data-storage-table.png)
 
+## Design Pattern 
+
+### ETL Pattern
+
+![etl](./images/IMG_0185.jpg)
+
+### ELT Pattern
+
+![elt](./images/IMG_0186.jpg)
+
+### CDC Pattern
+
+![cdc](./images/IMG_0187.jpg)
+
+### ETLT Pattern
+
+![etlt](./images/IMG_0188.jpg)
+
 ## C++
 
 ### CMake
