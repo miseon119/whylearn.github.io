@@ -190,7 +190,7 @@ kubectl top node --sort-by='cpu' --no-headers | head -1
 
  ```
 
-### kubectl corden
+### cordon
  
  - kubectl cordon은 지정된 노드에 더이상 포드들이 스케쥴링되서 실행되지 않도록 합니다.
 
@@ -234,6 +234,31 @@ ETCD version
 ```bash
 kubectl logs etcd-controlplane -n kube-system
 ```
+
+### Authenticate User
+
+```bash
+curl -v -k https://master-node-ip:6443/api/v1/pods -u "user1:password123"
+```
+
+#### static Password file
+e.g. user-detail.csv
+```bash
+password123,user1,uid,grp
+```
+
+#### static Token file
+e.g. user-token-details.csv, `--token-auth-file=user-token-details.csv`
+
+```bash
+KPJGDFSDFB123F,user1,uid,grp
+```
+
+curl command:
+```bash
+curl -v -k https://master-node-ip:6443/api/v1/pods --header "Authorization: Bearer KPJGDFSDFB123F"
+```
+
 
 ---
 
