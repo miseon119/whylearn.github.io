@@ -259,6 +259,12 @@ curl command:
 curl -v -k https://master-node-ip:6443/api/v1/pods --header "Authorization: Bearer KPJGDFSDFB123F"
 ```
 
+### Generate private/public key
+```bash
+openssl genrsa -out my-bank.key 1024
+openssl rsa -in my-bank.key -pubout > mybank.pem
+```
+
 
 ---
 
