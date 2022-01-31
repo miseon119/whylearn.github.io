@@ -1,9 +1,15 @@
 ---
 sort: 6
 ---
-# C++
+# Data Pipeline Design Patterns
 
-## CMake
+## Data Lake vs Data Warehouse vs Data Mart
+
+![datatype](https://chartio.com/images/articles/automatic-cloud-data-stack/data-storage-table.png)
+
+## C++
+
+### CMake
 
 **Include header**
 
@@ -56,15 +62,15 @@ or in CMakeLists:
 set(CMAKE_PREFIX_PATH "/home/rip/Qt/5.12.1/gcc_64/lib/cmake")
 ```
 
-## Modern C++ Notes
+### Modern C++ Notes
 
-### Pass Arguments to Threads
+#### Pass Arguments to Threads
 
 - Pass Simple Arguments
 - Pass References
 - Pass Class Member Function
 
-#### Passing simple arguments to thread
+##### Passing simple arguments to thread
 
 ```cpp
 #include <iostream>
@@ -86,7 +92,7 @@ int main()
 }
 ```
 
-#### Passing References
+##### Passing References
 
 > We use std::ref() to pass a reference
 
@@ -105,7 +111,7 @@ int main()
     return 0;
 }
 ```
-#### Passing  Member Function
+##### Passing  Member Function
 
 > Create a thread using Class member function.
 
@@ -135,7 +141,7 @@ int main() {
 }
 ```
 
-### map vs. unordered_map
+#### map vs. unordered_map
 
 |          | map             | unordered_map  |
 | -------- | --------------- | -------------- |
@@ -143,7 +149,7 @@ int main() {
 | Ordering | True            | False          |
 
 
-#### Unordered_map Usage
+##### Unordered_map Usage
 
 Check an element:
 ```cpp
