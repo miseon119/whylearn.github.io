@@ -63,3 +63,47 @@ Pros:
 - [x] Large community 
 
 ![ecs3](./images/ecs3.png)
+
+## Command
+
+### eksctl
+
+#### Create cluster
+```bash
+eksctl create cluster \
+--name kf-demo \
+--version 1.19 \
+--region us-east-2 \
+--with-oidc \
+--ssh-access \
+--ssh-public-key aws-hictc-kfserving-key \
+--nodes 1 \
+--node-type m5.large \
+--node-volume-size=20 \
+--managed
+```
+
+#### Delete cluster
+
+Delete whole cluster
+```bash
+eksctl delete cluster --name=kf-demo --region=us-east-2
+```
+
+Delete a nodegroup separately using `eksctl delete nodegroup`
+
+```bash
+# List EKS Clusters
+eksctl get clusters
+
+# Capture Node Group name
+eksctl get nodegroup --cluster=<clusterName>
+eksctl get nodegroup --cluster=eksdemo1
+
+# Delete Node Group
+eksctl delete nodegroup --cluster=<clusterName> --name=<nodegroupName>
+eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
+```
+
+[more](https://www.stacksimplify.com/aws-eks/eks-cluster/delete-eks-cluster-nodegroup/)
+
