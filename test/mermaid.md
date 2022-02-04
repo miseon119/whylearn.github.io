@@ -169,6 +169,38 @@ print with line number:
 $ cat -n my.txt
 ```
 
+Generate a yaml file
+
+```bash
+export AWS_CLUSTER_NAME=kubeflow-demo-msp
+export AWS_REGION=us-west-2
+export K8S_VERSION=1.19
+export EC2_INSTANCE_TYPE=m5.large
+```
+
+```bash
+cat << EOF > cluster.yaml
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: ${AWS_CLUSTER_NAME}
+  version: "${K8S_VERSION}"
+  region: ${AWS_REGION}
+
+managedNodeGroups:
+- name: kubeflow-mng
+  desiredCapacity: 3
+  instanceType: ${EC2_INSTANCE_TYPE}
+EOF
+```
+check 
+
+```bash
+cat cluster.yaml
+```
+
 ## ffmpeg
 
 Resize Video:
