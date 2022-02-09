@@ -84,6 +84,19 @@ view a new kubeconfig file
  kubectl config view --kubeconfig=my-custom-config
 ```
 
+check current context
+```bash
+kubectl config --kubeconfig=/root/my-kube-config current-context
+```
+
+use `research` context
+
+```bash
+kubectl config --kubeconfig=/root/my-kube-config use-context research
+```
+
+
+
 ### label
 ```bash
 kubectl get pods --show-labels
