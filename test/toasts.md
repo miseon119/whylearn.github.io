@@ -69,10 +69,15 @@ kubectl get pods --selector app=App1
 ```
 
 ### config
+
 ```bash
  kubectl config view
  kubectl config set-context NAME --cluster=kubernetes xxx
  kubectl config use-context NAME
+```
+check cluster numbers
+```bash
+ kubectl config view
 ```
 
 ### label
