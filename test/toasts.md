@@ -79,6 +79,10 @@ check cluster numbers
 ```bash
  kubectl config view
 ```
+view a new kubeconfig file
+```bash
+ kubectl config view --kubeconfig=my-custom-config
+```
 
 ### label
 ```bash
