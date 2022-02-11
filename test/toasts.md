@@ -304,6 +304,28 @@ openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
 openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 ```
 
+### authorization modes
+
+Inspect the environment and identify the authorization modes configured on the cluster.
+Check the `kube-apiserver` settings, look for `--authorization-mode`
+
+```bash
+kubectl describe pod kube-apiserver-controlplane -n kube-system
+```
+### View RBAC
+
+```bash
+kubectl get roles
+kubectl get rolebindings
+```
+
+### Check Access
+
+```bash
+kubectl auth can-i create deployments
+kubectl auth can-i create deployments --as dev-user
+```
+
 ---
 
 ## Architecture
