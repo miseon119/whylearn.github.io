@@ -355,6 +355,22 @@ ip route add 192.168.1.0/24 via 192.168.2.1
 
 ![networking](./images/IMG_0192.jpg)
 
+```bash
+ip route add 192.168.2.0/24 via 192.168.1.6
+ip route add 192.168.1.0/24 via 192.168.2.6
+```
+check ip forward
+```bash
+cat /proc/sys/net/ipv4/ip_forward
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+permanent change in `/etc/sysctl.conf` 
+```plain
+...
+net.ipv4.ip_forward = 1
+...
+```
+
 
 
 ## Architecture
