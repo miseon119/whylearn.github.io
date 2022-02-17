@@ -331,6 +331,7 @@ kubectl auth can-i create deployments --as dev-user
 ## Networking
 
 ![networking](./images/IMG_0191.jpg)
+
 Assign Address
 ```bash
 ip addr add 192.168.1.10/24 dev eth0
