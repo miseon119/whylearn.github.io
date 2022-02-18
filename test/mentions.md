@@ -26,9 +26,18 @@ dpkg -l | grep gstreamer
 ```console
 $ sudo apt-get install python3 python3-pip python3-dev python3-setuptools
 ```
-```colsole
+```console
 $ sudo pip3 install --upgrade pip
 ```
+
+#### Install pip3 In Mac
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+pip3 --version
+```
+
+
 ### Install virtualenv (if need)
 
 **Install**
