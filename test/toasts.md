@@ -329,6 +329,29 @@ kubectl auth can-i create deployments --as dev-user
 
 ---
 
+## kiali
+
+### Install via Istio Addons
+
+To Install:
+```bash
+kubectl apply -f ${ISTIO_HOME}/samples/addons/kiali.yaml
+```
+
+To uninstall:
+```bash
+kubectl delete -f ${ISTIO_HOME}/samples/addons/kiali.yaml --ignore-not-found
+```
+
+### port forward
+
+```bash
+kubectl port-forward svc/kiali 20001:20001 -n istio-system
+```
+
+
+---
+
 ## Networking
 
 ![networking](./images/IMG_0191.jpg)
