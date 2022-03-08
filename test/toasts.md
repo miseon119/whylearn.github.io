@@ -16,6 +16,11 @@ Features:
 
 ## Command
 
+# check node MAC address
+```bash
+arp node01
+```
+
 Imperative
 ```bash
 # Create Objects
