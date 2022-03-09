@@ -401,6 +401,11 @@ In terminal:
 $ sudo du -a /var | sort -n -r | head -n 10
 ```
 
+**Check Disk Usage**
+```bash
+df -h /var/lib/docker
+```
+
 ---
 ## tr command
 
