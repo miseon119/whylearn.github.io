@@ -16,7 +16,7 @@ Features:
 
 ## Command
 
-# check node MAC address
+check node MAC address
 ```bash
 arp node01
 ```
@@ -482,5 +482,24 @@ data:
 Note:
 
 - Each Namespace must define own ConfigMap
+
+## Istio
+
+- A service mesh that layers transparently onto existing distributed applications
+
+- It is also a platform, including APIs that let it integrate into any logging platform or telemetry or policy system. 
+
+- Istio is used more and more with Kubernetes for networking management, including service discovery, load balancing, traffic routing
+
+### Gateway
+
+> An Istio Gateway can be used for managing both inbound and outbound network traffic for the Kubernetes cluster. 
+
+### VirtualService
+
+> VirtualService defines an array of destination rules to tell Istio how and where to route the traffic.
+
+> There could be one or a bunch of micro services behind a VirtualService which is like a proxy. Per the rules defined in the VirtualService, the traffic (mostly, http/grpc requests) is routed to the proper target micro service.
+
 
 
