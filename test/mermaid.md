@@ -228,6 +228,15 @@ An image to a video:
 $ ffmpeg -loop 1 -i sample.jpg -c:v libx264 -t 5 -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2"  out.mp4
 ```
 
+Change video file pixel format
+```bash
+# Using the format filter (yuv420p)
+ffmpeg -i in_file -filter:v "format=yuv420p" out_file
+
+# Using the 'pix_fmt' option
+ffmpeg -i in_file -pix_fmt yuv420p out_file
+```
+
 ### concat videos
 
 concat demuxer:
