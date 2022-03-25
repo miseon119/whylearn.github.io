@@ -738,8 +738,22 @@ $ sudo update-alternatives --config x-terminal-emulator
 
 ## Troubleshooting
 
-### remmina codec error Ubuntun 18.04
+### apt-get update error
 
+Detailed error message
+```bash
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://apt.kitware.com/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6AF7F09730B3F0A4
+W: Failed to fetch https://apt.kitware.com/ubuntu/dists/focal/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6AF7F09730B3F0A4
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+```
+
+solution
+```bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  6AF7F09730B3F0A4
+```
+
+### remmina codec error Ubuntun 18.04
 
 ```console
 $ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
