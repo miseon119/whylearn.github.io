@@ -4,6 +4,15 @@ sort: 4
 
 # Linux
 
+## Network 
+
+Check used port
+```bash
+sudo netstat -pna | grep 8888
+# or
+netstat -anv | grep LISTEN
+```
+
 ## deb package
 
 ```console
