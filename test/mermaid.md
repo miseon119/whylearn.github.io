@@ -949,3 +949,14 @@ and
 ```console
 $  sudo dpkg --purge pkg_name
 ```
+
+---
+
+## email
+
+```bash
+sudo apt-get install mailutils
+mkfifo /var/spool/postfix/public/pickup
+service postfix restart
+ echo "Message Body Here" | mail -s "Subject Here" user@example.com -A backup.zip
+```
