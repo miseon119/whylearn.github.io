@@ -960,3 +960,13 @@ mkfifo /var/spool/postfix/public/pickup
 service postfix restart
  echo "Message Body Here" | mail -s "Subject Here" user@example.com -A backup.zip
 ```
+
+
+---
+
+## youtube-dl
+
+Download FHD video
+```bash
+youtube-dl  -f 137  https://www.youtube.com/watch\?v\=8SVrydUA6oU
+```
