@@ -111,9 +111,13 @@ create and move to branch:
 $ git checkout -b dev
 ```
 
-delete branch:
-```console
+Delete branch locally:
+```bash
 $ git branch -d dev
+```
+Delete branch remotely
+```bash
+$ git push origin --delete remoteBranchName
 ```
 
 push branch:
@@ -147,3 +151,4 @@ Clone branch
 ```console
 $ git clone -b <branch> <remote_repo>
 ```
+
