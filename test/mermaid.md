@@ -729,6 +729,23 @@ $ uname -p
 
 ---
 
+## Port-Forwarding
+
+Set port-forwarding 3030 to 3030
+```bash
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 3030 -j REDIRECT --to-port 3030
+```
+
+Check port-forwarding
+```bash
+sudo iptables -t nat -L --line-numbers
+```
+Delete port-forwarding
+```bash
+sudo iptables -t nat -D PREROUTING 3
+```
+"3" is displayed in second command.
+
 ## Terminal Setting
 
 ### Install Terminator
