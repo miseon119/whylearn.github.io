@@ -4,6 +4,42 @@ sort: 1
 
 # Nvidia Developement
 
+## TensorRT
+
+### Onnx to TensorRT engine
+
+Generate Static Batchsize:
+```bash
+./trtexec --onnx=<onnx_file> \
+          --explicitBatch \
+          --saveEngine=<tensorRT_engine_file> \
+          --workspace=<size_in_megabytes> \. # 设置工作空间的大小
+          --fp16
+```
+
+Generate Dynamic Bactchsize:
+```bash
+./trtexec --onnx=<onnx_file> \
+          --minShapes=input:<shape_of_min_batch> \
+          --optShapes=input:<shape_of_opt_batch> \
+          --maxShapes=input:<shape_of_max_batch> \
+          --saveEngine=<tensorRT_engine_file> \
+          --workspace=<size_in_megabytes> \. # 设置工作空间的大小
+          --fp16
+
+```
+e.g.
+```bash
+./trtexec --onnx=yolov4_-1_3_416_416_dynamic.onnx \
+          --minShapes=input:1x3x416x416 \
+          --optShapes=input:8x3x416x416 \
+          --maxShapes=input:8x3x416x416 \
+          --saveEngine=yolov4_-1_3_416_416_dynamic_b8_fp16.engine \
+          --workspace=4096 \. # 设置工作空间的大小
+          --fp16
+```
+
+
 ## Nsight Family
 ![nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
 
