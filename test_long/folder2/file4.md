@@ -21,6 +21,7 @@
 - Traffic splitting based on %
 - Dedicated URLs to Revisions
 
+![knative-serving](./images/kserving.png)
 
 ### Knative Eventing
 
@@ -36,4 +37,9 @@
 **Trigger** (subscription) ask for events from a Broker, 
  - Filters: to subset the stream of events often based on CloudEvent's metadata
 
+![kevent](./images/kevent.png)
 
+
+### Service Comparison
+
+![compare](./images/service_compare.png)
