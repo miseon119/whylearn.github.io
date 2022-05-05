@@ -39,6 +39,11 @@ e.g.
           --fp16
 ```
 
+### Nvidia TensorRT Docker
+
+```bash
+docker run --gpus all -it --rm -v $(pwd):/workdir nvcr.io/nvidia/tensorrt:21.10-py3
+```
 
 ## Nsight Family
 ![nsight-fam](https://developer.nvidia.com/sites/default/files/akamai/Nsight-Diagram.png)
