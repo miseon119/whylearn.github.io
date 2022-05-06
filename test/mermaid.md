@@ -795,6 +795,13 @@ restart remmina
 
 Add `-v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY` option
 
+#### ImportError: libGL.so.1: cannot open shared object file: No such file or director
+
+e.g. unbuntu 18.04 docker
+```bash
+apt-get update
+apt-get -y install libgl1-mesa-glx
+```
 
 ### dpkg 
 
