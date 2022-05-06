@@ -4,6 +4,12 @@ sort: 4
 
 # Linux
 
+## History Command
+```bash
+fc -l <start> <end> | grep "docker"
+# fc -l 4630 4810 | grep "docker"
+```
+
 ## Network 
 
 Check used port
