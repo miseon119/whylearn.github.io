@@ -252,6 +252,46 @@ ffmpeg -i in_file -filter:v "format=yuv420p" out_file
 ffmpeg -i in_file -pix_fmt yuv420p out_file
 ```
 
+### Stack Videos
+
+Horizontal Stack:
+```bash
+ffmpeg -i input0.mp4 -i input1.mp4 -filter_complex hstack=inputs=2 horizontal-stacked-output.mp4
+```
+
+Vertical Stack:
+```bash
+ffmpeg -i input0.mp4 -i input1.mp4 -filter_complex vstack=inputs=2 vertical-stack-output.mp4
+```
+
+2×2 Grid of Videos:
+```bash
+ffmpeg \
+-i input0.mp4 -i input1.mp4 -i input2.mp4 -i input3.mp4 \
+-filter_complex \
+"[0:v][1:v]hstack=inputs=2[top]; \
+[2:v][3:v]hstack=inputs=2[bottom]; \
+[top][bottom]vstack=inputs=2[v]" \
+-map "[v]" \
+finalOutput.mp4
+```
+
+3×2 Grid of Videos:
+```bash
+ffmpeg \
+-i input0.mp4 -i input1.mp4 \
+-i input2.mp4 -i input3.mp4 \
+-i input4.mp4 -i input5.mp4 \
+-filter_complex \
+"[0:v][1:v][2:v]hstack=inputs=3[top];\
+[3:v][4:v][5:v]hstack=inputs=3[bottom];\
+[top][bottom]vstack=inputs=2[v]" \
+-map "[v]" \
+finalOutput.mp4
+```
+
+
+
 ### concat videos
 
 concat demuxer:
