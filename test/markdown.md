@@ -39,6 +39,8 @@ e.g.
           --fp16
 ```
 
+> Note: your input name should match onnx file input name
+
 ### Nvidia TensorRT Docker
 
 ```bash
