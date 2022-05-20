@@ -19,6 +19,43 @@ sudo netstat -pna | grep 8888
 netstat -anv | grep LISTEN
 ```
 
+### UDP CLI Test Tool
+
+#### Establish Connection
+Server Side:
+```bash
+nc -u -l 9999
+```
+`9999` is server-side port
+
+`-u` is udp protocol
+
+Client Side:
+```bash
+nc -u 192.168.0.100 9999
+```
+`192.168.0.100` is server IP
+
+`9999` is server port
+
+#### Check Connection
+
+```bash
+netstat | grep 9999
+```
+
+#### Send Package 
+In client side, send: 
+```bash
+"Hi server!"
+```
+In Server side, send:
+```bash
+"hi, client"
+```
+
+[more](https://linuxhint.com/send_receive_udp_packets_linux_cli/)
+
 ## deb package
 
 ```console
