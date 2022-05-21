@@ -6,6 +6,24 @@ sort: 1
 
 ## TensorRT
 
+### Build Phase
+
+1. Create a `Logger`
+2. Create a `Builder` and `BuilderConfig`
+3. Build `Network`
+4. Generate `SerializedNetwork`
+
+### Runtime Phase
+
+1. Build `Engine`
+2. Create `Context`
+3. Set `Buffer`
+4. Copy `Buffer` from Host to Device
+5. Run `Excute`
+6. Copy `Buffer` from Device to Host
+7. Delete mempry
+
+
 ### Onnx to TensorRT engine
 
 Generate Static Batchsize:
