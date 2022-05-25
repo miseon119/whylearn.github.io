@@ -289,6 +289,11 @@ ffmpeg -i in_file -filter:v "format=yuv420p" out_file
 ffmpeg -i in_file -pix_fmt yuv420p out_file
 ```
 
+### re-encoding
+```bash
+ffmpeg -i a.mp4 -c:v libx264 -crf 18 -preset slow -c:a copy output.mp4
+```
+
 ### Stack Videos
 
 Horizontal Stack:
