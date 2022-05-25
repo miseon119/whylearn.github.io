@@ -152,3 +152,25 @@ Clone branch
 $ git clone -b <branch> <remote_repo>
 ```
 
+### Add submodule
+
+Add
+```bash
+git submodule add <url> <path>
+git submodule add -b <branch> <url> <path>
+```
+
+Update
+```bash
+git submodule update --init --recursive
+git submodule update --init --remote <git repo>
+```
+
+Delete
+```bash
+git submodule deinit -f <git repo>
+git rm --cached <git repo>
+```
+
+[more](https://www.csdn.net/tags/Mtzacg1sNTA5MS1ibG9n.html)
+
