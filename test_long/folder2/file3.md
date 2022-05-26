@@ -174,3 +174,9 @@ git rm --cached <git repo>
 
 [more](https://www.csdn.net/tags/Mtzacg1sNTA5MS1ibG9n.html)
 
+Common usage(which contains submodule)
+```bash
+git pull
+git submodule update --recursive --remote
+```
+
