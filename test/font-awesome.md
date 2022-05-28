@@ -96,6 +96,14 @@ Show/Hide side menu: `Alt + 0`
 
 `ctrl+pgdown`: next tab
 
+### Ubuntu Shortcut Key
+
+`Ctrl + Alt + F1~F6`: change tty terminal
+
+`alt + f10`: maximize window
+
+
+
 ---
 
 ## Synology NAS Setting
