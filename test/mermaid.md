@@ -201,6 +201,11 @@ or
 $ rm symlink_name
 ```
 
+**file numbers in a directory**
+```bash
+ls | wc -l
+```
+
 
 [reference](https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/)
 ## find command
