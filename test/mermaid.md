@@ -927,6 +927,53 @@ $ sudo apt-get install gnome-control-center
 
 ---
 
+### journalctl command
+retrieving messages from the last boot:
+```bash
+ journalctl -b -1
+```
+
+To list the boots of the system:
+```bash
+journalctl --list-boots
+```
+
+#### Time Ranges
+```bash
+journalctl --since "1 hour ago"
+journalctl --since "2 days ago"
+journalctl --since "2015-06-26 23:15:00" --until "2015-06-26 23:20:00"
+```
+
+#### By Unit
+
+To see messages logged by any systemd unit, use the -u switch. The command below will show all messages logged by the Nginx web server. You can use the --since and --until switches here to pinpoint web server errors occurring within a time window.
+
+```bash
+journalctl -u nginx.service
+journalctl -u nginx.service -u mysql.service
+```
+#### Follow or Tail
+
+```bash
+ journalctl -u mysql.service -f
+ journalctl -n 50 --since "1 hour ago"
+```
+
+The -r parameter shows journal entries in reverse chronological order, so the latest messages are printed first. 
+
+```bash
+ journalctl -u sshd.service -r -n 1
+```
+
+#### Output Formats
+
+```bash
+ journalctl -u apache2.service -r -o json-pretty
+```
+[more](https://www.loggly.com/ultimate-guide/using-journalctl/)
+
+
 ### Check Service log
 ```console
 $ journalctl -u service-name.service
