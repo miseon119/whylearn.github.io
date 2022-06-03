@@ -169,6 +169,7 @@ git submodule update --init --remote <git repo>
 Delete
 ```bash
 git submodule deinit -f <git repo>
+# e.g. git submodule deinit <module folder>
 git rm --cached <git repo>
 ```
 
