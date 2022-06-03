@@ -171,6 +171,7 @@ Delete
 git submodule deinit -f <git repo>
 # e.g. git submodule deinit <module folder>
 git rm --cached <git repo>
+git commit -m "removed all submodules"
 ```
 
 [more](https://www.csdn.net/tags/Mtzacg1sNTA5MS1ibG9n.html)
