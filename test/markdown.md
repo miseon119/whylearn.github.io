@@ -59,6 +59,11 @@ e.g.
 
 > Note: your input name should match onnx file input name
 
+export profile json
+```bash
+trtexec --onnx=yolov4_4_3_608_608_static.onnx --explicitBatch --saveEngine=test.plan --workspace=3072 --fp16 --exportProfile=prof.json --exportLayerInfo=graph.json --profilingVerbosity=detailed
+```
+
 ### Nvidia TensorRT Docker
 
 ```bash
