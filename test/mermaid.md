@@ -56,6 +56,51 @@ In Server side, send:
 
 [more](https://linuxhint.com/send_receive_udp_packets_linux_cli/)
 
+### Check Network Latency
+
+<details>
+  <summary>Linux 网络延迟</summary>
+  谈到网络延迟（Network Latency），人们通常认为它是指网络数据传输所需的时间。但是，这里的“时间”是指双向流量，即数据从源发送到目的地，然后从目的地地址返回响应的往返时间：RTT（Round-Trip Time）。除了网络延迟之外，另一个常用的指标是应用延迟（Application Latency），它是指应用接收请求并返回响应所需的时间。通常，应用延迟也称为往返延迟，它是网络数据传输时间加上数据处理时间的总和。
+
+  通常人们使用 ping 命令来测试网络延迟，ping 是基于 ICMP 协议的，它通过计算 ICMP 发出的响应报文和 ICMP 发出的请求报文之间的时间差来获得往返延迟时间。这个过程不需要特殊的认证，从而经常被很多网络攻击所利用，如，端口扫描工具 nmap、分组工具 hping3 等。
+
+  因此，为了避免这些问题，很多网络服务都会禁用 ICMP，这使得我们无法使用 ping 来测试网络服务的可用性和往返延迟。在这种情况下，您可以使用 traceroute 或 hping3 的 TCP 和 UDP 模式来获取网络延迟。
+
+</details>
+
+tool 1: 
+```bash
+# -c: 3 requests  
+# -S: Set TCP SYN  
+# -p: Set port to 80  
+$ hping3 -c 3 -S -p 80 google.com  
+HPING google.com (eth0 142.250.64.110): S set, 40 headers + 0 data bytes  
+len=46 ip=142.250.64.110 ttl=51 id=47908 sport=80 flags=SA seq=0 win=8192 rtt=9.3 ms  
+len=46 ip=142.250.64.110 ttl=51 id=6788  sport=80 flags=SA seq=1 win=8192 rtt=10.9 ms  
+len=46 ip=142.250.64.110 ttl=51 id=37699 sport=80 flags=SA seq=2 win=8192 rtt=11.9 ms  
+--- baidu.com hping statistic ---  
+3 packets transmitted, 3 packets received, 0% packet loss  
+round-trip min/avg/max = 9.3/10.9/11.9 ms  
+```
+
+tool 2: 
+```bash
+$ traceroute --tcp -p 80 -n google.com  
+traceroute to google.com (142.250.190.110), 30 hops max, 60 byte packets  
+ 1  * * *  
+ 2  240.1.236.34  0.198 ms * *  
+ 3  * * 243.254.11.5  0.189 ms  
+ 4  * 240.1.236.17  0.216 ms 240.1.236.24  0.175 ms  
+ 5  241.0.12.76  0.181 ms 108.166.244.15  0.234 ms 241.0.12.76  0.219 ms  
+ ...  
+24  142.250.190.110  17.465 ms 108.170.244.1  18.532 ms 142.251.60.207  18.595 ms  
+```
+
+> traceroute 会在路由的每一跳（hop）发送三个数据包，并在收到响应后输出往返延迟。如果没有响应或响应超时（默认 5s），将输出一个星号 *
+
+
+[reference](https://blog.devgenius.io/linux-troubleshoot-network-latency-a6da740f5cb8)
+
 ## deb package
 
 ```console
