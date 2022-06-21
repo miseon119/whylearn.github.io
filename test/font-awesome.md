@@ -68,7 +68,9 @@ delete rest of line: `D`
 
 delete rest of line and insert: `C`
 
-deletl to char a: `dta`
+delete to char a: `dta`
+
+cut a word and paste: `diw` + `p` or `P`
 
 </details>
 
