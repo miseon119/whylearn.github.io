@@ -6,7 +6,8 @@ sort: 10
 
 ## Shortcut Key
 
-### sublime text 3
+<details>
+<summary>sublime text 3</summary>
 
 Show/Hide sidebar: `Ctrl + K` and `Ctrl + B`
 
@@ -29,8 +30,11 @@ lower case: `Ctrl + KL`
 [referece](https://gist.github.com/mrliptontea/4c793ebdf72ed145bcbf)
 
 [//]: # (go to method:<kbd>Ctrl</kbd>+<kbd>R</kbd>)
+</details>
 
-### Vim 
+
+<details>
+<summary>Vim</summary>
 
 Delete character: `x`
 
@@ -66,7 +70,11 @@ delete rest of line and insert: `C`
 
 deletl to char a: `dta`
 
-### Qt Creator
+</details>
+
+
+<details>
+<summary>Qt Creator</summary>
 
 Stop Debugging: `Shift + F5`
 
@@ -75,9 +83,10 @@ Next Bookmark: `Ctrl + .`
 Previous Bookmark: `Ctrl + ,`
 
 Show/Hide side menu: `Alt + 0`
+</details>
 
-### Terminator
-
+<details>
+<summary>Terminator</summary>
 `Ctrl+Shift+E`: Split the view vertically.
 
 `Ctrl+Shift+O`: Split the view horizontally.
@@ -95,12 +104,15 @@ Show/Hide side menu: `Alt + 0`
 `Ctrl+pgup`: previous tab
 
 `ctrl+pgdown`: next tab
+</details>
 
-### Ubuntu Shortcut Key
 
+<details>
+<summary>Ubuntu Shortcut Key</summary>
 `Ctrl + Alt + F1~F6`: change tty terminal
 
 `alt + f10`: maximize window
+</details>
 
 
 
