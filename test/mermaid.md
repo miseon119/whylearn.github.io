@@ -335,6 +335,10 @@ jpg images to a video
 $ ffmpeg -r 1/5 -f concat -i list.txt -c:v libx264 -r 25 -pix_fmt yuv420p -t 15 out.mp4
 ```
 
+[more](https://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/)
+[more](https://stackoverflow.com/questions/30121222/convert-all-images-in-directory-to-mp4-using-ffmpeg-and-a-timestamp-order)
+
+
 Change video file pixel format
 ```bash
 # Using the format filter (yuv420p)
@@ -348,6 +352,8 @@ ffmpeg -i in_file -pix_fmt yuv420p out_file
 ```bash
 ffmpeg -i a.mp4 -c:v libx264 -crf 18 -preset slow -c:a copy output.mp4
 ```
+
+
 
 ### Stack Videos
 
