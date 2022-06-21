@@ -330,6 +330,11 @@ An image to a video:
 $ ffmpeg -loop 1 -i sample.jpg -c:v libx264 -t 5 -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2"  out.mp4
 ```
 
+jpg images to a video
+```bash
+$ ffmpeg -r 1/5 -f concat -i list.txt -c:v libx264 -r 25 -pix_fmt yuv420p -t 15 out.mp4
+```
+
 Change video file pixel format
 ```bash
 # Using the format filter (yuv420p)
