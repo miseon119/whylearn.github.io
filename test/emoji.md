@@ -75,4 +75,10 @@ Receive Streaming:
 $ gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, encoding-name=H264, payload=96 ! rtph264depay ! h264parse ! omxh264dec ! nveglglessink -e
 ```
 
+### 
+
+```bash
+gst-launch-1.0 multifilesrc location=img_%06d.jpg caps=image/jpeg,framerate=30/1 ! jpegdec ! videoconvert ! jpegenc ! multifilesink location=jpgs/img_post_%06d.jpg
+```
+
 
