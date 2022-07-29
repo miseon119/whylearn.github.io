@@ -182,3 +182,36 @@ git pull
 git submodule update --recursive --remote
 ```
 
+### filter-branch Usage
+
+#### Change Author and Committer
+```bash
+git filter-branch --commit-filter '
+export GIT_AUTHOR_EMAIL=me@example.com;
+export GIT_AUTHOR_NAME=me;
+export GIT_COMMITTER_EMAIL=me@example.com;
+export GIT_COMMITTER_NAME=me;
+git commit-tree "$@"
+'
+```
+
+#### Delete files in history
+
+```bash
+git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+```
+
+```bash
+//从指定的commit中删除误操作文件的记录
+git filter-branch --tree-filter 'git rm -f --ignore-unmatch {{文件名}}' [commit1..commit2]
+
+//从当前分支的前30次提交开始遍历,删除误操作文件的引用
+git filter-branch --tree-filter 'git rm -f {{文件名}}' HEAD~30..HEAD
+```
+then, 
+```bash
+git push origin master --force
+```
+
+
+
