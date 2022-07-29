@@ -219,6 +219,13 @@ git filter-branch --index-filter \
     'git rm -rf --cached --ignore-unmatch path_to_file' HEAD
 ```
 
+solution 3:
+```bash
+git filter-branch --tree-filter 'rm -f path/to/large/files' --tag-name-filter cat -- --all
+git push origin --tags --force
+git push origin --all --force
+```
+
 
 #### Difference Between tree-filter and index-filter
 
@@ -228,4 +235,9 @@ git filter-branch --index-filter \
 
 [more](https://stackoverflow.com/questions/36255221/what-is-the-difference-between-tree-filter-and-index-filter-in-the-git)
 
+
+#### Search Large files in history
+```bash
+git rev-list --objects --all | grep -E `git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}' | sed ':a;N;$!ba;s/\n/|/g'`
+```
 
