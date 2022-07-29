@@ -213,5 +213,19 @@ then,
 git push origin master --force
 ```
 
+[solution 2:](https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history) 
+```bash
+git filter-branch --index-filter \
+    'git rm -rf --cached --ignore-unmatch path_to_file' HEAD
+```
+
+
+#### Difference Between tree-filter and index-filter
+
+> The short version is that --tree-filter checks out each commit into a temporary directory, runs your filter command, and builds a new commit from whatever is now in the temporary directory; while --index-filter copies each commit into the index, runs your filter command, and builds a new commit from whatever is now in the index.
+
+> Copying a commit to the index is much1 faster than checking out the commit. Building a commit from the index is faster than building a commit from a directory. As a result, using the index filter is much faster than using the tree filter. It's not as easy to script for, though.
+
+[more](https://stackoverflow.com/questions/36255221/what-is-the-difference-between-tree-filter-and-index-filter-in-the-git)
 
 
