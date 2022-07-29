@@ -194,7 +194,7 @@ export GIT_COMMITTER_NAME=me;
 git commit-tree "$@"
 '
 ```
-
+[more](https://manishearth.github.io/blog/2017/03/05/understanding-git-filter-branch/)
 #### Delete files in history
 
 ```bash
