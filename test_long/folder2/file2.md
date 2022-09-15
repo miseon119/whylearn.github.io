@@ -94,3 +94,13 @@ $ docker run --gpus=1 -v /dev:/dev --ipc=host --shm-size=1g --rm -p8000:8000 -p8
 nvcr.io/nvidia/tritonserver:21.03-py3 \
 tritonserver --model-repository=/models
 ```
+
+## Troubleshooting
+Error: `/var/run/docker.sock` permission denied 
+
+```bash
+sudo usermod -aG docker $USER
+sudo chmod 666 /var/run/docker.sock
+sudo chown root:docker /var/run/docker.sock
+```
+
