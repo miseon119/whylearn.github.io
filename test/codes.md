@@ -405,3 +405,18 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 session = tf.Session(config=config)
 ```
+
+### Troubleshooting
+
+> Flask uses multiple threads. The problem you are running into is because the tensorflow model is not loaded and used in the same thread. One workaround is to force tensorflow to use the gloabl default graph .
+
+solution: Add this after you load your model
+```python
+global graph
+graph = tf.get_default_graph() 
+```
+And inside your predict
+```python
+with graph.as_default():
+    y_hat = keras_model_loaded.predict(predict_request, batch_size=1, verbose=1)
+```
