@@ -391,3 +391,17 @@ plt.show()
 from pathlib import Path
 Path("/my/directory").mkdir(parents=True, exist_ok=True)
 ```
+
+## Tensorflow 1.x
+
+Limit Gpu Growth
+```python
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+```
+Auto Adjuct Gpu Growth
+```python
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.Session(config=config)
+```
