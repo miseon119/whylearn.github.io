@@ -165,6 +165,7 @@ Clone branch
 $ git clone -b <branch> <remote_repo>
 ```
 
+
 ### Add submodule
 
 Add
@@ -333,4 +334,12 @@ $ git add .gitattributes
 $ git add .
 $ git commit -m "Add some files"
 $ git push origin master
+```
+
+## Use Case
+
+### Update or Checkout a single file from remote origin branch
+```bash
+git fetch
+git checkout origin/master -- path/to/file
 ```
