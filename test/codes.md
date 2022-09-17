@@ -420,3 +420,10 @@ And inside your predict
 with graph.as_default():
     y_hat = keras_model_loaded.predict(predict_request, batch_size=1, verbose=1)
 ```
+
+## Flask
+
+Disable the reloader
+```python
+run(use_reloader=False)
+```
