@@ -4,6 +4,47 @@ sort: 4
 
 # Linux
 
+## htop
+- PID: process ID number.
+- USER: process owner.
+- PRI: process priority by the kernel.
+- NI: process priority reset by the user or root.
+- VIR: virtual memory the process is consuming.
+- RES: physical memory the process is consuming.
+- SHR: shared memory that the process is consuming.
+- S: current process state.
+- CPU%: percentage of CPU that the process is consuming.
+- MEM%: percentage of memory that the process is consuming.
+- TIME+: time measured in clock ticks since process execution started.
+- Command: name of the command that started the process
+
+### Useful Shortcut Keys
+
+`u`: displays all processes owned by a particular user.
+
+`p`: sort processes on high CPU consumption.
+
+`m`: sort processes on high memory consumption.
+
+`t`: sort process on time.
+
+`Space`: tag a process
+
+`c`: tag a process and child processes
+
+`Shift + u`: remove all tags.
+
+`Shift + f`: highlight and follow a process.
+
+`Shift + h`: show/hide user and kernel processes.
+
+`a`: set what CPU cores a process can access.
+
+`i`: set IO priority.
+
+`h`: help menu.
+
+
 ## History Command
 ```bash
 fc -l <start> <end> | grep "docker"
