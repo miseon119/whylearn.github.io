@@ -45,6 +45,54 @@ $ git config --global user.email "your_email"
 $ git config --list
 ```
 
+### Git Stash
+
+아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어이다. 이를 통해 아직 완료하지 않은 일을 commit하지 않고 나중에 다시 꺼내와 마무리할 수 있다.
+
+git stash 명령을 사용하면 워킹 디렉토리에서 수정한 파일들만 저장한다.
+
+Save working directory files, not commit
+```bash
+git stash
+git stash save
+```
+
+Check stash list
+```bash
+git stash list
+```
+
+Apply specific stash
+```bash
+# recent stash
+git stash apply
+
+# stash@{2}
+git stash apply [stash name]
+```
+staging 상태로 apply
+```bash
+git stash apply --index
+```
+
+Remove stash
+```bash
+git stash drop
+git stash drop [stash name]
+```
+remove after apply
+```bash
+git stash pop
+```
+
+Cancel stash
+```bash
+git stash show -p | git apply -R
+# or
+git stash show -p [stash name] | git apply -R
+```
+
+
 ### Reflog
 Reflogs track when Git refs were updated in the local repository.
 
