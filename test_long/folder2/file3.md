@@ -45,6 +45,14 @@ $ git config --global user.email "your_email"
 $ git config --list
 ```
 
+### Reflog
+Reflogs track when Git refs were updated in the local repository.
+
+By default, git reflog will output the reflog of the HEAD ref. HEAD is a symbolic reference to the currently active branch. 
+```bash
+git reflog
+git reflog show --all 
+```
 
 ##  Git Basic Commands
 
@@ -343,3 +351,19 @@ $ git push origin master
 git fetch
 git checkout origin/master -- path/to/file
 ```
+
+### Recover a commit
+
+check commit id
+```bash
+git reflog 
+git reset --hard <커밋해시id>
+```
+
+### Recover a branch
+```bash
+git reflog |grep 브랜치명
+git checkout -b <삭제한 브랜치명> <커밋해시id>
+```
+
+
