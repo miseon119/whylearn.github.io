@@ -4,6 +4,13 @@ sort: 10
 
 # IDE And Environment Setting
 
+## GPU INFO
+full name
+```bash
+nvidia-smi -L
+```
+
+
 ## Shortcut Key
 
 ### sublime text 3
