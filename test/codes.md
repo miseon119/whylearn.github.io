@@ -4,6 +4,56 @@ sort: 3
 
 # Python Lib
 
+## Multiprocessing
+
+### Handle Orphan Process
+
+> An orphan process is a computer process whose parent process has finished or terminated, though it remains running itself. An orphan process is created when the parent of a child process is terminated.
+
+Some ways that a parent process may be terminated leaving the child process orphaned include:
+
+1. Parent process finishes.
+2. Parent raises an uncaught error or exception.
+3. Parent process calls sys.exit() or os._exit().
+4. The Process.terminate() or Process.kill() methods are called on the parent.
+5. A process calls os.kill() with the parent’s PID.
+6. Process is killed externally, e.g. via the kill command.
+
+Some solutions could be:
+
+1. Other processes keep a reference to processes that could be orphaned, e.g. Process instances.
+2. Store process identifiers (PIDs) for child processes that could be orphaned, e.g. in a file.
+3. Child processes can check if they are orphaned and take action accordingly.
+
+#### Check if a Process is Orphaned
+
+```python
+# check for no parent process
+if multiprocessing.parent_process() is None:
+    print('Orphaned')
+```
+
+Alternatively, a child process may have a multiprocessing.Process instance returned from the multiprocessing.parent_process() function, but the process may not be running. In which case, the process is orphaned
+
+```python
+# get the parent process
+parent = multiprocessing.parent_process()
+if parent is not None and not parent.is_alive():
+    print('Orphaned')
+```
+
+```python
+# return True if the current process is orphaned, False otherwise
+def is_orphan():
+    # get the parent process
+    parent = parent_process()
+    # check if orphaned
+    if parent is None or not parent.is_alive():
+        return True
+    # not orphaned
+    return False
+```
+
 ## pytorch
 
 ### check version
