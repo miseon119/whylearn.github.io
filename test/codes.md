@@ -4,6 +4,35 @@ sort: 3
 
 # Python Lib
 
+## GDB Debugging Python
+
+inspect threads
+```bash
+(gdb) info threads
+```
+
+get a picture of all threads:
+```bash
+(gdb) t a a py-list
+# or 
+(gdb) thread apply all py-list
+```
+
+walk through the stack 
+```bash
+(gdb) py-up
+```
+or
+```bash
+(gdb) py-down
+```
+
+full stack trace
+```bash
+(gdb) py-bt
+```
+
+
 ## Multiprocessing
 
 ### Handle Orphan Process
