@@ -4,6 +4,22 @@ sort: 7
 
 # Deep Learning Note
 
+## NeRF
+
+![nerf1](./images/nerf1.png)
+
+### core parts
+
+1. Volume rendering
+2. multilayer perceptron (MLP)
+3. positional Ecoding
+4. Hierarchical sampling
+
+**Neural Radiance Field** is 2D -> 3D process.
+
+**Volumn Rendering** is 3D -> 2D process. 
+
+
 ## Faster RCNN 
 
 - Region Proposal Layer: It predicts N number of objects detected in the feature map.
