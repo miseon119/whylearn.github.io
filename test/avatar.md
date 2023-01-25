@@ -19,6 +19,13 @@ sort: 7
 
 **Volumn Rendering** is 3D -> 2D process. 
 
+### Shape representations
+
+![shape_representations](./images/3d_shape_representations.png)
+
+### Appearance representations
+
+![appearance_representations](./images/3d_appearance_representations.png)
 
 ## Faster RCNN 
 
