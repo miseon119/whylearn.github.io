@@ -42,6 +42,12 @@ Duplicate Actor: `Alt` key + moving
 
 Snap to Surface: `End`
 
+**Level Operation**
+
+Create New Level: `Ctrl` + `N`
+
+Save Level: `Ctrl` + `S`
+
 
 
 
