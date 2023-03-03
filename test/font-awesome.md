@@ -48,6 +48,39 @@ Create New Level: `Ctrl` + `N`
 
 Save Level: `Ctrl` + `S`
 
+Save Everything: `Ctrl` + `Shift` + `s`
+
+Adjust Lighting: `Ctrl` + `L`
+
+**Play Mode**
+
+Enter Play Mode: `alt` + `p`
+
+Exit Play Mode: `ESC`
+
+Enter Simulation Mode: `Alt` + `s`
+
+Toggle Content Drawer: `ctrl` + `space`
+
+Browse to selected item: `ctrl` + `b`
+
+Edit selected item: `ctrl` + `e`
+
+Create new folder: `ctrl` + `shift` + `n`
+
+Duplicate selected item: `ctrl` + `d`
+
+Create Camera Bookmark: `ctrl` + `1`, `2`, `3` ...
+
+Editor fullscreen mode: `shift` + `f11`
+
+Toggle Game Mode: `G`
+
+
+
+
+
+
 
 
 
