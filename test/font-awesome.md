@@ -13,6 +13,42 @@ nvidia-smi -L
 
 ## Shortcut Key
 
+### Unreal Engine 5
+
+**viewpoint navigation**
+
+Tilt camera : right click + moving
+
+Move Around : right click + `W`, `A`, `S`, `D`
+
+Move Up/Down : right click + `Q`, `E` 
+
+Accelerate/Decelerate Movement: Middle mouse bottun
+
+
+**Actor Operation**
+
+Focus on Actor: `F`
+
+Move Actor: `W`
+
+Rotate Actor: `E`
+
+Scale Actor: `R` 
+
+Switch Tools: `Space`
+
+Duplicate Actor: `Alt` key + moving
+
+Snap to Surface: `End`
+
+
+
+
+
+
+
+
 ### sublime text 3
 
 Show/Hide sidebar: `Ctrl + K` and `Ctrl + B`
