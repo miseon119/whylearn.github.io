@@ -13,6 +13,18 @@ nvidia-smi -L
 
 ## Shortcut Key
 
+### Blender
+
+Zoom: scroll MMB
+
+Rotate: Hold and drag MMB
+
+Pan: `Shift` + MMB
+
+sidebar: `n`
+
+
+
 ### Unreal Engine 5
 
 **viewpoint navigation**
