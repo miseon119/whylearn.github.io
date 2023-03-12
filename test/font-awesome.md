@@ -13,6 +13,10 @@ nvidia-smi -L
 
 ## Shortcut Key
 
+## Visual Studio
+
+Navigate Backward / Forward: `Ctrl` + `-` / `Ctrl` + `^` + `-`
+
 ### Blender
 
 Zoom: scroll MMB
