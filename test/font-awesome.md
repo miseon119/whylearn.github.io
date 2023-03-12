@@ -18,6 +18,10 @@ Navigate Backward / Forward: `Ctrl` + `-` / `Ctrl` + `^` + `-`
 
 Toggle bookmark: `Ctrl` + `k`, `Ctrl` + `k`
 
+navigate to the next bookmark: `Ctrl` + `k`, `Ctrl` + `n`
+
+navigate to the previous bookmark: `Ctrl` + `k`, `Ctrl` + `p`
+
 Uncomment selection: `Ctrl` + `K`, `Ctrl` + `U`
 
 ### Blender
