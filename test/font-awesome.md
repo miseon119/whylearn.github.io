@@ -10,12 +10,15 @@ full name
 nvidia-smi -L
 ```
 
-
 ## Shortcut Key
 
 ## Visual Studio
 
 Navigate Backward / Forward: `Ctrl` + `-` / `Ctrl` + `^` + `-`
+
+Toggle bookmark: `Ctrl` + `k`, `Ctrl` + `k`
+
+Uncomment selection: `Ctrl` + `K`, `Ctrl` + `U`
 
 ### Blender
 
