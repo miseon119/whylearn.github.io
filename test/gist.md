@@ -18,7 +18,7 @@ The most common hardware cache  are L1, L2, and L3 caches.
 
  - L3 cache is even larger and slower than L2 cache,  and is often shared between multiple CPU cores. 
 
- 
+
 
 ## Data Pipeline Design Patterns
 
@@ -26,7 +26,7 @@ The most common hardware cache  are L1, L2, and L3 caches.
 
 ![datatype](https://chartio.com/images/articles/automatic-cloud-data-stack/data-storage-table.png)
 
-## #Design Pattern 
+### Design Pattern 
 
 #### ETL Pattern
 
