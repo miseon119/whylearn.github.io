@@ -12,7 +12,43 @@ nvidia-smi -L
 
 ## Shortcut Key
 
-## Visual Studio
+
+### Jupyter Notebook
+
+#### Command Mode
+
+`Arrow Up/Arrow Down` : Navigate between cells
+`A`: Insert a new cell above the current cell.
+`B`: Insert a new cell below the current cell.
+`C`: Copy the selected cell.
+`V`: Paste the copied cell below the current cell.
+`D`: Delete the selected cell.
+`Z`: Undo the last cell operation.
+`M`: Convert the selected cell to a markdown cell.
+`Y`: Convert the selected cell to a code cell.
+`Shift` + `Arrow Up/Arrow Down`: Select multiple cells.
+`Ctrl` + `Shift` + `-` : Split the current cell at the cursor.
+`Ctrl` + `Shift` + `Minus` : Split the current cell at the cursor.
+`Shift` + `M`: Merge selected cells.
+`Ctrl` + `Shift` + `P`: Open the command palette.
+`Shift` + `Enter` : Run the current cell and move the cursor to the next cell.
+`Ctrl` + `Enter` : Run the current cell without moving the cursor.
+
+
+#### Edit Mode
+
+Tab: Code completion or indent.
+Ctrl + Shift + –: Split the current cell at the cursor.
+Ctrl + ]: Indent.
+Ctrl + [: Dedent.
+Ctrl + A: Select all.
+Ctrl + Z: Undo.
+Ctrl + Y: Redo.
+Ctrl + Home: Go to cell start.
+Ctrl + End: Go to cell end.
+
+
+### Visual Studio
 
 Navigate Backward / Forward: `Ctrl` + `-` / `Ctrl` + `^` + `-`
 
