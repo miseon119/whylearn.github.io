@@ -614,6 +614,38 @@ $ sudo du -a /var | sort -n -r | head -n 10
 df -h /var/lib/docker
 ```
 
+### Disk Mount
+
+driver check
+```
+sudo fdisk -l
+```
+
+Format a disk
+```
+# sudo mkfs -t ext4 /dev/sda
+```
+
+Disk mount
+```
+# sudo mkdir /dev/hdd
+# sudo mount /dev/sda /dev/hdd
+# sudo chmod 777 /dev/hdd
+```
+
+Auto mount after booting
+```
+sudo vim /etc/fstab
+# 파일 밑에 아래 줄 추가
+#/dev/sda /dev/hdd ext4 defaults 0 0
+```
+
+check mount
+```
+df -h
+```
+
+
 ---
 ## tr command
 
