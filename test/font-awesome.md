@@ -12,6 +12,31 @@ nvidia-smi -L
 
 ## Shortcut Key
 
+### Powerpoint
+
+#### Navigating
+
+`Ctrl+F1`: Hides/unhides the Ribbon (very useful for quickly freeing up space on small screens)
+
+#### While Presenting
+
++: Zooms into the slide (up to three zoom levels); once zoomed in, you can pan the slide with the mouse cursor or the arrow keys
+
+-: Zooms out of the slide to provide an overview of all slides of the presentation (including sections)
+
+B: Blacks the screen
+
+#### PowerPoint Shortcuts to Manage Display
+
+Alt+F9: Show or hide gridlines and guides
+
+#### Edit
+
+Alt + R: Spell Check
+
+Alt + key : Changing Tabs
+
+Shift + Up Arrow/Down arrow : Select or Deselect Text
 
 ### Jupyter Notebook
 
