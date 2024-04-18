@@ -226,6 +226,31 @@ sort command : Sort lines of text files.
 head : Output the first part of files.
 -n : Print the first ‘n’ lines. (In our case, We displayed first 5 lines).
 
+Find all files **modified** between time A and time B
+```
+find . -type f -newermt 2007-06-07 ! -newermt 2007-06-08
+```
+
+Find files **accessed** between time A and time B
+```
+find . -type f -newerat 2008-09-29 ! -newerat 2008-09-30
+```
+
+Files which had their **permission changed** on the same day
+```
+find . -type f -newerct 2008-09-29 ! -newerct 2008-09-30
+```
+
+Find all Directory **modified** between time A and time B
+```
+find . -type f -newermt 2007-06-07 ! -newermt 2007-06-08
+```
+setting directory depth parameter
+```
+find . -maxdepth 2 -type d -newermt 2007-06-07 ! -newermt 2007-06-08
+```
+
+
 **Human Readable Format**
 ```console
 $ du -hs * | sort -rh | head -5
