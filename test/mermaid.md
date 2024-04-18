@@ -245,6 +245,7 @@ Find all Directory **modified** between time A and time B
 ```
 find . -type f -newermt 2007-06-07 ! -newermt 2007-06-08
 ```
+
 setting directory depth parameter
 ```
 find . -maxdepth 2 -type d -newermt 2007-06-07 ! -newermt 2007-06-08
