@@ -72,6 +72,39 @@ $ apt-get update
 $ apt install libcanberra-gtk-module libcanberra-gtk3-module
 ```
 
+## Relocating Docker Data Root
+
+Copy the existing Docker cache from /var/lib/docker to a directory on your drive of choice (in this case, /mnt/docker):
+
+```
+$ sudo cp -r /var/lib/docker /mnt/docker
+```
+Then add your directory as "data-root" in /etc/docker/daemon.json:
+
+```
+{
+    "runtimes": {
+        "nvidia": {
+            "path": "nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    },
+
+    "default-runtime": "nvidia",
+    "data-root": "/mnt/docker"
+}
+```
+then
+```bash
+$ sudo systemctl restart docker
+```
+You can then confirm the changes by looking under docker info
+```bash
+$ sudo docker info | grep 'Docker Root Dir'
+```
+
+
+
 ## docker warning config.json permission denied
 
 ```console
