@@ -102,7 +102,12 @@ You can then confirm the changes by looking under docker info
 ```bash
 $ sudo docker info | grep 'Docker Root Dir'
 ```
+## inspect mounted volumn
 
+```
+docker inspect <container id or container name>
+```
+and find "Mounts" keyword.
 
 
 ## docker warning config.json permission denied

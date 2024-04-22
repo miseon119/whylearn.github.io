@@ -372,6 +372,13 @@ cat cluster.yaml
 
 ## ffmpeg
 
+cut audio from video file
+```bash
+ffmpeg -i input.webm -ss start_time -t duration -c:a pcm_s16le output.wav
+ffmpeg -i input.webm -ss 00:00:30 -t 00:00:10 -c:a pcm_s16le output.wav
+```
+
+
 Resize Video:
 ```console
 $ ffmpeg -i input_video.mp4 -s 640x480 -c:a copy out.mp4
